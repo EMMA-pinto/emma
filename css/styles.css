@@ -3130,15 +3130,15 @@ td:last-child {
  * ## main navigation
  * -------------------------------------------------------------------- */
 .s-header__nav {
-    margin-left: 0;
+  margin-left: 0; /* rimuove il margin-left che spinge a destra */
+  display: flex;
+  justify-content: center; /* centra il contenuto orizzontalmente */
+  width: 100%; /* assicurati che occupi tutta la larghezza */
 }
 
 .s-header__menu-links {
-    list-style: none;
-    display   : inline-flex;
-    flex-flow : row nowrap;
-    margin    : 0;
-    padding   : 0;
+  justify-content: center; /* centra i link all’interno del menu */
+  width: auto; /* lascia che la lista abbia larghezza minima */
 }
 
 .s-header__menu-links li {
