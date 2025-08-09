@@ -3033,16 +3033,7 @@ td:last-child {
  *
  *
  * ------------------------------------------------------------------- */
-.logo-text {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  color: white;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: inline-block;
-} 
-    .s-header {
+.s-header {
     --header-height : 72px;
     --logo-width    : 10.2rem;
     --width-grid-max: calc(var(--width-sixteen-cols) - calc(var(--gutter) * 2));
@@ -3139,15 +3130,15 @@ td:last-child {
  * ## main navigation
  * -------------------------------------------------------------------- */
 .s-header__nav {
-  margin-left: 0; /* rimuove il margin-left che spinge a destra */
-  display: flex;
-  justify-content: center; /* centra il contenuto orizzontalmente */
-  width: 100%; /* assicurati che occupi tutta la larghezza */
+    margin-left: var(--vspace-1);
 }
 
 .s-header__menu-links {
-  justify-content: center; /* centra i link all’interno del menu */
-  width: auto; /* lascia che la lista abbia larghezza minima */
+    list-style: none;
+    display   : inline-flex;
+    flex-flow : row nowrap;
+    margin    : 0;
+    padding   : 0;
 }
 
 .s-header__menu-links li {
@@ -3443,7 +3434,7 @@ td:last-child {
     top     : 0;
     right   : 0;
     bottom  : 0;
-    left    : 0;
+    left    : 50%;
 }
 
 .s-intro__content-media::before {
