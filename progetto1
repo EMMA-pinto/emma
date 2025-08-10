@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Progetto 1 - Emma Pinto</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+    <h1>Progetto 1</h1>
+    <nav>
+        <a href="index.html">Torna alla home</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Descrizione del progetto 1</h2>
+        <p>Qui puoi mettere il testo, le immagini, video, ecc.</p>
+        <img src="images/progetto1-1.jpg" alt="Progetto 1 immagine 1" />
+        <img src="images/progetto1-2.jpg" alt="Progetto 1 immagine 2" />
+    </section>
+</main>
+
+</body>
+</html>
