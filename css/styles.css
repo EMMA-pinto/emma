@@ -3133,7 +3133,7 @@ td:last-child {
     border: none;
 
     font-family: 'Helvetica';
-    font-size: 1.5rem;  /* o la dimensione che vuoi */
+    font-size: 4rem;  /* o la dimensione che vuoi */
     font-weight: 700;
     color: white;       /* o il colore che preferisci */
     text-transform: uppercase; /* se vuoi tutto maiuscolo */
