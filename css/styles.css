@@ -3133,11 +3133,11 @@ td:last-child {
     border: none;
 
     font-family: 'Helvetica';
-    font-size: 4rem;  /* o la dimensione che vuoi */
+    font-size: 3rem;  /* o la dimensione che vuoi */
     font-weight: 700;
     color: white;       /* o il colore che preferisci */
     text-transform: uppercase; /* se vuoi tutto maiuscolo */
-    letter-spacing: 0.05em;    /* spazio tra le lettere */
+    letter-spacing: 0em;    /* spazio tra le lettere */
 }
 
 
