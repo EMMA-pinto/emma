@@ -3133,11 +3133,14 @@ td:last-child {
     border : none;
 }
 
-.s-header__logo img {
-    width         : var(--logo-width);
-    margin        : 0;
-    vertical-align: bottom;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.5rem;  /* o la dimensione che vuoi */
+    font-weight: 700;
+    color: white;       /* o il colore che preferisci */
+    text-transform: uppercase; /* se vuoi tutto maiuscolo */
+    letter-spacing: 0.05em;    /* spazio tra le lettere */
 }
+
 
 /* --------------------------------------------------------------------
  * ## main navigation
