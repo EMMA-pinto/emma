@@ -3062,7 +3062,7 @@ td:last-child {
     background-color: transparent;
     height          : var(--header-height);
     width           : 100%;
-    position        : absolute;
+    position        : fixed;
     top             : 0;
     left            : 0;
 }
@@ -3107,7 +3107,7 @@ td:last-child {
     justify-content : space-between;
     background-color: var(--color-3);
     border          : 1px solid rgba(255, 255, 255, 0.03);
-    padding         : 0 var(--gutter);
+    padding         : 0;
     box-shadow      : var(--box-shadow);
 }
 
