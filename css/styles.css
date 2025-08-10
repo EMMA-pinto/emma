@@ -3034,7 +3034,7 @@ td:last-child {
  *
  * ------------------------------------------------------------------- */
 .logo-text {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 700;
   font-size: 3rem;
   color: white;
