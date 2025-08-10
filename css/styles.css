@@ -3982,14 +3982,14 @@ td:last-child {
  * ## folio entries 
  * ------------------------------------------------------------------- */
 .folio-entries .entry {
-    flex    : none;
-    width   : 50%;
-    margin  : 0;
-    padding : 0;
+    width: calc(33.33% - 20px); /* 3 colonne con margini */
+    margin: 10px;
+    box-sizing: border-box;
+    /* mantieni gli altri stili */
+    flex: none;
     overflow: hidden;
     position: relative;
 }
-
 .folio-entries .entry__link {
     display : block;
     position: relative;
