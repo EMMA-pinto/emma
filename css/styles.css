@@ -2709,7 +2709,7 @@ td:last-child {
 
 .text-display-title {
     font-family   : 'Helvetica';
-    font-size     : 8rem; /* sostituisci var(--text-display-1) se vuoi */
+    font-size     : 11rem; /* sostituisci var(--text-display-1) se vuoi */
     line-height   : 1.0717;
     letter-spacing: -0.015em;
     margin-top    : 0;
