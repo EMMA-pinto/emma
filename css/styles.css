@@ -3033,25 +3033,7 @@ td:last-child {
  *
  *
  * ------------------------------------------------------------------- */
-.logo-text {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  color: white;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: inline-block;
-}
-    .logo-text {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  color: white;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  display: inline-block;
-}
-    .s-header {
+.s-header {
     --header-height : 72px;
     --logo-width    : 10.2rem;
     --width-grid-max: calc(var(--width-sixteen-cols) - calc(var(--gutter) * 2));
@@ -3452,7 +3434,7 @@ td:last-child {
     top     : 0;
     right   : 0;
     bottom  : 0;
-    left    : 0;
+    left    : 50%;
 }
 
 .s-intro__content-media::before {
