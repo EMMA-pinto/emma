@@ -3090,25 +3090,32 @@ td:last-child {
 }
 
 .s-header.sticky .s-header__inner {
-    --width-grid-max: var(--width-default);
-    background-color: transparent;
-    border          : none;
-    box-shadow      : none;
-}
-
-.s-header.sticky.scrolling {
-    opacity   : 1;
-    visibility: visible;
+    width: 100vw;              /* tutta la larghezza della finestra */
+    max-width: 100%;           /* niente max-width che restringe */
+    margin: 0;                 /* nessun margine */
+    background-color: var(--color-3);
+    border: none;
+    box-shadow: var(--box-shadow);
+    padding: 0 2rem;           /* padding orizzontale per distanziare contenuto dai bordi */
+    box-sizing: border-box;    /* assicura che padding non aumenti larghezza */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .s-header__inner {
-    height          : var(--header-height);
-    align-items     : center;
-    justify-content : space-between;
+    width: 100vw;              /* stessa cosa nella modalità normale */
+    max-width: 100%;
+    margin: 0;
     background-color: var(--color-3);
-    border          : 1px solid rgba(255, 255, 255, 0.03);
-    padding         : 0;
-    box-shadow      : var(--box-shadow);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 0 2rem;
+    box-shadow: var(--box-shadow);
+    box-sizing: border-box;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .s-header__block {
