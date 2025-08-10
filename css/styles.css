@@ -3102,7 +3102,20 @@ td:last-child {
     align-items: center;
     justify-content: space-between;
 }
-
+.s-header.sticky.scrolling {
+    opacity: 1;
+    visibility: visible;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    background-color: var(--color-3);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .s-header__inner {
     width: 100vw;              /* stessa cosa nella modalità normale */
     max-width: 100%;
