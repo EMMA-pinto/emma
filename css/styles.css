@@ -4002,7 +4002,7 @@ td:last-child {
 
 .folio-entries {
   display: flex;
-  flex-wrap: nowrap;  /* una riga */
+  flex-wrap: wrap;  /* una riga */
   gap: 6px;
   padding-left: 3px;
   padding-right: 3px;
