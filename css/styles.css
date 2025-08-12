@@ -4094,6 +4094,7 @@ td:last-child {
 @media screen and (max-width: 800px) {
     .folio-entries .entry__cat {
         font-size: calc(var(--text-size) * 0.7);
+         font-family: 'Helvetica', sans-serif;
     }
 
     .folio-entries .entry__title {
