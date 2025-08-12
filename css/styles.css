@@ -100,22 +100,25 @@
 
   /* theme color variations
    */
-    --color-1-lightest: hsla(12, 75%, 75%, 1);
-    --color-1-lighter : hsla(12, 75%, 65%, 1);
-    --color-1-light   : hsla(12, 75%, 55%, 1);
-    --color-1-dark    : hsla(12, 75%, 35%, 1);
-    --color-1-darker  : hsla(12, 75%, 25%, 1);
-    --color-1-darkest : hsla(12, 75%, 15%, 1);
+   --color-1: hsla(0, 0%, 40%, 1);        /* grigio medio scuro */
+  --color-1-lightest: hsla(0, 0%, 85%, 1); /* grigio molto chiaro */
+  --color-1-lighter: hsla(0, 0%, 70%, 1);  /* grigio chiaro */
+  --color-1-light: hsla(0, 0%, 55%, 1);    /* grigio medio */
+  --color-1-dark: hsla(0, 0%, 30%, 1);     /* grigio scuro */
+  --color-1-darker: hsla(0, 0%, 20%, 1);   /* grigio molto scuro */
+  --color-1-darkest: hsla(0, 0%, 10%, 1);  /* quasi nero */
+  
+  /* mantenere --color-2 come verde/grigio scuro o convertirlo anche in scala grigi? */
+  --color-2-lightest: hsla(0, 0%, 70%, 1);
+  --color-2-lighter: hsla(0, 0%, 55%, 1);
+  --color-2-light: hsla(0, 0%, 40%, 1);
+  --color-2-dark: hsla(0, 0%, 25%, 1);
+  --color-2-darker: hsla(0, 0%, 15%, 1);
 
-    --color-2-lightest: hsla(96, 10%, 49%, 1);
-    --color-2-lighter : hsla(96, 10%, 39%, 1);
-    --color-2-light   : hsla(96, 10%, 29%, 1);
-    --color-2-dark    : hsla(96, 10%, 10%, 1);
-    --color-2-darker  : hsla(96, 10%, 1%, 1);
-
-    --color-3-light: hsla(0, 0%, 16%, 1);
-    --color-3-dark : hsla(0, 0%, 8%, 1);
-
+  /* se vuoi, anche --color-3 in scala di grigi */
+  --color-3-light: hsla(0, 0%, 30%, 1);
+  --color-3-dark: hsla(0, 0%, 15%, 1);
+}
   /* feedback colors
    * color-error(#ffd1d2), color-success(#c8e675), 
    * color-info(#d7ecfb), color-notice(#fff099)
