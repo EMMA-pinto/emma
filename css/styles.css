@@ -3191,7 +3191,7 @@ td:last-child {
 }
 
 .s-header__menu-links .current a {
-    color: #FFD700; /* esempio colore per il menu attivo */
+    color: #D3D3D3; /* esempio colore per il menu attivo */
 }
 
 /* --------------------------------------------------------------------
