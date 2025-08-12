@@ -4003,18 +4003,18 @@ td:last-child {
 .folio-entries {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px; /* ridotto per avere meno spazio tra le foto */
-    padding-left: 3px; /* quasi a filo bordo */
+    gap: 6px; /* spazio tra foto */
+    padding-left: 3px;
     padding-right: 3px;
-    max-width: 100%; /* rimuove il limite dei 1400px */
+    max-width: 100%;
 }
 
 .folio-entries .entry.wide {
-    flex: 0 0 33%;  /* leggermente più grande per avvicinare */
+    flex: 0 0 calc(33% - 4px); /* calcola gap nella larghezza */
 }
 
 .folio-entries .entry.square {
-    flex: 0 0 28%;  /* più grande rispetto a prima */
+    flex: 0 0 calc(28% - 4px);
 }
 
 .folio-entries .entry__link img {
