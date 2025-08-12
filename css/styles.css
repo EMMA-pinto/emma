@@ -3992,7 +3992,7 @@ td:last-child {
 }
 
 .folio-entries {
-    --width-grid-max: 1400px;
+    --width-grid-max: 1800px;
     margin-top      : var(--vspace-0_5);
 }
 
