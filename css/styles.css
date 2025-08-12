@@ -4008,7 +4008,7 @@ td:last-child {
   padding-right: 3px;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 3px;
   margin-bottom: 12px;
   box-sizing: border-box;
 }
