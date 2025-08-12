@@ -4005,7 +4005,7 @@ td:last-child {
   flex-wrap: wrap;
   gap: 6px;
   padding-left: 4px;
-  padding-right: 3px;
+  padding-right: 4px;
   max-width: 100%;
   margin: 0 auto;
 }
