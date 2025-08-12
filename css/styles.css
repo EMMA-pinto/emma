@@ -4002,7 +4002,10 @@ td:last-child {
 .folio-entries {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px; /* ridotto per avere meno spazio tra le foto */
+    padding-left: 5px; /* quasi a filo bordo */
+    padding-right: 5px;
+    max-width: 100%; /* rimuove il limite dei 1400px */
 }
 
 .folio-entries .entry {
