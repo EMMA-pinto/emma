@@ -3996,9 +3996,6 @@ td:last-child {
     margin-top      : var(--vspace-0_5);
 }
 
-/* ------------------------------------------------------------------- 
- * ## folio entries 
- * ------------------------------------------------------------------- */
 .folio-entries {
     display: flex;
     flex-wrap: wrap;
@@ -4011,17 +4008,17 @@ td:last-child {
     position: relative;
 }
 
-/* Foto larghe */
+/* Prima e terza foto larghe 40% */
 .folio-entries .entry.wide {
-    flex: 0 0 calc(50% - 20px); /* due per riga */
+    flex: 0 0 calc(40% - 20px);
 }
 
-/* Foto quadrate */
+/* Foto quadrata (seconda in ogni riga) */
 .folio-entries .entry.square {
-    flex: 0 0 calc(25% - 20px); /* quattro per riga */
+    flex: 0 0 calc(20% - 20px);
 }
 
-/* Mantieni le animazioni e gli effetti hover originali */
+/* Effetti e immagini */
 .folio-entries .entry__link {
     display: block;
     position: relative;
