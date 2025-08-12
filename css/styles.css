@@ -3992,11 +3992,6 @@ td:last-child {
 }
 
 .folio-entries {
-    --width-grid-max: 1400px;
-    margin-top      : var(--vspace-0_5);
-}
-
-.folio-entries {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* spazio tra foto */
@@ -4008,20 +4003,14 @@ td:last-child {
     position: relative;
 }
 
-/* Prima e terza foto larghe 40% */
-.folio-entries .entry.wide {
-    flex: 0 0 calc(40% - 20px);
-}
-
-/* Foto quadrata (seconda in ogni riga) */
+/* Quadrata (25%) */
 .folio-entries .entry.square {
-    flex: 0 0 calc(20% - 20px);
+    flex: 0 0 calc(25% - 13.33px); /* calcolato per includere gap su 3 elementi */
 }
 
-/* Effetti e immagini */
-.folio-entries .entry__link {
-    display: block;
-    position: relative;
+/* 4/5 di quadrata (20%) */
+.folio-entries .entry.four-fifths {
+    flex: 0 0 calc(20% - 13.33px);
 }
 
 .folio-entries .entry__link img {
