@@ -3994,7 +3994,7 @@ td:last-child {
 .folio-entries {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* spazio tra foto */
+    gap: 10px; /* spazio tra foto */
 }
 
 .folio-entries .entry {
@@ -4003,14 +4003,13 @@ td:last-child {
     position: relative;
 }
 
-/* Quadrata (calcolo: circa 20% meno gap per bilanciare) */
-.folio-entries .entry.square {
-    flex: 0 0 calc((100% - 40px) / 6); /* esempio per avere la quadrata 1/6 larghezza */
+/* Calcolo gap totali per 3 elementi in riga: 2 gap da 10px = 20px */
+.folio-entries .entry.wide {
+    flex: 0 0 calc((100% - 20px) * 0.4); /* 40% larghezza */
 }
 
-/* 4/5 larghezza (80%) */
-.folio-entries .entry.four-fifths {
-    flex: 0 0 calc((100% - 40px) * (5/6)); /* esempio per 5/6 larghezza */
+.folio-entries .entry.square {
+    flex: 0 0 calc((100% - 20px) * 0.2); /* 20% larghezza */
 }
 
 .folio-entries .entry__link img {
