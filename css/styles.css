@@ -1190,7 +1190,7 @@ textarea {
  * ## base type styles
  * -------------------------------------------------------------------- */
 body {
-    font-family: var(--font-1);
+    font-family: 'Helvetica neue';
     font-size  : var(--base-font-size);
     font-weight: 400;
     line-height: var(--vspace-1);
@@ -1229,7 +1229,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family           : var(--font-2);
+    font-family           : 'Helvetica neue';
     font-weight           : 400;
     color                 : var(--color-text-dark);
     font-variant-ligatures: common-ligatures;
@@ -1303,7 +1303,7 @@ h5,
 
 h6,
 .h6 {
-    font-family   : var(--font-1);
+    font-family   : 'Helvetica neue';;
     font-weight   : 600;
     font-size     : var(--text-sm);
     line-height   : var(--vspace-0_75);
@@ -2737,7 +2737,7 @@ td:last-child {
 
 .section-header::before {
     content       : attr(data-num);
-    font-family   : var(--font-1);
+    font-family   : 'Helvetica';
     font-weight   : 600;
     font-size     : 10em;
     letter-spacing: -0.05em;
@@ -2854,7 +2854,7 @@ td:last-child {
 }
 
 .glightbox-container .gslide-title {
-    font-family  : var(--font-1);
+    font-family  : 'Helvetica';
     font-weight  : 400;
     font-size    : 1.7rem !important;
     color        : white;
@@ -4094,7 +4094,7 @@ td:last-child {
 @media screen and (max-width: 800px) {
     .folio-entries .entry__cat {
         font-size: calc(var(--text-size) * 0.7);
-         font-family: 'Helvetica', sans-serif;
+         font-family: 'Helvetica neue', sans-serif;
     }
 
     .folio-entries .entry__title {
@@ -4130,7 +4130,7 @@ td:last-child {
 }
 
 .s-numbers h5 {
-    font-family  : var(--font-1);
+    font-family  : 'Helvetica neue';
     font-weight  : 500;
     margin-top   : 0;
     margin-bottom: var(--vspace-0_75);
@@ -4145,7 +4145,7 @@ td:last-child {
 .counter-items .num {
     display       : inline-flex;
     align-items   : center;
-    font-family   : var(--font-1);
+    font-family   : 'Helvetica neue';
     font-weight   : 700;
     font-size     : var(--text-huge-3);
     letter-spacing: -0.035em;
