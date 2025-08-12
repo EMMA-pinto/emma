@@ -4001,29 +4001,30 @@ td:last-child {
  * ------------------------------------------------------------------- */
 
 .folio-entries {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  padding-left: 4px;
-  padding-right: 4px;
-  max-width: 100%;
-  margin: 0 auto;
-}
-.folio-entries.row-1 .entry.wide {
-  flex: 0 0 33%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px; /* ridotto per avere meno spazio tra le foto */
+    padding-left: 3px; /* quasi a filo bordo */
+    padding-right: 3px;
+    max-width: 100%; /* rimuove il limite dei 1400px */
 }
 
-.folio-entries.row-1 .entry.square {
-  flex: 0 0 28%;
+/* Foto grandi */
+.folio-entries .entry.four-fifths {
+   flex: 0 0 33%
 }
 
-/* Per la seconda riga invertiamo */
-.folio-entries.row-2 .entry.wide {
-  flex: 0 0 33%;
+/* Foto centrali piccole */
+.folio-entries .entry.square {
+    flex: 0 0 28%;
 }
 
-.folio-entries.row-2 .entry.square {
-  flex: 0 0 28%;
+/* Foto - adattamento */
+.folio-entries .entry__link img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* taglia senza deformare */
 }
 /* ------------------------------------------------------------------- 
  * ## testimonials
