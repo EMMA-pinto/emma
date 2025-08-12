@@ -4001,26 +4001,35 @@ td:last-child {
  * ------------------------------------------------------------------- */
 
 .folio-entries {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px; /* spazio tra foto */
-    padding-left: 3px;
-    padding-right: 3px;
-    max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;  /* una riga */
+  gap: 6px;
+  padding-left: 3px;
+  padding-right: 3px;
+  max-width: 100%;
+  margin-bottom: 12px; /* spazio tra righe */
 }
 
-.folio-entries .entry.wide {
-    flex: 0 0 calc(33% - 4px); /* calcola gap nella larghezza */
+/* Prima riga */
+.folio-entries:not(.reverse) .entry.wide {
+  flex: 0 0 calc(33% - 4px);
+}
+.folio-entries:not(.reverse) .entry.square {
+  flex: 0 0 calc(28% - 4px);
 }
 
-.folio-entries .entry.square {
-    flex: 0 0 calc(28% - 4px);
+/* Seconda riga invertita */
+.folio-entries.reverse .entry.wide {
+  flex: 0 0 calc(28% - 4px);
+}
+.folio-entries.reverse .entry.square {
+  flex: 0 0 calc(33% - 4px);
 }
 
 .folio-entries .entry__link img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 /* ------------------------------------------------------------------- 
  * ## testimonials
