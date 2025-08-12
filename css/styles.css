@@ -4013,11 +4013,11 @@ td:last-child {
 }
 
 .folio-entries .entry.wide {
-    flex: 0 0 calc((100% - 20px) * 0.4); /* 40% larghezza */
+    flex: 0 0 33%;  /* leggermente più grande per avvicinare */
 }
 
 .folio-entries .entry.square {
-    flex: 0 0 calc((100% - 20px) * 0.2); /* 20% larghezza */
+    flex: 0 0 28%;  /* più grande rispetto a prima */
 }
 
 .folio-entries .entry__link img {
