@@ -3999,17 +3999,13 @@ td:last-child {
 /* ------------------------------------------------------------------- 
  * ## folio entries 
  * ------------------------------------------------------------------- */
-* {
-  outline: 1px solid rgba(255,0,0,0.2); /* per vedere i bordi di ogni elemento */
-  box-sizing: border-box;
-}
 
 .folio-entries {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   padding-left: 4px;
-  padding-right: 4px;
+  padding-right: 3px;
   max-width: 100%;
   margin: 0 auto;
 }
