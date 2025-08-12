@@ -4001,13 +4001,16 @@ td:last-child {
  * ## folio entries 
  * ------------------------------------------------------------------- */
 .folio-entries {
-  display: flex;
-  flex-wrap: wrap; /* importante per andare a capo */
-  gap: 6px;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 3px;
   padding-right: 3px;
-  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
   margin-bottom: 12px;
+  box-sizing: border-box;
 }
 
 /* Prima riga (no .reverse) */
