@@ -4003,14 +4003,14 @@ td:last-child {
     position: relative;
 }
 
-/* Quadrata (25%) */
+/* Quadrata (calcolo: circa 20% meno gap per bilanciare) */
 .folio-entries .entry.square {
-    flex: 0 0 calc(25% - 13.33px); /* calcolato per includere gap su 3 elementi */
+    flex: 0 0 calc((100% - 40px) / 6); /* esempio per avere la quadrata 1/6 larghezza */
 }
 
-/* 4/5 di quadrata (20%) */
+/* 4/5 larghezza (80%) */
 .folio-entries .entry.four-fifths {
-    flex: 0 0 calc(20% - 13.33px);
+    flex: 0 0 calc((100% - 40px) * (5/6)); /* esempio per 5/6 larghezza */
 }
 
 .folio-entries .entry__link img {
