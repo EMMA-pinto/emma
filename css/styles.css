@@ -4009,24 +4009,22 @@ td:last-child {
   max-width: 100%;
   margin: 0 auto;
 }
-.folio-entries .entry {
-    box-sizing: border-box;
+.folio-entries.row-1 .entry.wide {
+  flex: 0 0 33%;
 }
 
-.folio-entries .entry.wide {
-    flex: 0 0 33%;  /* leggermente più grande per avvicinare */
+.folio-entries.row-1 .entry.square {
+  flex: 0 0 28%;
 }
 
-.folio-entries .entry.square {
-    flex: 0 0 28%;  /* più grande rispetto a prima */
+/* Per la seconda riga invertiamo */
+.folio-entries.row-2 .entry.wide {
+  flex: 0 0 33%;
 }
 
-.folio-entries .entry__link img {
-    width: 100%;
-    height: auto;
-    display: block;
+.folio-entries.row-2 .entry.square {
+  flex: 0 0 28%;
 }
-
 /* ------------------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
