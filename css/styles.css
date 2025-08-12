@@ -4429,3 +4429,11 @@ td:last-child {
         right: -2rem;
     }
 }
+.folio-entries .entry__info {
+    margin-top: 4px;
+}
+
+/* Riduce spazio tra titolo e sottotitolo */
+.folio-entries .entry__title {
+    margin-bottom: 2px;
+}
