@@ -4013,21 +4013,10 @@ td:last-child {
   box-sizing: border-box;
 }
 
-/* Prima riga (no .reverse) */
-.folio-entries .entry.wide:not(.reverse) {
-  flex: 0 0 calc(33% - 4px);
-}
-.folio-entries .entry.square:not(.reverse) {
-  flex: 0 0 calc(28% - 4px);
+.folio-entries .entry {
+  flex: 0 0 calc(33.33% - 4px); /* tutte larghe uguali, 3 per riga */
 }
 
-/* Seconda riga (con .reverse) - invertiamo larghezze */
-.folio-entries .entry.wide.reverse {
-  flex: 0 0 calc(33% - 4px); /* più grande */
-}
-.folio-entries .entry.square.reverse {
-  flex: 0 0 calc(28% - 4px); /* più piccola */
-}
 .folio-entries .entry__link img {
   width: 100%;
   height: auto;
