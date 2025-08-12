@@ -2740,7 +2740,7 @@ td:last-child {
 }
 
 .section-header::before {
-    font-size: 10em !important;  /* Forza la dimensione giusta */
+    font-size: 5em !important;  /* Forza la dimensione giusta */
     position: absolute !important;
     top: -0.25em !important;
     left: -0.1em !important;
