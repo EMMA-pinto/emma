@@ -2724,7 +2724,8 @@ td:last-child {
  * ------------------------------------------------------------------- */
 .section-header {
     display      : flex;
-    align-items  : flex-start;
+    align-items  : flex-start; /* mantiene l'allineamento verticale all'inizio */
+    justify-content: center;   /* centra orizzontalmente */
     margin-bottom: var(--vspace-3_5);
     position     : relative;
 }
