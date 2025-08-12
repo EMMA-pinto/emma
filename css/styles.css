@@ -4009,10 +4009,6 @@ td:last-child {
     max-width: 100%; /* rimuove il limite dei 1400px */
 }
 
-.folio-entries .entry {
-    box-sizing: border-box;
-}
-
 .folio-entries .entry.wide {
     flex: 0 0 33%;  /* leggermente più grande per avvicinare */
 }
