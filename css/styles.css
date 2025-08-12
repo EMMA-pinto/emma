@@ -4011,18 +4011,18 @@ td:last-child {
 }
 
 /* Prima riga */
-.folio-entries:not(.reverse) .entry.wide {
+.folio-entries .entry.wide:not(.reverse) {
   flex: 0 0 calc(33% - 4px);
 }
-.folio-entries:not(.reverse) .entry.square {
+.folio-entries .entry.square:not(.reverse) {
   flex: 0 0 calc(28% - 4px);
 }
 
-/* Seconda riga invertita */
-.folio-entries.reverse .entry.wide {
+/* Seconda riga (class reverse) - invertiamo */
+.folio-entries .entry.wide.reverse {
   flex: 0 0 calc(28% - 4px);
 }
-.folio-entries.reverse .entry.square {
+.folio-entries .entry.square.reverse {
   flex: 0 0 calc(33% - 4px);
 }
 
