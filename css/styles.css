@@ -4020,12 +4020,11 @@ td:last-child {
 
 /* Seconda riga (con .reverse) - invertiamo larghezze */
 .folio-entries .entry.wide.reverse {
-  flex: 0 0 calc(28% - 4px);
+  flex: 0 0 calc(33% - 4px); /* più grande */
 }
 .folio-entries .entry.square.reverse {
-  flex: 0 0 calc(33% - 4px);
+  flex: 0 0 calc(28% - 4px); /* più piccola */
 }
-
 .folio-entries .entry__link img {
   width: 100%;
   height: auto;
