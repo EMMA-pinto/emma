@@ -1230,7 +1230,7 @@ h6,
 .h5,
 .h6 {
     font-family           : 'Helvetica neue';
-    font-weight           : 400;
+    font-weight           : 600;
     color                 : var(--color-text-dark);
     font-variant-ligatures: common-ligatures;
     text-rendering        : optimizeLegibility;
