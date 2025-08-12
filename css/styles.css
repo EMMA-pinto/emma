@@ -3999,15 +3999,20 @@ td:last-child {
 /* ------------------------------------------------------------------- 
  * ## folio entries 
  * ------------------------------------------------------------------- */
-.folio-entries {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px; /* ridotto per avere meno spazio tra le foto */
-    padding-left: 4px; /* quasi a filo bordo */
-    padding-right: 4px;
-    max-width: 100%; /* rimuove il limite dei 1400px */
+* {
+  outline: 1px solid rgba(255,0,0,0.2); /* per vedere i bordi di ogni elemento */
+  box-sizing: border-box;
 }
 
+.folio-entries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  max-width: 100%;
+  margin: 0 auto;
+}
 .folio-entries .entry {
     box-sizing: border-box;
 }
