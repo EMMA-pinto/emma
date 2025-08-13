@@ -2728,14 +2728,13 @@ td:last-child {
     display: flex;
     align-items: flex-start;    /* allinea il testo in alto */
     justify-content: center;    /* centra orizzontalmente */
-    margin-bottom: calc(var(--vspace-1) + 10px
+    margin-bottom: var(--vspace-1); /* ridotto lo spazio sotto */
     position: relative;
 }
 
 .section-header .text-display-title {
     padding-top: 0.5em;
-    margin-bottom: 0.5em;  /* aggiunto un po’ di spazio sotto */
-    font-size: 5rem;     /* ingrandito il testo */
+    margin-bottom: 0;           /* niente spazio extra sotto il titolo */
     position: relative;
 }
 
