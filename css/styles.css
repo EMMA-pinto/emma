@@ -3429,13 +3429,24 @@ td:last-child {
 /* --------------------------------------------------------------------
  * ## intro content
  * -------------------------------------------------------------------- */
+
+/* Sezione principale */
+.s-intro {
+    position: relative;
+    height: 100vh; /* altezza intera viewport */
+    overflow: hidden; /* evita scroll se la GIF è più grande */
+}
+
+/* Contenuto testo e bottoni */
 .s-intro__content {
     z-index       : 2;
     align-items   : flex-end;
-    height        : 100%;
+    height        : 100%; /* ora prende l'altezza della sezione */
     padding-top   : var(--content-padding-top);
     padding-bottom: var(--content-padding-bottom);
     position      : relative;
+    display       : flex;
+    flex-direction: column;
 }
 
 .s-intro__content-text {
@@ -3474,53 +3485,20 @@ td:last-child {
     margin-right: 0;
 }
 
+/* Contenitore GIF */
 .s-intro__content-media {
     position: absolute;
     top     : 0;
     right   : 0;
     bottom  : 0;
     left    : 0;
+    width   : 100%;
+    height  : 100vh; /* forza altezza a schermo intero */
+    overflow: hidden;
 }
 
-.s-intro__content-media::before {
-    display       : block;
-    content       : "";
-    position      : absolute;
-    top           : 0;
-    left          : 0;
-    right         : 0;
-    bottom        : 0;
-    width         : 100%;
-    height        : 100%;
-    background    : rgba(0, 0, 0, 0);
-    pointer-events: none;
-}
-
-.s-intro__content-media::after {
-    display       : block;
-    content       : "";
-    position      : absolute;
-    top           : 0;
-    left          : 0;
-    right         : 0;
-    bottom        : 0;
-    width         : 100%;
-    height        : 100%;
-    background    : linear-gradient(0deg, rgb(0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%);
-    pointer-events: none;
-    opacity       : 0.3;
-}
-
-.s-intro__content-media img {
-    z-index       : 2;
-    -o-object-fit : cover;
-    object-fit    : cover;
-    vertical-align: bottom;
-    width         : 100%;
-    height        : 100%;
-    margin        : 0;
-    padding       : 0;
-}
+/* Overlay trasparente sopra la GIF */
+.s-intro
 
 /* --------------------------------------------------------------------
  * ## intro btn cv download
