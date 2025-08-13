@@ -3928,12 +3928,14 @@ td:last-child {
  * # ABOUT
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: 80px;       /* aumenta lo spazio sopra */
-    padding-bottom: 80px;    /* aumenta lo spazio sotto */
+    min-height: 100vh;       /* occupa almeno tutta l'altezza della viewport */
+    padding-top: 80px;       /* spazio sopra il contenuto */
+    padding-bottom: 80px;    /* spazio sotto il contenuto */
     color: var(--color-3);
-    display: flex;           /* permette layout su righe */
+    display: flex;           /* layout su righe */
     flex-wrap: wrap;
     gap: 40px;               /* spazio tra blocchi */
+    align-items: center;     /* centra verticalmente i blocchi */
 }
 
 /* --------------------------------------------------------------------
