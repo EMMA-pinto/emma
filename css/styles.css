@@ -2733,7 +2733,7 @@ td:last-child {
 
 .section-header .text-display-title {
     padding-top: 0.5em;
-    margin-bottom: 1em;           /* niente spazio extra sotto il titolo */
+    margin-bottom: 0.7em;           /* niente spazio extra sotto il titolo */
     position: relative;
 }
 
