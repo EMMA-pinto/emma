@@ -4022,15 +4022,8 @@ td:last-child {
     --width-grid-max: 1800px;
     margin-top      : var(--vspace-0_5);
 }
-.s-works {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  background-color: #000; /* sfondo nero */
-}.s-works, 
-.s-works .logo-text,
-.s-works .folio-entries .entry__link img {
-  color: white; /* testo bianco */
-}
+
+
 /* ------------------------------------------------------------------- 
  * ## folio entries 
  * ------------------------------------------------------------------- */
