@@ -4034,29 +4034,28 @@ td:last-child {
  * ## folio entries 
  * ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- 
- * ## folio entries 
+ * ## Folio Entries 
  * ------------------------------------------------------------------- */
 .folio-entries {
   max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 3px;
-  padding-right: 3px;
+  margin: 0 auto;
+  padding: 0 3px;
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;             /* spazio ridotto al minimo */
+  gap: 1px;            /* spazio minimo tra le immagini */
   margin-bottom: 12px;
   box-sizing: border-box;
 }
 
 .folio-entries .entry {
-  flex: 0 0 calc(33.33% - 2px); /* 3 per riga con spazio minimo */
+  flex: 0 0 calc(33.33% - 2px); /* 3 immagini per riga con spazio minimo */
   box-sizing: border-box;
+  position: relative;
 }
 
 .folio-entries .entry__thumb {
-  position: relative;   /* per posizionare numeri sopra */
-  overflow: hidden;     /* per evitare overflow nello zoom */
+  position: relative;   /* necessario per posizionare i numeri sopra */
+  overflow: hidden;     /* evita overflow durante lo zoom */
 }
 
 .folio-entries .entry__thumb img {
@@ -4068,20 +4067,22 @@ td:last-child {
 }
 
 .folio-entries .entry:hover .entry__thumb img {
-  transform: scale(1.08);
+  transform: scale(1.08); /* zoom sull'immagine */
 }
 
-/* Numerini in alto a sinistra */
-.folio-entries .entry .photo-number {
+/* Numeri in alto a sinistra */
+.folio-entries .entry .entry-number {
   position: absolute;
   top: 8px;
   left: 8px;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: white;         /* testo visibile su foto */
-  z-index: 2;           /* sopra l’immagine */
-  pointer-events: none; /* non interferisce col click */
+  color: white;
+  z-index: 2;           /* sopra l'immagine */
+  pointer-events: none;  /* non blocca click/lightbox */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* leggibilità su foto chiare */
 }
+
 ------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
