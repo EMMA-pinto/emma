@@ -4310,7 +4310,25 @@ td:last-child {
 .s-footer .link-list a:hover {
     color: white;
 }
+.s-footer,
+.s-footer p,
+.s-footer h1,
+.s-footer h2,
+.s-footer h3,
+.s-footer h4,
+.s-footer h5,
+.s-footer h6,
+.s-footer a,
+.s-footer span,
+.s-footer li {
+    color: white !important;
+}
 
+/* Mantieni hover dei link leggermente diverso se vuoi */
+.s-footer a:hover,
+.s-footer a:focus {
+    color: #f0f0f0 !important; /* bianco chiaro per l'hover */
+}
 /* ------------------------------------------------------------------- 
  * ## copyright
  * ------------------------------------------------------------------- */
