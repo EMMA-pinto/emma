@@ -4234,6 +4234,12 @@ td:last-child {
 .s-footer__block {
     margin-bottom: var(--vspace-0_5);
 }
+    .s-footer__block {
+    display: flex;           /* rende il blocco un contenitore flex */
+    flex-direction: column;  /* impila i contenuti verticalmente */
+    justify-content: flex-start; /* allinea tutto in alto */
+    margin-bottom: var(--vspace-0_5);
+}
 
 .s-footer__block a {
     color: var(--color-gray-12);
