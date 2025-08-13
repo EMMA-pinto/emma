@@ -3935,9 +3935,8 @@ td:last-child {
     display: flex;           /* layout su righe */
     flex-wrap: wrap;
     gap: 40px;               /* spazio tra blocchi */
-    align-items: center;     /* centra verticalmente i blocchi */
+    align-items: flex-start; /* allinea i blocchi in alto */
 }
-
 /* --------------------------------------------------------------------
  * ## about blocks
  * -------------------------------------------------------------------- */
