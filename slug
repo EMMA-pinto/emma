@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slug Page</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+
+  .container {
+    display: flex;
+    padding: 50px;
+    gap: 20px;
+  }
+
+  .text-column {
+    flex: 2;
+    max-width: 65%;
+  }
+
+  .text-column h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .images-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .images-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-column">
+    <h1>“Sefèm” Sound Evolution Festival Milano</h1>
+    <p>Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano e il suo modo di inserirsi all’interno del panorama internazionale: un luogo ricco di opportunità, cultura, dinamicità, avanguardia ma pur sempre a misura d’uomo.</p>
+    <p>Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati, intervallati dalla presenza di interventi e workshop di natura artistico-culturale.</p>
+  </div>
+  <div class="images-column">
+    <img src="poster1.jpg" alt="Poster Festival">
+    <img src="poster2.jpg" alt="Poster Festival">
+    <img src="poster3.jpg" alt="Poster Festival">
+  </div>
+</div>
+
+</body>
+</html>
