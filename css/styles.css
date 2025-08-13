@@ -1251,7 +1251,7 @@ h3,
 .h3,
 .h4 {
     margin-top   : 0.5px;
-    margin-bottom: 1px; /* più spazio sotto */
+    margin-bottom: 1.5px; /* più spazio sotto */
 }
 
 h5,
@@ -1293,7 +1293,7 @@ h3,
 
 h4,
 .h4 {
-    font-size: 1rem;        /* prima era var(--text-lg) */
+    font-size: 1.5rem;        /* prima era var(--text-lg) */
     line-height: var(--vspace-1);
 }
 
