@@ -4036,13 +4036,14 @@ td:last-child {
   padding-right: 3px;
   display: flex;
   flex-wrap: wrap;
-  gap: 3px;
+  gap: 1px;             /* spazio ridotto al minimo */
   margin-bottom: 12px;
   box-sizing: border-box;
 }
 
 .folio-entries .entry {
-  flex: 0 0 calc(33.33% - 4px); /* tutte larghe uguali, 3 per riga */
+  flex: 0 0 calc(33.33% - 2px); /* 3 per riga con spazio minimo */
+  box-sizing: border-box;
 }
 
 .folio-entries .entry__link img {
