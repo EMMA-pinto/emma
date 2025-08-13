@@ -2734,7 +2734,7 @@ td:last-child {
 
 .section-header .text-display-title {
     padding-top: 0.5em;
-    margin-bottom: 0;           /* niente spazio extra sotto il titolo */
+    margin-bottom: 2em;           /* niente spazio extra sotto il titolo */
     position: relative;
 }
 
@@ -4466,6 +4466,6 @@ td:last-child {
     margin-bottom: 2px;
 }
 .section-header .text-display-title {
-  font-size: 7rem !important;
+  font-size: 6.5rem !important;
   line-height: 1.2 !important;
 }
