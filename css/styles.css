@@ -2725,26 +2725,21 @@ td:last-child {
  * ## section header
  * ------------------------------------------------------------------- */
 .section-header {
-    display      : flex;
-    align-items  : flex-start; /* mantiene l'allineamento verticale all'inizio */
-    justify-content: center;   /* centra orizzontalmente */
-    margin-bottom: var(--vspace-3_5);
-    position     : relative;
-}
-    .section-header {
-    position: relative; /* serve per i figli assoluti */
-    display: block;     /* rimuove flex se non serve */
-    height: 100vh;      /* altezza piena della viewport */
+    display: flex;
+    align-items: flex-start;    /* allinea il testo in alto */
+    justify-content: center;    /* centra orizzontalmente */
+    margin-bottom: var(--vspace-1); /* ridotto lo spazio sotto */
+    position: relative;
 }
 
 .section-header .text-display-title {
-    padding-top  : 0.5em;
-    margin-bottom: 0;
-    position     : relative;
+    padding-top: 0.5em;
+    margin-bottom: 0;           /* niente spazio extra sotto il titolo */
+    position: relative;
 }
 
 .section-header::before {
-    font-size: 5em !important;  /* Forza la dimensione giusta */
+    font-size: 5em !important;  
     position: absolute !important;
     top: -0.25em !important;
     left: -0.1em !important;
@@ -2757,17 +2752,14 @@ td:last-child {
     line-height: 1 !important;
     font-family: 'Helvetica', sans-serif !important;
 }
-.section-header {
-    min-height: 100vh; /* 100% dell’altezza della viewport */
-}
+
 .section-header.light-on-dark .text-display-title {
     color: white;
 }
 
 .section-header.light-on-dark::before {
     color: rgba(255, 255, 255, 0.15);
-} riscrivimelo giusto cosi faccio copia e incolla
-
+}
 
 /* ------------------------------------------------------------------- 
  * ## social list
