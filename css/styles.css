@@ -3935,20 +3935,24 @@ td:last-child {
     display: flex;           /* layout su righe */
     flex-wrap: wrap;
     gap: 40px;               /* spazio tra blocchi */
+    justify-content: flex-start; /* allinea i blocchi a sinistra */
     align-items: flex-start; /* allinea i blocchi in alto */
 }
+
 /* --------------------------------------------------------------------
  * ## about blocks
  * -------------------------------------------------------------------- */
 .s-about__blocks {
+    flex: 0 0 33%;           /* occupa circa 1/3 della larghezza della sezione */
+    max-width: 33%;
+    text-align: left;        /* testo allineato a sinistra */
     margin-top: var(--vspace-3);
-    flex: 0 0 33%;           /* occupa circa 1/3 della larghezza */
-    text-align: left;        /* allinea testo a sinistra */
+    box-sizing: border-box;  /* evita overflow dovuto a padding/margin */
 }
 
 .s-about__blocks .s-about__block-title {
     margin-top: 0;
-    margin-bottom: 1em;      /* più spazio sotto il titolo */
+    margin-bottom: 1em;      /* spazio sotto il titolo */
     padding-left: 1.45rem;
     position: relative;
     font-size: 2rem;         /* titolo ingrandito */
