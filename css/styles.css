@@ -3926,12 +3926,14 @@ td:last-child {
 
 /* ===================================================================
  * # ABOUT
- *
- *
  * ------------------------------------------------------------------- */
 .s-about {
-    padding-top: var(--vspace-7);
-    color      : var(--color-3);
+    padding-top: 80px;       /* aumenta lo spazio sopra */
+    padding-bottom: 80px;    /* aumenta lo spazio sotto */
+    color: var(--color-3);
+    display: flex;           /* permette layout su righe */
+    flex-wrap: wrap;
+    gap: 40px;               /* spazio tra blocchi */
 }
 
 /* --------------------------------------------------------------------
@@ -3939,49 +3941,54 @@ td:last-child {
  * -------------------------------------------------------------------- */
 .s-about__blocks {
     margin-top: var(--vspace-3);
+    flex: 0 0 33%;           /* occupa circa 1/3 della larghezza */
+    text-align: left;        /* allinea testo a sinistra */
 }
 
 .s-about__blocks .s-about__block-title {
-    margin-top   : 0;
-    margin-bottom: var(--vspace-1);
-    padding-left : 1.45rem;
-    position     : relative;
+    margin-top: 0;
+    margin-bottom: 1em;      /* più spazio sotto il titolo */
+    padding-left: 1.45rem;
+    position: relative;
+    font-size: 2rem;         /* titolo ingrandito */
 }
 
 .s-about__blocks .s-about__block-title::before {
-    content         : "";
-    height          : 0.7em;
-    width           : 3px;
+    content: "";
+    height: 0.7em;
+    width: 3px;
     background-color: var(--color-1);
-    transform       : translateY(-50%);
-    position        : absolute;
-    left            : 0;
-    top             : 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    top: 50%;
 }
 
 .s-about__list {
-    list-style : none;
-    font-size  : calc(var(--text-size) * 1.05);
+    list-style: none;
+    font-size: 1.1rem;       /* testo leggermente più grande */
     margin-left: 0;
 }
 
 .s-about__list a {
     color: var(--color-text);
+    text-decoration: none;
 }
 
 .s-about__list li {
-    font-weight  : 500;
-    margin-bottom: var(--vspace-0_625);
-    padding-left : 0;
+    font-weight: 500;
+    margin-bottom: 0.625rem;
+    padding-left: 0;
 }
 
 .s-about__list span {
-    display    : block;
-    font-size  : var(--text-sm);
+    display: block;
+    font-size: 0.9rem;       /* leggermente più leggibile */
     font-weight: 300;
-    line-height: 1.2;
-    color      : var(--color-text-light) !important;
+    line-height: 1.4;        /* aumenta l'interlinea */
+    color: var(--color-text-light) !important;
 }
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
