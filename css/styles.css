@@ -4022,7 +4022,14 @@ td:last-child {
     --width-grid-max: 1800px;
     margin-top      : var(--vspace-0_5);
 }
+.s-works {
+  background-color: #fff !important; /* forza sfondo bianco */
+  color: #000 !important;            /* forza testo nero */
+}
 
+.s-works .logo-text {
+  color: #000 !important;            /* titolo nero */
+}
 /* ------------------------------------------------------------------- 
  * ## folio entries 
  * ------------------------------------------------------------------- */
