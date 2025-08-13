@@ -4,12 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slug Page</title>
-
-<!-- CSS principale -->
-<link rel="stylesheet" href="styles.css">
-
 <style>
-  /* Stili base della pagina slug */
   body {
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -54,4 +49,69 @@
     height: auto;
     display: block;
     object-fit: cover;
-    borde
+    border-radius: 8px;
+  }
+
+  /* STILI HEADER */
+  .s-header {
+    background-color: #222;
+    color: white;
+    padding: 20px 50px;
+  }
+
+  .s-header__logo a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .s-header__menu-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .s-header__menu-links li a {
+    color: white;
+    text-decoration: none;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- HEADER CON MENU -->
+<header class="s-header">
+    <div class="s-header__inner">
+        <div class="s-header__logo">
+            <a class="logo" href="index.html">EMMA PINTO</a>
+        </div>
+
+        <nav class="s-header__nav">    
+            <ul class="s-header__menu-links">
+                <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
+                <li><a class="smoothscroll" href="#about">About</a></li>
+                <li><a class="smoothscroll" href="#works">Works</a></li>
+                <li><a class="smoothscroll" href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- CONTENUTO SLUG -->
+<div class="container">
+  <div class="text-column">
+    <h1>“COMA COSE/"La Gelosia"</h1>
+    <p>Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano e il suo modo di inserirsi all’interno del panorama internazionale: un luogo ricco di opportunità, cultura, dinamicità, avanguardia ma pur sempre a misura d’uomo. Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati, intervallati dalla presenza di interventi e workshop di natura artistico-culturale.</p>
+  </div>
+  <div class="images-column">
+    <img src="images/folio/coma.jpg" alt="Poster Festival">
+    <img src="poster2.jpg" alt="Poster Festival">
+    <img src="poster3.jpg" alt="Poster Festival">
+  </div>
+</div>
+
+</body>
+</html>
