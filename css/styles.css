@@ -1299,10 +1299,9 @@ h4,
 
 h5,
 .h5 {
-    font-size  : var(--text-md);
-    line-height: var(--vspace-0_875);
+    font-size: calc(var(--text-md) * 1.1);  /* +10% rispetto al valore originale */
+    line-height: calc(var(--vspace-0_875) * 1.2);
 }
-
 h6,
 .h6 {
     font-family   : 'Helvetica neue';;
