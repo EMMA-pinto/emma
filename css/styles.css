@@ -4056,21 +4056,21 @@ td:last-child {
   height: auto;
   display: block;
 }
-    .folio-entries .entry__thumb {
-  overflow: hidden; /* mantiene la foto dentro il riquadro */
+/* Assicuriamoci che il primo .entry abbia overflow nascosto */
+.folio-entries .entry:first-child .entry__thumb {
+  position: relative;
+  overflow: hidden;
 }
 
-.folio-entries .entry__link img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease; /* animazione morbida */
+.folio-entries .entry:first-child .entry__thumb img {
+  transition: transform 0.4s ease;
+  transform-origin: center center;
 }
 
-.folio-entries .entry__link:hover img {
-  transform: scale(1.05); /* leggero zoom al passaggio del mouse */
-}
-/* ------------------------------------------------------------------- 
+/* Zoom solo sulla prima */
+.folio-entries .entry:first-child:hover .entry__thumb img {
+  transform: scale(1.06);
+}------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
 .s-testimonials {
