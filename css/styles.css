@@ -4201,6 +4201,9 @@ td:last-child {
  *
  *
  * ------------------------------------------------------------------- */
+/* ===================================================================
+ * # FOOTER
+ * ------------------------------------------------------------------- */
 .s-footer {
     --bottom-padding: var(--vspace-2_5);
     background-color: var(--color-3);
@@ -4208,6 +4211,12 @@ td:last-child {
     padding-top     : var(--vspace-6);
     padding-bottom  : var(--bottom-padding);
     color           : var(--color-gray-15);
+
+    /* NUOVE PROPRIETÀ PER OCCUPARE UN’INTERA SEZIONE */
+    min-height: 100vh;       /* altezza minima pari all’intera viewport */
+    display: flex;            /* per allineare contenuti verticalmente */
+    flex-direction: column;
+    justify-content: center;  /* centra verticalmente il contenuto */
 }
 
 .s-footer h5 {
