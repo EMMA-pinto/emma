@@ -2731,6 +2731,11 @@ td:last-child {
     margin-bottom: var(--vspace-3_5);
     position     : relative;
 }
+    .section-header {
+    position: relative; /* serve per i figli assoluti */
+    display: block;     /* rimuove flex se non serve */
+    height: 100vh;      /* altezza piena della viewport */
+}
 
 .section-header .text-display-title {
     padding-top  : 0.5em;
