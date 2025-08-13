@@ -2724,13 +2724,9 @@ td:last-child {
  * ## section header
  * ------------------------------------------------------------------- */
 .section-header {
-    display: flex;
-    align-items: flex-start;    /* allinea il testo in alto */
-    justify-content: center;    /* centra orizzontalmente */
-    margin-bottom: var(--vspace-1); /* ridotto lo spazio sotto */
-    position: relative;
+    text-align: center;       /* centra il titolo */
+    margin-bottom: var(--vspace-1);
 }
-
 .section-header .text-display-title {
     padding-top: 0.5em;
     margin-bottom: 0.7em;           /* niente spazio extra sotto il titolo */
