@@ -2712,7 +2712,7 @@ td:last-child {
 
 .text-display-title {
     font-family   : 'Helvetica';
-    font-size     : 4rem; /* o un valore che ti piace */
+    font-size     : 6rem; /* o un valore che ti piace */
     line-height   : 1.0717;
     letter-spacing: -0.015em;
     margin-top    : 0;
@@ -2752,7 +2752,9 @@ td:last-child {
     line-height: 1 !important;
     font-family: 'Helvetica', sans-serif !important;
 }
-
+.section-header {
+    min-height: 100vh; /* 100% dell’altezza della viewport */
+}
 .section-header.light-on-dark .text-display-title {
     color: white;
 }
