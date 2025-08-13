@@ -4068,7 +4068,7 @@ td:last-child {
 }
 
 .folio-entries .entry:hover .entry__thumb img {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 /* Numerini in alto a sinistra */
