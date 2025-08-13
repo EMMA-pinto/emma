@@ -4067,7 +4067,7 @@ td:last-child {
 }
 
 .folio-entries .entry:hover .entry__thumb img {
-  transform: scale(1.08); /* zoom sull'immagine */
+  transform: scale(1.07); /* zoom sull'immagine */
 }
 
 /* Numeri in alto a sinistra */
