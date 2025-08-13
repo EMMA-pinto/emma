@@ -4033,6 +4033,9 @@ td:last-child {
 /* ------------------------------------------------------------------- 
  * ## folio entries 
  * ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- 
+ * ## folio entries 
+ * ------------------------------------------------------------------- */
 .folio-entries {
   max-width: 1800px;
   margin-left: auto;
@@ -4051,26 +4054,35 @@ td:last-child {
   box-sizing: border-box;
 }
 
-.folio-entries .entry__link img {
+.folio-entries .entry__thumb {
+  position: relative;   /* per posizionare numeri sopra */
+  overflow: hidden;     /* per evitare overflow nello zoom */
+}
+
+.folio-entries .entry__thumb img {
   width: 100%;
   height: auto;
   display: block;
-}
-/* Assicuriamoci che il primo .entry abbia overflow nascosto */
-.folio-entries .entry:first-child .entry__thumb {
-  position: relative;
-  overflow: hidden;
-}
-
-.folio-entries .entry:first-child .entry__thumb img {
   transition: transform 0.4s ease;
   transform-origin: center center;
 }
 
-/* Zoom solo sulla prima */
-.folio-entries .entry:first-child:hover .entry__thumb img {
+.folio-entries .entry:hover .entry__thumb img {
   transform: scale(1.06);
-}------------------------------------------------------- 
+}
+
+/* Numerini in alto a sinistra */
+.folio-entries .entry .photo-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;         /* testo visibile su foto */
+  z-index: 2;           /* sopra l’immagine */
+  pointer-events: none; /* non interferisce col click */
+}
+------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
 .s-testimonials {
