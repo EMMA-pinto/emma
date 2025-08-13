@@ -2712,16 +2712,15 @@ td:last-child {
 
 .text-display-title {
     font-family   : 'Helvetica';
-    font-size     : 11rem; /* sostituisci var(--text-display-1) se vuoi */
+    font-size     : 4rem; /* o un valore che ti piace */
     line-height   : 1.0717;
     letter-spacing: -0.015em;
     margin-top    : 0;
     margin-bottom : var(--vspace-1_5);
-    font-weight   : 700;   /* aggiunto grassetto */
-    color         : black; /* se vuoi essere sicuro del colore */
-    text-transform: uppercase; /* se vuoi maiuscolo */
+    font-weight   : 700;
+    color         : black;
+    text-transform: uppercase;
 }
-
 /* ------------------------------------------------------------------- 
  * ## section header
  * ------------------------------------------------------------------- */
