@@ -4250,8 +4250,15 @@ td:last-child {
     min-height: 100vh; 
     display: flex; 
     flex-direction: column; 
-    justify-content: flex-start; /* tutto inizia dall’alto */ 
-} 
+    justify-content: space-between; /* titolo in alto, contenuti in basso */
+}
+
+.s-footer__inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
 
 /* Titolo "Get in Touch" */
 .s-footer h2.get-in-touch { 
@@ -4358,7 +4365,6 @@ td:last-child {
 .s-footer a:focus { 
     color: #f0f0f0 !important; 
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## copyright
