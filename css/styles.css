@@ -4352,6 +4352,11 @@ td:last-child {
 .s-footer a:hover, .s-footer a:focus { 
     color: #f0f0f0 !important; /* bianco chiaro per l'hover */ 
 }
+    .s-footer h2.get-in-touch {
+    margin-top: 0;       /* rimuove margini superiori */
+    padding-top: 0;      /* rimuove padding superiori */
+    transform: translateY(-20px); /* sposta il titolo 20px più in alto */
+}
 
 /* ------------------------------------------------------------------- 
  * ## copyright
