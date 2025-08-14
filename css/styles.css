@@ -4244,19 +4244,13 @@ td:last-child {
     margin-top: auto; 
     padding-top: var(--vspace-6); 
     padding-bottom: var(--bottom-padding); 
-    color: var(--color-gray-15);  
+    color: var(--color-gray-15); 
 
     /* Occupa intera sezione */
     min-height: 100vh; 
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; /* titolo in alto, contenuti in basso */
-
-    /* FULL WIDTH BACKGROUND */
-    width: 100vw; 
-    position: relative;
-    left: 0;
-    right: 0;
 }
 
 .s-footer__inner {
@@ -4264,12 +4258,6 @@ td:last-child {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
-
-    /* contenuto centrato e max-width */
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 var(--gutter);
 }
 
 /* Titolo "Get in Touch" */
@@ -4289,7 +4277,6 @@ td:last-child {
 
 .s-footer__block a { 
     color: var(--color-gray-12); 
-    transition: color 0.3s;
 } 
 
 .s-footer__block a:focus, 
@@ -4351,7 +4338,6 @@ td:last-child {
 .s-footer .link-list a { 
     color: var(--color-gray-15); 
     border: none; 
-    transition: color 0.3s;
 } 
 
 .s-footer .link-list a:focus, 
@@ -4379,6 +4365,7 @@ td:last-child {
 .s-footer a:focus { 
     color: #f0f0f0 !important; 
 }
+
 
 
 
