@@ -4236,8 +4236,8 @@ td:last-child {
 }
 
 /* =================================================================== 
- * # FOOTER 
- * ------------------------------------------------------------------- */ 
+   # FOOTER 
+=================================================================== */ 
 .s-footer { 
     --bottom-padding: var(--vspace-2_5); 
     background-color: var(--color-3); 
@@ -4245,42 +4245,42 @@ td:last-child {
     padding-top: var(--vspace-6); 
     padding-bottom: var(--bottom-padding); 
     color: var(--color-gray-15); 
-    /* NUOVE PROPRIETÀ PER OCCUPARE UN’INTERA SEZIONE */ 
-    min-height: 100vh; /* altezza minima pari all’intera viewport */ 
-    display: flex; /* per allineare contenuti verticalmente */ 
+
+    /* Occupa intera sezione */
+    min-height: 100vh; 
+    display: flex; 
     flex-direction: column; 
-    justify-content: center; /* centra verticalmente il contenuto */ 
+    justify-content: flex-start; /* tutto inizia dall’alto */ 
 } 
 
-.s-footer h2.get-in-touch {
-    margin-top: 0 !important;          /* annulla eventuali margini superiori */
-    padding-top: 0 !important;         /* annulla eventuali padding superiori */
-    position: relative;                 /* necessario per usare top */
-    top: -20px !important;              /* sposta il titolo di 20px verso l’alto */
-}
-
-.s-footer h5 { 
+/* Titolo "Get in Touch" */
+.s-footer h2.get-in-touch { 
     color: white; 
     margin-top: 0; 
-} 
+    margin-bottom: var(--vspace-1_25); 
+}
 
+/* Blocchi interni */
 .s-footer__block { 
-    margin-bottom: var(--vspace-0_5); 
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start; 
+    margin-bottom: var(--vspace-0_5); 
 } 
 
 .s-footer__block a { 
     color: var(--color-gray-12); 
 } 
-.s-footer__block a:focus, .s-footer__block a:hover { 
+
+.s-footer__block a:focus, 
+.s-footer__block a:hover { 
     color: white; 
 } 
 
 .s-footer__about { 
     padding-top: var(--vspace-0_25); 
 } 
+
 .s-footer__about > * { 
     width: min(100%, 560px); 
 } 
@@ -4332,10 +4332,13 @@ td:last-child {
     color: var(--color-gray-15); 
     border: none; 
 } 
-.s-footer .link-list a:focus, .s-footer .link-list a:hover { 
+
+.s-footer .link-list a:focus, 
+.s-footer .link-list a:hover { 
     color: white; 
 } 
 
+/* Colore di default testo/footer */
 .s-footer, 
 .s-footer p, 
 .s-footer h1, 
@@ -4350,14 +4353,12 @@ td:last-child {
     color: white !important; 
 } 
 
-.s-footer a:hover, .s-footer a:focus { 
-    color: #f0f0f0 !important; /* bianco chiaro per l'hover */ 
+/* Hover leggero per i link */
+.s-footer a:hover, 
+.s-footer a:focus { 
+    color: #f0f0f0 !important; 
 }
-    .s-footer h2.get-in-touch {
-    margin-top: 0;       /* rimuove margini superiori */
-    padding-top: 0;      /* rimuove padding superiori */
-    transform: translateY(-20px); /* sposta il titolo 20px più in alto */
-}
+
 
 /* ------------------------------------------------------------------- 
  * ## copyright
