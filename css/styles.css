@@ -4241,22 +4241,18 @@ td:last-child {
 .s-footer { 
     --bottom-padding: var(--vspace-2_5); 
     background-color: var(--color-3); 
-    margin-top: auto; 
-    padding-top: var(--vspace-6); 
-    padding-bottom: var(--bottom-padding); 
     color: var(--color-gray-15);  
 
-    /* Occupa intera sezione */
-    min-height: 100vh; 
+    /* FULL WIDTH BACKGROUND */
+    width: 100%;
+    min-width: 100vw;
+    margin: 0;
+    padding-top: var(--vspace-6);
+    padding-bottom: var(--bottom-padding);
+
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; /* titolo in alto, contenuti in basso */
-
-    /* FULL WIDTH BACKGROUND */
-    width: 100vw; 
-    position: relative;
-    left: 0;
-    right: 0;
 }
 
 .s-footer__inner {
