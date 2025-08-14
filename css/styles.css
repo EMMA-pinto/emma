@@ -4252,10 +4252,11 @@ td:last-child {
     justify-content: center; /* centra verticalmente il contenuto */ 
 } 
 
-/* Regola specifica solo per il titolo "Get In Touch." */
-.s-footer .section-header h2 {
-    align-self: flex-start; /* allinea in alto */
-    margin-top: 0;
+.s-footer h2.get-in-touch {
+    margin-top: 0 !important;          /* annulla eventuali margini superiori */
+    padding-top: 0 !important;         /* annulla eventuali padding superiori */
+    position: relative;                 /* necessario per usare top */
+    top: -20px !important;              /* sposta il titolo di 20px verso l’alto */
 }
 
 .s-footer h5 { 
