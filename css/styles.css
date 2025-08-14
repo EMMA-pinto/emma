@@ -4253,9 +4253,8 @@ td:last-child {
     flex-direction: column;
     justify-content: center;
 
-    /* Larghezza piena */
-    width: 100vw;
-    margin-left: calc(-1 * (100vw - 100%)/2);
+    /* Larghezza piena senza spostare il contenuto */
+    width: 100%;
 }
 
 .s-footer h5 {
