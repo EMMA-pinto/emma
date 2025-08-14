@@ -4238,11 +4238,6 @@ td:last-child {
 
 /* ===================================================================
  * # FOOTER
- *
- *
- * ------------------------------------------------------------------- */
-/* ===================================================================
- * # FOOTER
  * ------------------------------------------------------------------- */
 .s-footer {
     --bottom-padding: var(--vspace-2_5);
@@ -4252,11 +4247,15 @@ td:last-child {
     padding-bottom  : var(--bottom-padding);
     color           : var(--color-gray-15);
 
-    /* NUOVE PROPRIETÀ PER OCCUPARE UN’INTERA SEZIONE */
-    min-height: 100vh;       /* altezza minima pari all’intera viewport */
-    display: flex;            /* per allineare contenuti verticalmente */
+    /* Altezza minima a piena viewport */
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
-    justify-content: center;  /* centra verticalmente il contenuto */
+    justify-content: center;
+
+    /* Larghezza piena */
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%)/2);
 }
 
 .s-footer h5 {
@@ -4265,12 +4264,9 @@ td:last-child {
 }
 
 .s-footer__block {
-    margin-bottom: var(--vspace-0_5);
-}
-    .s-footer__block {
-    display: flex;           /* rende il blocco un contenitore flex */
-    flex-direction: column;  /* impila i contenuti verticalmente */
-    justify-content: flex-start; /* allinea tutto in alto */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     margin-bottom: var(--vspace-0_5);
 }
 
@@ -4287,7 +4283,7 @@ td:last-child {
     padding-top: var(--vspace-0_25);
 }
 
-.s-footer__about>* {
+.s-footer__about > * {
     width: min(100%, 560px);
 }
 
@@ -4343,6 +4339,8 @@ td:last-child {
 .s-footer .link-list a:hover {
     color: white;
 }
+
+/* Forza tutti i testi del footer bianchi */
 .s-footer,
 .s-footer p,
 .s-footer h1,
@@ -4357,11 +4355,12 @@ td:last-child {
     color: white !important;
 }
 
-/* Mantieni hover dei link leggermente diverso se vuoi */
+/* Hover leggermente più chiaro */
 .s-footer a:hover,
 .s-footer a:focus {
-    color: #f0f0f0 !important; /* bianco chiaro per l'hover */
+    color: #f0f0f0 !important;
 }
+
 /* ------------------------------------------------------------------- 
  * ## copyright
  * ------------------------------------------------------------------- */
