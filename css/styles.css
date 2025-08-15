@@ -4236,21 +4236,21 @@ td:last-child {
 }
 
 /* =================================================================== 
-   # FOOTER 
+   # FOOTER FULL WIDTH
 =================================================================== */ 
 .s-footer { 
     --bottom-padding: var(--vspace-2_5); 
     background-color: var(--color-3); 
-    margin-top: auto; 
+    margin: 0; /* Rimuove margini esterni */
     padding-top: var(--vspace-6); 
     padding-bottom: var(--bottom-padding); 
     color: var(--color-gray-15); 
-
-    /* Occupa intera sezione */
+    width: 100%;
+    max-width: 100%;
     min-height: 100vh; 
     display: flex; 
     flex-direction: column; 
-    justify-content: space-between; /* titolo in alto, contenuti in basso */
+    justify-content: space-between; 
 }
 
 .s-footer__inner {
@@ -4258,6 +4258,10 @@ td:last-child {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* Titolo "Get in Touch" */
@@ -4307,17 +4311,19 @@ td:last-child {
     padding-top: var(--vspace-1_25); 
     margin-top: var(--vspace-0_75); 
     position: relative; 
-} 
+    width: 100%;
+}
 
+/* Linea divisoria full-width */
 .s-footer__bottom::before { 
     content: ""; 
     display: block; 
     height: 1px; 
-    width: calc(100% - 2 * var(--gutter)); 
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.04); 
     position: absolute; 
     top: 0; 
-    left: var(--gutter); 
+    left: 0; 
 } 
 
 .s-footer__social svg path, 
