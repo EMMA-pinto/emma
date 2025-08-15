@@ -4240,7 +4240,7 @@ td:last-child {
 .s-footer { 
     --bottom-padding: var(--vspace-2_5); 
     background-color: var(--color-3); 
-    margin-top: auto; 
+    margin: 0; /* rimuove margini esterni */
     padding-top: var(--vspace-6); 
     padding-bottom: var(--bottom-padding); 
     color: var(--color-gray-15);  
@@ -4250,33 +4250,28 @@ td:last-child {
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; /* titolo in alto, contenuti in basso */
+    width: 100%; /* estende sfondo su tutta la viewport */
+}
 
-    /* Full width background */
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-} 
+.s-footer__inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    max-width: 1200px; /* contenitore centrato */
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
 
-.s-footer__inner { 
-    display: flex; 
-    flex-direction: column; 
-    flex-grow: 1; 
-    justify-content: space-between; 
-
-    /* Full width content */
-    max-width: none;
-    padding-left: 0;
-    padding-right: 0;
-} 
-
-/* Titolo "Get in Touch" */ 
+/* Titolo "Get in Touch" */
 .s-footer h2.get-in-touch { 
     color: white; 
     margin-top: 0; 
     margin-bottom: var(--vspace-1_25); 
-} 
+}
 
-/* Blocchi interni */ 
+/* Blocchi interni */
 .s-footer__block { 
     display: flex; 
     flex-direction: column; 
@@ -4354,7 +4349,7 @@ td:last-child {
     color: white; 
 } 
 
-/* Colore di default testo/footer */ 
+/* Colore di default testo/footer */
 .s-footer, 
 .s-footer p, 
 .s-footer h1, 
@@ -4369,13 +4364,11 @@ td:last-child {
     color: white !important; 
 } 
 
-/* Hover leggero per i link */ 
+/* Hover leggero per i link */
 .s-footer a:hover, 
 .s-footer a:focus { 
     color: #f0f0f0 !important; 
 }
-
-
 
 /* ------------------------------------------------------------------- 
  * ## copyright
