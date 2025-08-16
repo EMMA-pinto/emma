@@ -4364,7 +4364,19 @@ td:last-child {
 .s-footer a:focus { 
     color: #f0f0f0 !important; 
 }
+.s-footer {
+    background-color: var(--color-3);
+    margin: 0;        /* elimina margini esterni */
+    padding: 0;       /* elimina padding laterale */
+    width: 100%;      /* forza l'estensione */
+    max-width: 100vw; /* occupa tutta la viewport */
+}
 
+.s-footer__inner {
+    max-width: 1200px; /* se vuoi il contenuto centrato */
+    margin: 0 auto;    /* centrato dentro lo sfondo */
+    padding: 0 20px;   /* spaziatura interna */
+}
 /* ------------------------------------------------------------------- 
  * ## copyright
  * ------------------------------------------------------------------- */
