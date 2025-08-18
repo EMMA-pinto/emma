@@ -4107,14 +4107,57 @@ html, body {
   border-bottom: 1px solid #000; /* linea nera di 1px */
 }
 
-
 /* ------------------------------------------------------------------- 
  * responsive:
  * about
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) { /* tablet */
     .s-about {
-        padding-top: var(--vspace-5);
+        padding-top: 60px;
+        padding-bottom: 60px;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .s-about__blocks {
+        flex: 0 0 48%;
+        max-width: 48%;
+        margin-top: var(--vspace-2);
+    }
+}
+
+@media screen and (max-width: 768px) { /* smartphone */
+    .s-about {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 20px;
+        flex-direction: column; /* i blocchi vanno in colonna */
+        align-items: center;
+    }
+
+    .s-about__blocks {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-top: var(--vspace-2);
+    }
+
+    .s-about__blocks .s-about__block-title {
+        font-size: 1.6rem;
+        padding-left: 0;
+    }
+
+    .s-about__blocks .s-about__block-title::before {
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .s-about__list {
+        font-size: 1.1rem;
+    }
+
+    .s-about__list span {
+        font-size: 0.85rem;
     }
 }
 
