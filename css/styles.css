@@ -4020,6 +4020,21 @@ html, body {
   gap: 20px;
 }
 
+/* Tablet: 2 colonne */
+@media (max-width: 992px) {
+  .folio-entries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 colonna */
+@media (max-width: 600px) {
+  .folio-entries {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* -----------------------
    MEDIA QUERIES
 ----------------------- */
