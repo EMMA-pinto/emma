@@ -3427,51 +3427,58 @@ html, body {
  * ## intro content
  * -------------------------------------------------------------------- */
 
+/* ===================================================================
+   # SEZIONE INTRO
+=================================================================== */
+
 /* Sezione principale */
 .s-intro {
     position: relative;
-    height: 100vh; /* altezza intera viewport */
-    overflow: hidden; /* evita scroll se la GIF è più grande */
+    height: 100vh;       /* altezza intera viewport */
+    overflow: hidden;    /* evita scroll se la GIF è più grande */
+    background-color: var(--color-gray-10); /* sfondo opzionale */
 }
 
 /* Contenuto testo e bottoni */
 .s-intro__content {
-    z-index       : 2;
-    display       : flex;
+    position: relative;
+    z-index: 2;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* allinea il testo in basso */
-    height        : 100%; /* prende tutta l'altezza della sezione */
-    padding-top   : var(--content-padding-top);
+    justify-content: flex-end;  /* allinea il testo in basso */
+    height: 100%;
+    padding-top: var(--content-padding-top);
     padding-bottom: var(--content-padding-bottom);
-    position      : relative;
 }
 
+/* Testo principale */
 .s-intro__content-text {
-    z-index    : 2;
+    z-index: 2;
     grid-column: 1 / span 8;
-    margin-top : var(--vspace-1);
+    margin-top: var(--vspace-1);
 }
 
 .s-intro__content-pretitle {
-    font-weight  : 600;
+    font-weight: 600;
     margin-bottom: var(--vspace-0_125);
-    color        : var(--color-1);
+    color: var(--color-1);
 }
 
 .s-intro__content-title {
-    font-size     : clamp(3.8rem, 4.8vw, 8.8rem);
-    line-height   : 1.045;
+    font-size: clamp(3.8rem, 4.8vw, 8.8rem);
+    line-height: 1.045;
     letter-spacing: -0.025em;
-    margin-top    : 0;
-    margin-bottom : var(--vspace-1_25);
+    margin-top: 0;
+    margin-bottom: var(--vspace-1_25);
 }
 
+/* Bottoni */
 .s-intro__content-btns {
-    --color-btn           : var(--color-text-dark);
-    --color-btn-text      : var(--color-white);
-    --color-btn-hover     : var(--color-1);
+    --color-btn: var(--color-text-dark);
+    --color-btn-text: var(--color-white);
+    --color-btn-hover: var(--color-1);
     --color-btn-hover-text: var(--color-white);
-    margin-top            : var(--vspace-2);
+    margin-top: var(--vspace-2);
 }
 
 .s-intro__content-btns .btn {
@@ -3481,24 +3488,26 @@ html, body {
 .s-intro__content-btns .btn:last-child {
     margin-right: 0;
 }
-/* Contenitore GIF centrato e leggermente più piccolo */
+
+/* Contenitore GIF centrato e ridimensionato */
 .s-intro__content-media {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 70vw;         /* leggermente più piccolo della larghezza attuale */
-    max-width: 1000px;   /* evita che diventi troppo grande su schermi larghi */
-    height: auto;        /* mantiene proporzioni */
-    transform: translate(-50%, -50%); /* centra il contenitore */
+    width: 60vw;          /* larghezza contenuta */
+    max-width: 800px;     /* larghezza massima su schermi larghi */
+    height: auto;
+    max-height: 70vh;     /* limita altezza per margini sopra e sotto */
+    transform: translate(-50%, -50%); /* centra esattamente */
     overflow: hidden;
-    z-index: 1;          /* sotto il contenuto testuale */
-    padding: 10px;       /* spazio bianco intorno alla GIF */
-    background: #fff;    /* colore dello spazio bianco */
+    z-index: 1;           /* sotto il contenuto testuale */
+    padding: 10px;
+    background: #fff;     
     box-sizing: border-box;
-    border-radius: 10px; /* arrotonda i bordi del contenitore */
+    border-radius: 10px;
 }
 
-/* Overlay trasparente sopra la GIF (opzionale) */
+/* Overlay opzionale sopra la GIF */
 .s-intro__content-media::before {
     content: "";
     position: absolute;
@@ -3506,7 +3515,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0); 
+    background: rgba(0,0,0,0);
     pointer-events: none;
 }
 
@@ -3517,20 +3526,20 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgb(0,0,0) 15%, rgba(0,0,0,0) 100%);
-    opacity: 0.3;
+    background: linear-gradient(0deg, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0) 100%);
     pointer-events: none;
 }
 
 /* Stile GIF */
 .s-intro__content-media img {
-    width: 100%;          /* si adatta al contenitore */
-    height: auto;         /* mantiene proporzioni */
+    width: 100%;
+    height: 100%;
     display: block;
-    object-fit: contain;  /* mantiene tutta la GIF senza ritaglio */
+    object-fit: contain;    /* mantiene proporzioni e margini */
     object-position: center;
-    border-radius: 5px;   /* arrotonda leggermente i bordi della GIF */
+    border-radius: 5px;
 }
+
 
 /* --------------------------------------------------------------------
  * ## intro btn cv download
