@@ -4042,36 +4042,47 @@ html, body {
   color: #000;
 }
 
-.logo-text {
+.s-works .section-header {
+  margin-bottom: 30px;
+}
+
+.text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   font-size: 3rem;
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin: 0;
   text-align: left;
 }
 
-/* Griglia dinamica */
+/* ---------------- GRID ENTRIES ---------------- */
 .folio-entries {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 150px;
   gap: 20px;
-  max-width: 1800px;
-  margin: 0 auto 12px auto;
-  padding: 0 3px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
-.folio-item {
+.entry {
   overflow: hidden;
   border-radius: 8px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-.folio-item img {
+.entry__thumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.entry__thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4080,35 +4091,37 @@ html, body {
   transform-origin: center center;
 }
 
-.folio-item:hover img {
+.entry:hover .entry__thumb img {
   transform: scale(1.07);
 }
 
-/* Differenti dimensioni */
-.folio-item.large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.folio-item.medium {
-  grid-column: span 2;
-}
-
-.folio-item.small {
-  grid-column: span 1;
-}
-
-/* Numeri in alto a sinistra */
-.folio-item .entry-number {
+/* Numero in alto a sinistra */
+.entry-number {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 10px;
   font-size: 1.3rem;
   font-weight: bold;
   color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   z-index: 2;
   pointer-events: none;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Info */
+.entry__info {
+  margin-top: 10px;
+}
+
+.entry__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.entry__cat {
+  font-size: 0.9rem;
+  color: #666;
 }
 
 /* ----------------------- RESPONSIVE ----------------------- */
@@ -4116,31 +4129,22 @@ html, body {
 @media (max-width: 1024px) {
   .folio-entries {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 120px;
     gap: 15px;
   }
 
-  .logo-text {
+  .text-display-title {
     font-size: 2.5rem;
   }
 }
 
+/* Smartphone */
 @media (max-width: 768px) {
   .folio-entries {
     grid-template-columns: 1fr;
-    grid-auto-rows: 200px; /* più alti per dare respiro */
     gap: 15px;
   }
 
-  /* reset delle dimensioni */
-  .folio-item.large,
-  .folio-item.medium,
-  .folio-item.small {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
-  }
-
-  .logo-text {
+  .text-display-title {
     font-size: 2rem;
     text-align: center;
   }
