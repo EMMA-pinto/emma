@@ -3657,32 +3657,7 @@ html, body {
     left            : calc(var(--hline-width) * -1);
 }
 
-/* --------------------------------------------------------------------
- * ## intro social
- * -------------------------------------------------------------------- */
-.s-intro__social {
-    z-index : 2;
-    display : block;
-    position: absolute;
-    bottom  : calc(var(--vspace-2) + var(--vspace-1_75) + 12rem);
-    right   : calc(var(--gutter) + var(--vspace-1_25));
-}
 
-.s-intro__social li {
-    padding-right: 0;
-    margin-right : 0;
-    margin-bottom: var(--vspace-0_625);
-}
-
-.s-intro__social svg {
-    height: var(--vspace-0_75);
-    width : var(--vspace-0_75);
-}
-
-.s-intro__social svg path,
-.s-intro__social svg circle {
-    fill: rgb(255, 255, 255);
-}
 
 /* --------------------------------------------------------------------
  * ## intro scroll down
