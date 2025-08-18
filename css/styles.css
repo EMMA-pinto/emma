@@ -4174,19 +4174,19 @@ html, body {
     overflow-x: hidden; /* previene scroll orizzontale */
 }
 
-/* Contenitore generale del footer (sfondo trasparente) */
+/* Contenitore generale del footer */
 .s-footer {
     position: relative;
     width: 100%;
-    background-color: transparent; /* cambiato da var(--color-3) a trasparente */
+    background-color: #111; /* sfondo scuro */
     margin: 0;
     padding: 0;
     min-height: 100vh; /* altezza minima della sezione */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden; /* elimina scroll orizzontale */
-    color: black; /* testi neri */
+    overflow: hidden;
+    color: #fff; /* testi bianchi */
 }
 
 /* Contenuto interno centrato */
@@ -4203,7 +4203,7 @@ html, body {
 
 /* Titolo "Get in Touch" */
 .s-footer h2.get-in-touch {
-    color: black; /* testi neri */
+    color: #fff; /* testi bianchi */
     margin: 0 0 var(--vspace-1_25) 0;
 }
 
@@ -4216,13 +4216,13 @@ html, body {
 }
 
 .s-footer__block a {
-    color: black; /* testi link neri */
+    color: #fff; /* link bianchi */
     text-decoration: none;
 }
 
 .s-footer__block a:hover,
 .s-footer__block a:focus {
-    color: #333 !important; /* hover leggermente più scuro */
+    color: #ccc !important; /* hover più chiaro */
 }
 
 /* Footer About */
@@ -4232,17 +4232,17 @@ html, body {
 
 /* Footer Buttons */
 .s-footer__buttons {
-    --color-btn-stroke: black;
-    --color-btn-stroke-text: black;
-    --color-btn-stroke-hover: black;
-    --color-btn-stroke-hover-text: #333;
+    --color-btn-stroke: #fff;
+    --color-btn-stroke-text: #fff;
+    --color-btn-stroke-hover: #fff;
+    --color-btn-stroke-hover-text: #ccc;
     margin: var(--vspace-0_75) 0 var(--vspace-2_5) 0;
 }
 
 /* Footer Bottom */
 .s-footer__bottom {
     font-size: calc(var(--text-size) * 0.8);
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5); /* testo chiaro semi-trasparente */
     padding-top: var(--vspace-1_25);
     margin-top: var(--vspace-0_75);
     position: relative;
@@ -4253,7 +4253,7 @@ html, body {
     display: block;
     height: 1px;
     width: calc(100% - 2 * var(--gutter));
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* linea chiara */
     position: absolute;
     top: 0;
     left: var(--gutter);
@@ -4271,14 +4271,14 @@ html, body {
 }
 
 .s-footer .link-list a {
-    color: black; /* link neri */
+    color: #fff; /* link bianchi */
     border: none;
     text-decoration: none;
 }
 
 .s-footer .link-list a:hover,
 .s-footer .link-list a:focus {
-    color: #333 !important;
+    color: #ccc !important;
 }
 
 /* Colore di default testo/footer */
@@ -4293,12 +4293,12 @@ html, body {
 .s-footer a,
 .s-footer span,
 .s-footer li {
-    color: black !important; /* testi neri */
+    color: #fff !important; /* testi bianchi */
 }
 
 .s-footer a:hover,
 .s-footer a:focus {
-    color: #333 !important;
+    color: #ccc !important;
 }
 
 
