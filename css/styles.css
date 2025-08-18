@@ -4551,3 +4551,6 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* Nasconde l'overflow orizzontale */
 }
+body {
+  overflow-x: hidden;
+}
