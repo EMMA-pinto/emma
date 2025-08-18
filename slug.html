@@ -1,27 +1,36 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Slug Page</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: #fff;
-    color: #000;
-  }
+<!-- CONTENUTO SLUG -->
+<div class="container">
+  <div class="text-column">
+    <h1>“COMA COSE/"La Gelosia"</h1>
+    <p>
+      Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano e il suo modo di inserirsi all’interno del panorama internazionale: un luogo ricco di opportunità, cultura, dinamicità, avanguardia ma pur sempre a misura d’uomo. Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati, intervallati dalla presenza di interventi e workshop di natura artistico-culturale.
+    </p>
+  </div>
 
+  <div class="images-column">
+    <div class="grid">
+      <div class="grid-item large"><img src="images/folio/coma.jpg" alt="Poster Festival"></div>
+      <div class="grid-item small"><img src="poster2.jpg" alt="Poster Festival"></div>
+      <div class="grid-item medium"><img src="poster3.jpg" alt="Poster Festival"></div>
+      <div class="grid-item small"><img src="poster4.jpg" alt="Poster Festival"></div>
+      <div class="grid-item medium"><img src="poster5.jpg" alt="Poster Festival"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Layout base */
   .container {
     display: flex;
+    gap: 30px;
     padding: 50px;
-    gap: 20px;
+    flex-wrap: wrap;
   }
 
   .text-column {
-    flex: 1;
-    max-width: 33.333%;
-    text-align: left;
+    flex: 1 1 300px;
+    max-width: 400px;
+    line-height: 1.4; /* meno distanza tra le righe */
   }
 
   .text-column h1 {
@@ -31,87 +40,75 @@
 
   .text-column p {
     font-size: 1rem;
-    line-height: 1.6;
     margin-bottom: 1.5rem;
   }
 
+  /* Griglia immagini dinamica */
   .images-column {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 10px;
+    flex: 2 1 400px;
   }
 
-  .images-column img {
-    width: 95%;
-    margin: 0 auto;
-    height: auto;
-    display: block;
-    object-fit: cover;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 15px;
+  }
+
+  .grid-item {
+    overflow: hidden;
     border-radius: 8px;
-  }
-
-  /* STILI HEADER */
-  .s-header {
-    background-color: #222;
-    color: white;
-    padding: 20px 50px;
-  }
-
-  .s-header__logo a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .s-header__menu-links {
-    list-style: none;
     display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
   }
 
-  .s-header__menu-links li a {
-    color: white;
-    text-decoration: none;
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
+  /* Dimensioni diverse per la griglia */
+  .grid-item.large {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .grid-item.medium {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+
+  .grid-item.small {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .container {
+      gap: 20px;
+      padding: 30px;
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      grid-auto-rows: 120px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      padding: 20px;
+    }
+    .text-column {
+      max-width: 100%;
+    }
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-auto-rows: 100px;
+    }
+  }
 </style>
-</head>
-<body>
-
-<!-- HEADER CON MENU -->
-<header class="s-header">
-    <div class="s-header__inner">
-        <div class="s-header__logo">
-            <a class="logo" href="index.html">EMMA PINTO</a>
-        </div>
-
-        <nav class="s-header__nav">    
-            <ul class="s-header__menu-links">
-                <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                <li><a class="smoothscroll" href="#about">About</a></li>
-                <li><a class="smoothscroll" href="#works">Works</a></li>
-                <li><a class="smoothscroll" href="#footer">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- CONTENUTO SLUG -->
-<div class="container">
-  <div class="text-column">
-    <h1>“COMA COSE/"La Gelosia"</h1>
-    <p>Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano e il suo modo di inserirsi all’interno del panorama internazionale: un luogo ricco di opportunità, cultura, dinamicità, avanguardia ma pur sempre a misura d’uomo. Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati, intervallati dalla presenza di interventi e workshop di natura artistico-culturale.</p>
-  </div>
-  <div class="images-column">
-    <img src="images/folio/coma.jpg" alt="Poster Festival">
-    <img src="poster2.jpg" alt="Poster Festival">
-    <img src="poster3.jpg" alt="Poster Festival">
-  </div>
-</div>
-
-</body>
-</html>
