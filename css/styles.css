@@ -3476,16 +3476,17 @@ td:last-child {
 .s-intro__content-btns .btn:last-child {
     margin-right: 0;
 }
-
-/* Contenitore GIF */
+/* Contenitore GIF centrato e più piccolo */
 .s-intro__content-media {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* riempie tutta la sezione */
+    top: 50%;
+    left: 50%;
+    width: 60%; /* larghezza della GIF, puoi cambiare */
+    height: auto; /* mantiene le proporzioni */
+    transform: translate(-50%, -50%); /* centra il contenitore */
     overflow: hidden;
     z-index: 1; /* sotto il contenuto testuale */
+    border-radius: 10px; /* opzionale, arrotonda i bordi */
 }
 
 /* Overlay trasparente sopra la GIF */
@@ -3496,7 +3497,7 @@ td:last-child {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0); /* se vuoi trasparente puoi rimuovere */
+    background: rgba(0, 0, 0, 0); 
     pointer-events: none;
 }
 
@@ -3514,18 +3515,14 @@ td:last-child {
 
 /* Stile GIF */
 .s-intro__content-media img {
-    position: absolute;        /* assicura che riempia il contenitore */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;         /* scala e ritaglia per coprire tutto */
-    object-position: center;   /* centrata */
+    width: 100%;       /* si adatta al contenitore */
+    height: auto;      /* mantiene le proporzioni */
     display: block;
-    margin: 0;
-    padding: 0;
+    object-fit: cover; /* opzionale, se vuoi ritaglio */
+    object-position: center;
     z-index: 1;
 }
+
 
 /* --------------------------------------------------------------------
  * ## intro btn cv download
