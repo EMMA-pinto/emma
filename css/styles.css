@@ -4263,28 +4263,30 @@ html, body {
 /* Contenitore generale del footer (sfondo full-width) */
 .s-footer {
     position: relative;
-    width: 100%;
+    width: 100vw;          /* forza piena larghezza viewport */
     background-color: var(--color-3);
     margin: 0;
     padding: 0;
-    min-height: 100vh;  /* altezza minima della sezione */
+    min-height: 100vh;     /* altezza minima della sezione */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;    /* elimina scroll orizzontale */
+    overflow-x: hidden;    /* previene scroll orizzontale */
+    box-sizing: border-box;
     color: white;
 }
 
 /* Contenuto interno centrato */
 .s-footer__inner {
     width: 100%;
-    max-width: 1200px;  /* larghezza massima del contenuto */
-    margin: 0 auto;     /* centrato orizzontalmente */
-    padding: 0 20px;    /* padding interno */
+    max-width: 1200px;
+    margin: 0 auto;        /* centrato */
+    padding: 60px 20px;    /* spazio interno */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
 /* Titolo "Get in Touch" */
