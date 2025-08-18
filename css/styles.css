@@ -2824,47 +2824,6 @@ td:last-child {
   }
 }
 
-/* ------------------------------------------------------------------- 
- * ## social list
- * ------------------------------------------------------------------- */
-.social-list {
-    display    : flex;
-    align-items: center;
-    list-style : none;
-    margin     : 0;
-}
-
-.social-list li {
-    padding-left: 0;
-    margin-right: 0.8rem;
-}
-
-.social-list li:last-child {
-    margin-right: 0;
-}
-
-.social-list a {
-    display    : flex;
-    align-items: center;
-}
-
-.social-list a:focus svg path,
-.social-list a:focus svg circle,
-.social-list a:hover svg path,
-.social-list a:hover svg circle {
-    fill: var(--color-white);
-}
-
-.social-list svg {
-    height: var(--vspace-0_875);
-    width : var(--vspace-0_875);
-}
-
-.social-list svg path,
-.social-list svg circle {
-    fill      : rgba(255, 255, 255, 0.5);
-    transition: all 0.5s;
-}
 
 /* ------------------------------------------------------------------- 
  * ## swiper overrides
@@ -2967,19 +2926,21 @@ td:last-child {
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * project-wide and shared styles
+ * Responsive: project-wide and shared styles
  * ------------------------------------------------------------------- */
+
+/* Large screens */
 @media screen and (max-width: 1400px) {
     .section-header .text-display-title {
-        font-size: var(--text-xxxl);
+        font-size: clamp(4rem, 6vw, 5.5rem);
     }
 
     .section-header::before {
-        font-size: 8.6em;
+        font-size: clamp(6em, 10vw, 8em);
     }
 }
 
+/* Medium screens / tablets */
 @media screen and (max-width: 800px) {
     .testimonials__slide {
         text-align: center;
@@ -2988,11 +2949,20 @@ td:last-child {
     .testimonials__cite {
         text-align: left;
     }
+
+    .section-header .text-display-title {
+        font-size: clamp(3rem, 5vw, 4rem);
+    }
+
+    .section-header::before {
+        font-size: clamp(4.5em, 8vw, 6em);
+    }
 }
 
+/* Small screens / mobile */
 @media screen and (max-width: 500px) {
     .text-pretitle {
-        font-size  : var(--text-size);
+        font-size: var(--text-size);
         line-height: var(--vspace-0_75);
     }
 
@@ -3001,34 +2971,31 @@ td:last-child {
     }
 
     .section-header .text-display-title {
-        font-size: var(--text-xxl);
+        font-size: clamp(2rem, 7vw, 3rem);
     }
 
     .section-header::before {
-        font-size: 7em;
-        left     : 0;
+        font-size: clamp(3em, 10vw, 4.5em);
+        left: 0;
     }
 }
 
 
 /* ===================================================================
  * # GRID-BASED LAYOUTS
- *
- *
  * ------------------------------------------------------------------- */
 
 /* --------------------------------------------------------------------
  * ## grid block
  * -------------------------------------------------------------------- */
 .grid-block {
-    --col                : 12;
-    --grid-gap-h         : calc(var(--gutter) * 2);
-    --grid-gap-v         : var(--vspace-1);
-    display              : grid;
+    --col: 12;
+    --grid-gap-h: calc(var(--gutter) * 2);
+    --grid-gap-v: var(--vspace-1);
+    display: grid;
     grid-template-columns: repeat(var(--col), [col] 1fr);
-    -moz-column-gap      : var(--grid-gap-h);
-    column-gap           : var(--grid-gap-h);
-    row-gap              : var(--grid-gap-v);
+    column-gap: var(--grid-gap-h);
+    row-gap: var(--grid-gap-v);
 }
 
 .grid-block.no-h-gutter {
@@ -3036,7 +3003,7 @@ td:last-child {
 }
 
 .grid-block.no-v-gutter {
-    --grid-gap-h: 0;
+    --grid-gap-v: 0; /* corretto da --grid-gap-h a --grid-gap-v */
 }
 
 .grid-block.grid-16 {
@@ -3044,19 +3011,19 @@ td:last-child {
 }
 
 .grid-block .grid-full {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
 }
 
 /* ------------------------------------------------------------------- 
  * ## list grid
  * ------------------------------------------------------------------- */
 .grid-list-items {
-    --gap                : calc(var(--gutter) * 2);
-    --min-width          : 300px;
-    display              : grid;
+    --gap: calc(var(--gutter) * 2);
+    --min-width: 300px;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(var(--min-width), 100%), 1fr));
-    -moz-column-gap      : var(--gap);
-    column-gap           : var(--gap);
+    column-gap: var(--gap);
+    row-gap: var(--vspace-1);
 }
 
 .grid-list-items__item {
@@ -3064,39 +3031,35 @@ td:last-child {
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * grid layouts
+ * Responsive: grid layouts
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
-
     .grid-block,
     .grid-block.grid-16 {
         --col: 8;
+        --grid-gap-h: calc(var(--gutter) * 1.5);
     }
 }
 
 @media screen and (max-width: 600px) {
-
     .grid-block,
     .grid-block.grid-16 {
         --col: 4;
+        --grid-gap-h: var(--gutter);
+        --grid-gap-v: calc(var(--vspace-0_5));
     }
 }
 
-
 /* ===================================================================
  * # PAGE WRAP
- *
- *
  * ------------------------------------------------------------------- */
 .s-pagewrap {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    min-height    : 100%;
-    overflow      : hidden;
-    position      : relative;
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
 }
-
 
 /* ===================================================================
  * # SITE HEADER
@@ -3201,7 +3164,35 @@ td:last-child {
     z-index : 101;
     position: relative;
 }
+@media screen and (max-width: 992px) {
+    .logo-text {
+        font-size: 2rem;
+    }
 
+    .s-header {
+        --header-height: 60px;
+    }
+
+    .s-header__inner {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .s-header {
+        --header-height: 50px;
+    }
+
+    .s-header__inner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0.5rem;
+    }
+}
 /* --------------------------------------------------------------------
  * ## logo
  * -------------------------------------------------------------------- */
@@ -3259,7 +3250,29 @@ td:last-child {
 .s-header__menu-links .current a {
     color: #D3D3D3; /* esempio colore per il menu attivo */
 }
+@media screen and (max-width: 992px) {
+    .s-header__menu-links {
+        flex-flow: row wrap;
+    }
 
+    .s-header__menu-links a {
+        font-size: 1.2rem;
+        padding: 0 0.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .s-header__menu-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .s-header__menu-links a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+    }
+}
 /* --------------------------------------------------------------------
  * ## mobile menu toggle
  * -------------------------------------------------------------------- */
@@ -4065,11 +4078,16 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 150px;
   gap: 20px;
+  max-width: 1800px;
+  margin: 0 auto 12px auto;
+  padding: 0 3px;
+  box-sizing: border-box;
 }
 
 .folio-item {
   overflow: hidden;
   border-radius: 8px;
+  position: relative;
 }
 
 .folio-item img {
@@ -4077,6 +4095,12 @@ html, body {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+}
+
+.folio-item:hover img {
+  transform: scale(1.07);
 }
 
 /* Differenti dimensioni */
@@ -4091,6 +4115,19 @@ html, body {
 
 .folio-item.small {
   grid-column: span 1;
+}
+
+/* Numeri in alto a sinistra */
+.folio-item .entry-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 /* -----------------------
@@ -4124,60 +4161,6 @@ html, body {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-}
-</style>
-
-/* ------------------------------------------------------------------- 
- * ## folio entries 
- * ------------------------------------------------------------------- */
-/* ------------------------------------------------------------------- 
- * ## Folio Entries 
- * ------------------------------------------------------------------- */
-.folio-entries {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 3px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1px;            /* spazio minimo tra le immagini */
-  margin-bottom: 12px;
-  box-sizing: border-box;
-}
-
-.folio-entries .entry {
-  flex: 0 0 calc(33.33% - 2px); /* 3 immagini per riga con spazio minimo */
-  box-sizing: border-box;
-  position: relative;
-}
-
-.folio-entries .entry__thumb {
-  position: relative;   /* necessario per posizionare i numeri sopra */
-  overflow: hidden;     /* evita overflow durante lo zoom */
-}
-
-.folio-entries .entry__thumb img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
-  transform-origin: center center;
-}
-
-.folio-entries .entry:hover .entry__thumb img {
-  transform: scale(1.07); /* zoom sull'immagine */
-}
-
-/* Numeri in alto a sinistra */
-.folio-entries .entry .entry-number {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: white;
-  z-index: 2;           /* sopra l'immagine */
-  pointer-events: none;  /* non blocca click/lightbox */
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6); /* leggibilità su foto chiare */
 }
 
 ------------------------------------------------------- 
