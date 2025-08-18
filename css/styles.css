@@ -2710,48 +2710,43 @@ td:last-child {
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem); /* fluido e responsivo */
+  font-size: 1.6rem; /* dimensione fissa per evitare grandi ingrandimenti */
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 0.5em;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
   max-width: 100%;
-  word-break: break-word;
+  white-space: nowrap; /* forza il testo su 1 sola riga */
+  overflow: hidden;   /* taglia se troppo lungo */
+  text-overflow: ellipsis; /* opzionale, mostra "..." se troppo lungo */
 }
 
 /* Tablet */
 @media (max-width: 992px) {
   .text-display-title {
-    margin-bottom: 1.2rem;
-    line-height: 1.1;
+    font-size: 1.5rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .text-display-title {
-    font-size: 1.4rem; /* dimensione più contenuta */
-    margin-bottom: 1rem;
-    line-height: 1.15;
-    text-align: center;
+    font-size: 1.2rem; /* piccolo su smartphone */
   }
 }
+
 
 /* ===================================================================
  * # SECTION HEADER
  =================================================================== */
 .section-header {
-  position: relative; /* necessario per ::before */
   display: flex;
-  flex-wrap: wrap; /* permette al testo di andare a capo se necessario */
   align-items: baseline;
   justify-content: center;
   gap: 6px;
-  text-align: center;
-  margin-bottom: var(--vspace-1);
+  flex-wrap: nowrap; /* NON va a capo */
 }
 
 /* Numero decorativo o elemento prima del titolo */
