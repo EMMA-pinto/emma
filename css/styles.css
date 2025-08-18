@@ -1276,12 +1276,7 @@ h1,
         font-size  : var(--text-xxxl);
         line-height: calc(1.625 * var(--space));
     }
-  h2,
-  .h2 {
-    font-size  : clamp(1.2rem, 5vw, 1.8rem); /* minimo, fluido, massimo */
-    line-height: 1.3;
-  }
-
+h2, .h2 { font-size : var(--text-xxl); line-height : calc(1.375 * var(--space)); letter-spacing: -0.02em; }
     
 }
 
