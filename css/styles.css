@@ -2814,25 +2814,30 @@ td:last-child {
   .section-header::before {
     font-size: 5em;
   }
-}
 
-/* Mobile */
+
 @media (max-width: 600px) {
   .section-header {
     flex-direction: column;
     text-align: center;
     gap: 0.2em; /* piccolo spazio tra numero e titolo */
   }
+
   .section-header .text-display-title {
-    font-size: clamp(1.2rem, 2vw + 0.6rem, 1.5rem);
+    font-size: clamp(1.2rem, 2vw + 0.6rem, 1.5rem) !important;
+    line-height: 1.2 !important;
+    text-align: center;
     margin-bottom: 0.4em;
   }
+
   .section-header::before {
     font-size: 3.5em;
     top: -0.2em;
     left: 0;
   }
 }
+    
+
 
 
 /* ------------------------------------------------------------------- 
