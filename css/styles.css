@@ -2709,15 +2709,18 @@ td:last-child {
 
 /* --- Responsive Display Title --- */
 .text-display-title {
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 700;
-    font-size: clamp(2.5rem, 8vw, 6rem); /* scala fluida tra 2.5rem e 6rem */
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-top: 0;
-    margin-bottom: 1.5rem; /* puoi usare var(--vspace-1_5) */
-    color: black;
-    text-transform: uppercase;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 6vw, 3rem); /* si ridimensiona in base allo schermo */
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center; /* centrato su tutti i device */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.1; /* compatta un po’ */
+  max-width: 100%;  /* non sfora il contenitore */
 }
 
 /* Tablet */
