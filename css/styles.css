@@ -4046,6 +4046,7 @@ html, body {
   gap: 40px; /* spazio tra blocchi */
   justify-content: flex-start; /* allinea i blocchi a sinistra */
   align-items: flex-start; /* allinea i blocchi in alto */
+  box-sizing: border-box;
 }
 
 /* -------------------------------------------------------------------- */
@@ -4102,7 +4103,45 @@ html, body {
   line-height: 1.4; /* aumenta l'interlinea */
   color: var(--color-text-light) !important;
   border-bottom: 1px solid #000; /* linea nera di 1px */
+  padding-bottom: 0.3rem;
 }
+
+/* -------------------------------------------------------------------- */
+/* ## Responsive */
+/* -------------------------------------------------------------------- */
+
+/* Tablet: due colonne */
+@media (max-width: 1023px) {
+  .s-about__blocks {
+    flex: 0 0 48%; /* circa metà larghezza */
+    max-width: 48%;
+  }
+}
+
+/* Mobile: una colonna */
+@media (max-width: 767px) {
+  .s-about {
+    flex-direction: column; /* blocchi uno sotto l'altro */
+    gap: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .s-about__blocks {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .s-about__block-title {
+    font-size: 1.7rem;
+    padding-left: 1rem;
+  }
+
+  .s-about__list {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* ------------------------------------------------------------------- 
  * responsive:
