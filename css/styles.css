@@ -2680,9 +2680,8 @@ td:last-child {
 
 /* ===================================================================
  * # PROJECT-WIDE SHARED STYLES
- *
- *
- * ------------------------------------------------------------------- */
+=================================================================== */
+
 .width-sixteen-col {
     --width-grid-max: var(--width-sixteen-cols);
 }
@@ -2708,18 +2707,36 @@ td:last-child {
     margin-top    : 0;
 }
 
+/* --- Responsive Display Title --- */
 .text-display-title {
-    font-family   : 'Helvetica';
-    font-size     : 6rem; /* o un valore che ti piace */
-    line-height   : 1.0717;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.5rem, 8vw, 6rem); /* scala fluida tra 2.5rem e 6rem */
+    line-height: 1.1;
     letter-spacing: -0.015em;
-    margin-top    : 0;
-    margin-bottom : var(--vspace-1_5);
-    font-weight   : 700;
-    color         : black;
+    margin-top: 0;
+    margin-bottom: 1.5rem; /* puoi usare var(--vspace-1_5) */
+    color: black;
     text-transform: uppercase;
 }
-/* ------------------------------------------------------------------- 
+
+/* Tablet */
+@media (max-width: 992px) {
+    .text-display-title {
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .text-display-title {
+        margin-bottom: 1rem;
+        line-height: 1.05;
+        text-align: center; /* centra il titolo su mobile */
+    }
+}
+--------------------------------------------------------------- 
  * ## section header
  * ------------------------------------------------------------------- */
 .section-header {
