@@ -4035,7 +4035,122 @@ html, body {
     }
 }
 
-<!-- WORKS SECTION --> <section class="s-works"> <div class="container"> <h2 class="logo-text">Works</h2> <div class="folio-entries"> <div class="folio-item large"><img src="images/work1.jpg" alt="Work 1"></div> <div class="folio-item small"><img src="images/work2.jpg" alt="Work 2"></div> <div class="folio-item medium"><img src="images/work3.jpg" alt="Work 3"></div> <div class="folio-item small"><img src="images/work4.jpg" alt="Work 4"></div> <div class="folio-item medium"><img src="images/work5.jpg" alt="Work 5"></div> <div class="folio-item small"><img src="images/work6.jpg" alt="Work 6"></div> </div> </div> </section> <style> /* ----------------------- WORKS SECTION ----------------------- */ .s-works { padding: 40px 20px; background-color: #fff; color: #000; } .logo-text { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 3rem; color: #000; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 30px; text-align: left; } /* Griglia dinamica */ .folio-entries { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 150px; gap: 20px; max-width: 1800px; margin: 0 auto 12px auto; padding: 0 3px; box-sizing: border-box; } .folio-item { overflow: hidden; border-radius: 8px; position: relative; } .folio-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; transform-origin: center center; } .folio-item:hover img { transform: scale(1.07); } /* Differenti dimensioni */ .folio-item.large { grid-column: span 2; grid-row: span 2; } .folio-item.medium { grid-column: span 2; } .folio-item.small { grid-column: span 1; } /* Numeri in alto a sinistra */ .folio-item .entry-number { position: absolute; top: 8px; left: 8px; font-size: 1.3rem; font-weight: bold; color: white; z-index: 2; pointer-events: none; text-shadow: 0 1px 3px rgba(0,0,0,0.6); } /* ----------------------- RESPONSIVE ----------------------- */ /* Tablet */ @media (max-width: 1024px) { .folio-entries { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; gap: 15px; } .logo-text { font-size: 2.5rem; } } /* Smartphone */ @media (max-width: 768px) { .folio-entries { grid-template-columns: 1fr; grid-auto-rows: 120px; gap: 10px; } .logo-text { font-size: 2rem; text-align: center; } .s-works { padding-top: 20px; padding-bottom: 20px; } } ------------------------------------------------------- * ## testimonials * ------------------------------------------------------------------- */ .s-testimonials { padding-top : var(--vspace-4_5); padding-bottom: var(--vspace-4); } .s-testimonials__header { margin-top : 0; margin-bottom: var(--vspace-2); text-align : center; } .s-testimonials .swiper-container { padding-bottom: var(--vspace-2); } .s-testimonials__slide { position: relative; } .s-testimonials__author { display : inline-block; min-height : var(--vspace-2); margin-bottom: var(--vspace-0_625); padding-left : calc(2.25 * var(--space)); position : relative; } .s-testimonials__avatar { width : var(--vspace-1_75); height : var(--vspace-1_75); border-radius: 100%; outline : none; position : absolute; top : 0; left : 0; } .s-testimonials__cite { display: block; } .s-testimonials__cite strong, .s-testimonials__cite span { font-style: normal; transition: all 0.3s ease-in-out; } .s-testimonials__cite strong { font-size : calc(var(--text-size) * 0.9); font-weight: 500; line-height: var(--vspace-0_75); color : var(--color-text-dark); } .s-testimonials__cite span { display : block; font-size : calc(var(--text-size) * 0.75); font-weight: 400; line-height: var(--vspace-0_5); color : var(--color-text-light); } /* ------------------------------------------------------------------- * responsive: * works * ------------------------------------------------------------------- */ @media screen and (max-width: 800px) { .folio-entries .entry__cat { font-size: calc(var(--text-size) * 0.7); font-family: 'Helvetica neue', sans-serif; } .folio-entries .entry__title { font-size: calc(var(--text-size) * 0.85); } .s-testimonials__slide { text-align: center; } .s-testimonials__cite { text-align: left; } } @media screen and (max-width: 500px) { .folio-entries .entry { width: 100%; } } /* =================================================================== * # NUMBERS * * * ------------------------------------------------------------------- */ .s-numbers { padding-top : var(--vspace-5_5); padding-bottom : var(--vspace-4); background-color: var(--color-gray-10); color : var(--color-text-light); } .s-numbers h5 { font-family : 'Helvetica neue'; font-weight : 500; margin-top : 0; margin-bottom: var(--vspace-0_75); } .counter-items__item { flex : none; width : 50%; margin-bottom: var(--vspace-0_625); } .counter-items .num { display : inline-flex; align-items : center; font-family : 'Helvetica neue'; font-weight : 700; font-size : var(--text-huge-3); letter-spacing: -0.035em; line-height : 1; color : var(--color-3-dark); } .counter-items span { font-size : 0.5em; margin-left: 0.1em; } /* ------------------------------------------------------------------- * responsive: * numbers * ------------------------------------------------------------------- */ @media screen and (max-width: 1000px) { .counter-items .num { font-size: var(--text-huge-1); } } @media screen and (max-width: 700px) { .counter-items__item { width: 100%; } }
+/* ----------------------- WORKS SECTION ----------------------- */
+.s-works {
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+.logo-text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Griglia dinamica */
+.folio-entries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  gap: 20px;
+  max-width: 1800px;
+  margin: 0 auto 12px auto;
+  padding: 0 3px;
+  box-sizing: border-box;
+}
+
+.folio-item {
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.folio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+}
+
+.folio-item:hover img {
+  transform: scale(1.07);
+}
+
+/* Differenti dimensioni */
+.folio-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.folio-item.medium {
+  grid-column: span 2;
+}
+
+.folio-item.small {
+  grid-column: span 1;
+}
+
+/* Numeri in alto a sinistra */
+.folio-item .entry-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* ----------------------- RESPONSIVE ----------------------- */
+/* Tablet */
+@media (max-width: 1024px) {
+  .folio-entries {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 120px;
+    gap: 15px;
+  }
+
+  .logo-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .folio-entries {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px; /* più alti per dare respiro */
+    gap: 15px;
+  }
+
+  /* reset delle dimensioni */
+  .folio-item.large,
+  .folio-item.medium,
+  .folio-item.small {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  .logo-text {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .s-works {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
 /* ===================================================================
    # FOOTER
 =================================================================== */
