@@ -2710,15 +2710,16 @@ td:last-child {
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.6rem, 5vw, 3rem); /* leggermente ridotto per mobile */
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem); /* fluido e responsivo */
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 0.5em;
   text-align: center;
-  word-break: break-word;
   line-height: 1.1;
   max-width: 100%;
+  word-break: break-word;
 }
 
 /* Tablet */
@@ -2732,49 +2733,35 @@ td:last-child {
 /* Mobile */
 @media (max-width: 600px) {
   .text-display-title {
-    font-size: clamp(1.2rem, 4.5vw, 2rem); /* ridotto per smartphone */
+    font-size: 1.4rem; /* dimensione più contenuta */
     margin-bottom: 1rem;
-    line-height: 1.05;
+    line-height: 1.15;
     text-align: center;
   }
 }
 
+/* ===================================================================
+ * # SECTION HEADER
+ =================================================================== */
 .section-header {
+  position: relative; /* necessario per ::before */
   display: flex;
-  align-items: baseline;
-  gap: 4px;
   flex-wrap: wrap; /* permette al testo di andare a capo se necessario */
-}
-
---------------------------------------------------------------- 
- * ## section header
- * ------------------------------------------------------------------- */
-.section-header {
-  position: relative;           /* necessario per il ::before */
-  text-align: center;
-  margin-bottom: var(--vspace-1);
-  display: flex;
   align-items: baseline;
   justify-content: center;
   gap: 6px;
-  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: var(--vspace-1);
 }
 
-.section-header .text-display-title {
-  padding-top: 0.5em;
-  margin-bottom: 0.7em;
-  position: relative;
-  font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem); /* fluido */
-}
-
+/* Numero decorativo o elemento prima del titolo */
 .section-header::before {
-  content: ""; /* importante: aggiungi qui il contenuto (es. un numero o testo) */
+  content: ""; /* aggiungi qui il contenuto decorativo */
   font-size: 7em;
   position: absolute;
   top: -0.25em;
   left: -0.1em;
   opacity: 0.5;
-  margin: 0;
   color: var(--color-gray-11);
   font-weight: 600;
   letter-spacing: -0.05em;
@@ -2783,6 +2770,7 @@ td:last-child {
   pointer-events: none; /* decorativo */
 }
 
+/* Variante light-on-dark */
 .section-header.light-on-dark .text-display-title {
   color: white;
 }
@@ -2791,6 +2779,7 @@ td:last-child {
   color: rgba(255, 255, 255, 0.15);
 }
 
+/* Variante specifica selected.works */
 .section-header.selected.works {
   margin-bottom: var(--vspace-1);
 }
@@ -2798,7 +2787,6 @@ td:last-child {
 .section-header.selected.works .text-display-title {
   margin-bottom: 0;
 }
-
 /* --------------------
    RESPONSIVE
 -------------------- */
