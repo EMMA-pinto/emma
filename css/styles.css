@@ -3530,14 +3530,14 @@ html, body {
     pointer-events: none;
 }
 
-/* Stile GIF */
 .s-intro__content-media img {
-    width: 100%;
-    height: 100%;
+    width: 100%;          /* si adatta alla larghezza del contenitore */
+    height: auto;         /* mantiene le proporzioni originali */
     display: block;
-    object-fit: contain;    /* mantiene proporzioni e margini */
+    object-fit: contain;  /* opzionale, ma sicuro */
     object-position: center;
     border-radius: 5px;
+    max-height: 70vh;     /* evita che sia troppo alta */
 }
 
 
