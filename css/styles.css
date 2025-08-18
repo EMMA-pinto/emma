@@ -1277,12 +1277,14 @@ h1,
         line-height: calc(1.625 * var(--space));
     }
 }
-
-    h2,
-    .h2 {
-        font-size  : var(--text-xl);              /* più piccolo rispetto a desktop */
-        line-height: calc(1.25 * var(--space));   /* leggermente più compatto */
-    }
+  h2,
+  .h2 {
+    font-size  : 1.5rem;         /* ridotto per mobile */
+    line-height: 1.3;            /* più compatto */
+    letter-spacing: -0.01em;     /* meno stretto */
+    text-align: center;          /* opzionale, se vuoi centrarlo */
+  }
+}
 }
 
 h3,
