@@ -4518,10 +4518,4 @@ html, body {
 }
 body {
   overflow-x: hidden;
-}
-@media (max-width: 600px) {
-  .section-header .text-display-title {
-    font-size  : clamp(1.1rem, 4vw, 1.4rem) !important;
-    line-height: 1.2 !important;
-  }
-}
+
