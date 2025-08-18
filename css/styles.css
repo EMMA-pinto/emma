@@ -2707,16 +2707,19 @@ td:last-child {
     margin-top    : 0;
 }
 
-/* --- Responsive Display Title --- */
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: clamp(1.6rem, 6vw, 3rem); /* si ridimensiona in base allo schermo */
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
-  text-align: left;
+  text-align: center; /* centrato su tutti i device */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.1; /* compatta un po’ */
+  max-width: 100%;  /* non sfora il contenitore */
 }
 
 /* Tablet */
