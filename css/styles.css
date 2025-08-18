@@ -2711,16 +2711,12 @@ td:last-child {
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.6rem, 6vw, 3rem); /* si ridimensiona in base allo schermo */
+  font-size: 3rem;
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
-  text-align: center; /* centrato su tutti i device */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.1; /* compatta un po’ */
-  max-width: 100%;  /* non sfora il contenitore */
+  text-align: left;
 }
 
 /* Tablet */
