@@ -2707,10 +2707,13 @@ td:last-child {
     margin-top    : 0;
 }
 
+/* ===================================================================
+ * # TEXT DISPLAY TITLE
+ =================================================================== */
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 1.6rem; /* dimensione fissa per evitare grandi ingrandimenti */
+  font-size: 1.6rem; /* dimensione base */
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -2718,25 +2721,32 @@ td:last-child {
   text-align: center;
   line-height: 1.2;
   max-width: 100%;
-  white-space: nowrap; /* forza il testo su 1 sola riga */
-  overflow: hidden;   /* taglia se troppo lungo */
-  text-overflow: ellipsis; /* opzionale, mostra "..." se troppo lungo */
+  white-space: nowrap;      /* forza su una sola riga */
+  overflow: hidden;         /* taglia se troppo lungo */
+  text-overflow: ellipsis;  /* mostra "..." se necessario */
+  flex-shrink: 1;           /* riduce il titolo se necessario */
 }
 
 /* Tablet */
 @media (max-width: 992px) {
   .text-display-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .text-display-title {
-    font-size: 1.2rem; /* piccolo su smartphone */
+    font-size: 1.2rem;
   }
 }
 
+/* Extra small mobile */
+@media (max-width: 480px) {
+  .text-display-title {
+    font-size: 1rem;
+  }
+}
 
 /* ===================================================================
  * # SECTION HEADER
@@ -2746,23 +2756,32 @@ td:last-child {
   align-items: baseline;
   justify-content: center;
   gap: 6px;
-  flex-wrap: nowrap; /* NON va a capo */
+  flex-wrap: nowrap;  /* non va a capo */
+  min-width: 0;       /* necessario per flexbox e testo lungo */
 }
 
-/* Numero decorativo o elemento prima del titolo */
-.section-header::before {
-  content: ""; /* aggiungi qui il contenuto decorativo */
-  font-size: 7em;
-  position: absolute;
-  top: -0.25em;
-  left: -0.1em;
-  opacity: 0.5;
-  color: var(--color-gray-11);
-  font-weight: 600;
-  letter-spacing: -0.05em;
+/* Numero decorativo o anno */
+.section-year {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
   line-height: 1;
-  font-family: 'Helvetica', sans-serif;
-  pointer-events: none; /* decorativo */
+  color: #000;
+  flex-shrink: 0;      /* non si riduce */
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .section-year {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .section-year {
+    font-size: 1rem;
+  }
 }
 
 /* Variante light-on-dark */
@@ -2770,8 +2789,8 @@ td:last-child {
   color: white;
 }
 
-.section-header.light-on-dark::before {
-  color: rgba(255, 255, 255, 0.15);
+.section-header.light-on-dark .section-year {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Variante specifica selected.works */
@@ -2782,6 +2801,7 @@ td:last-child {
 .section-header.selected.works .text-display-title {
   margin-bottom: 0;
 }
+
 /* --------------------
    RESPONSIVE
 -------------------- */
