@@ -2713,7 +2713,7 @@ td:last-child {
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: 1.6rem; /* dimensione base */
+  font-size: clamp(1.2rem, 5vw, 2rem); /* scala con la larghezza */
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -2721,10 +2721,7 @@ td:last-child {
   text-align: center;
   line-height: 1.2;
   max-width: 100%;
-  white-space: nowrap;      /* forza su una sola riga */
-  overflow: hidden;         /* taglia se troppo lungo */
-  text-overflow: ellipsis;  /* mostra "..." se necessario */
-  flex-shrink: 1;           /* riduce il titolo se necessario */
+  white-space: normal; /* permette al testo di andare a capo solo se necessario */
 }
 
 /* Tablet */
