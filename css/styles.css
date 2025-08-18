@@ -1278,11 +1278,11 @@ h1,
     }
 }
 
-h2,
-.h2 {
-    font-size     : var(--text-xxl);
-    line-height   : calc(1.375 * var(--space));
-    letter-spacing: -0.02em;
+    h2,
+    .h2 {
+        font-size  : var(--text-xl);              /* più piccolo rispetto a desktop */
+        line-height: calc(1.25 * var(--space));   /* leggermente più compatto */
+    }
 }
 
 h3,
