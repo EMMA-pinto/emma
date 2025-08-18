@@ -4163,7 +4163,7 @@ html, body {
 
 /* ----------------------- WORKS SECTION ----------------------- */ .s-works { padding: 40px 20px; background-color: #fff; color: #000; } .s-works .section-header { margin-bottom: 30px; } .text-display-title { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 3rem; color: #000; letter-spacing: 1px; text-transform: uppercase; margin: 0; text-align: left; } /* ---------------- GRID ENTRIES ---------------- */ .folio-entries { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1600px; margin: 0 auto; padding: 0 10px; box-sizing: border-box; } .entry { overflow: hidden; border-radius: 8px; position: relative; display: flex; flex-direction: column; } .entry__thumb { position: relative; overflow: hidden; border-radius: 8px; } .entry__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; transform-origin: center center; } .entry:hover .entry__thumb img { transform: scale(1.07); } /* Numero in alto a sinistra */ .entry-number { position: absolute; top: 10px; left: 10px; font-size: 1.3rem; font-weight: bold; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.6); z-index: 2; pointer-events: none; } /* Info */ .entry__info { margin-top: 10px; } .entry__title { font-size: 1.1rem; font-weight: 600; margin: 0; } .entry__cat { font-size: 0.9rem; color: #666; } /* ----------------------- RESPONSIVE ----------------------- */ /* Tablet */ @media (max-width: 1024px) { .folio-entries { grid-template-columns: repeat(2, 1fr); gap: 15px; } .text-display-title { font-size: 2.5rem; } } /* Smartphone */ @media (max-width: 768px) { .folio-entries { grid-template-columns: 1fr; gap: 15px; } .text-display-title { font-size: 2rem; text-align: center; } .s-works { padding-top: 20px; padding-bottom: 20px; } }
 /* ===================================================================
-   # FOOTER
+   # FOOTER – VERSIONE SCURA
 =================================================================== */
 
 /* Reset base per evitare margini/padding indesiderati */
@@ -4180,30 +4180,29 @@ html, body {
     width: 100%;
     background-color: #111; /* sfondo scuro */
     margin: 0;
-    padding: 0;
-    min-height: 100vh; /* altezza minima della sezione */
+    padding: 60px 0; /* spazio interno */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
     color: #fff; /* testi bianchi */
 }
 
 /* Contenuto interno centrato */
 .s-footer__inner {
     width: 100%;
-    max-width: 1200px; /* larghezza massima del contenuto */
-    margin: 0 auto; /* centrato orizzontalmente */
-    padding: 0 20px; /* padding interno */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
 }
 
-/* Titolo "Get in Touch" */
-.s-footer h2.get-in-touch {
-    color: #fff; /* testi bianchi */
+/* Titolo “Get In Touch” */
+.s-footer h2.get-in-touch,
+.s-footer .section-header.light-on-dark h2 {
+    color: #fff;
     margin: 0 0 var(--vspace-1_25) 0;
 }
 
@@ -4230,7 +4229,7 @@ html, body {
     width: min(100%, 560px);
 }
 
-/* Footer Buttons */
+/* Footer Buttons (se presenti) */
 .s-footer__buttons {
     --color-btn-stroke: #fff;
     --color-btn-stroke-text: #fff;
@@ -4242,7 +4241,7 @@ html, body {
 /* Footer Bottom */
 .s-footer__bottom {
     font-size: calc(var(--text-size) * 0.8);
-    color: rgba(255, 255, 255, 0.5); /* testo chiaro semi-trasparente */
+    color: rgba(255, 255, 255, 0.5);
     padding-top: var(--vspace-1_25);
     margin-top: var(--vspace-0_75);
     position: relative;
@@ -4271,7 +4270,7 @@ html, body {
 }
 
 .s-footer .link-list a {
-    color: #fff; /* link bianchi */
+    color: #fff;
     border: none;
     text-decoration: none;
 }
@@ -4293,13 +4292,14 @@ html, body {
 .s-footer a,
 .s-footer span,
 .s-footer li {
-    color: #fff !important; /* testi bianchi */
+    color: #fff !important;
 }
 
 .s-footer a:hover,
 .s-footer a:focus {
     color: #ccc !important;
 }
+
 
 
 
