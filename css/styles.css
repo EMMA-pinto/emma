@@ -4001,7 +4001,7 @@ html, body {
 /* ------------------------------------------------------------------- */
 .s-about {
   min-height: 100vh;
-  padding: 80px 20px;
+  padding: 120px 20px 80px 20px; /* testo più in basso su desktop */
   color: var(--color-3);
   display: flex;
   flex-direction: column;
@@ -4063,7 +4063,7 @@ html, body {
   position: absolute;
   bottom: 90px;
   right: 10px;
-  width: 150px;
+  width: 200px; /* PNG più grande su desktop */
   height: auto;
 }
 
@@ -4085,6 +4085,10 @@ html, body {
 
   .s-about h2.text-display-title {
     font-size: 2.2rem;
+  }
+
+  .s-about img.decorative {
+    width: 150px; /* PNG medio su tablet */
   }
 }
 
@@ -4117,11 +4121,11 @@ html, body {
   }
 
   .s-about img.decorative {
-    width: 80px;
+    width: 80px; /* PNG piccolo su mobile */
     bottom: 40px;
     right: 10px;
   }
-
+}
 
 
 
