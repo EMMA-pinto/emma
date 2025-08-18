@@ -4539,4 +4539,15 @@ td:last-child {
   font-size: 6.5rem !important;
   line-height: 1.2 !important;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Impostazioni per html e body */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Nasconde l'overflow orizzontale */
+}
