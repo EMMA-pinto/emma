@@ -3996,7 +3996,6 @@ html, body {
     }
 }
 
-
 /* =================================================================== */
 /* # ABOUT SECTION */
 /* ------------------------------------------------------------------- */
@@ -4008,7 +4007,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  position: relative; /* per posizionare l'immagine in basso a destra */
+  position: relative; /* per posizionare l'immagine decorativa */
 }
 
 /* Titolo */
@@ -4030,8 +4029,12 @@ html, body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  padding-left: 10px; /* margine laterale ridotto */
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
+/* Colonne testo e immagini */
 .s-about__content .text-column,
 .s-about__content .images-column {
   flex: 0 0 33.33%;
@@ -4043,6 +4046,7 @@ html, body {
 .s-about__content .text-column p.attention-getter {
   font-size: 1.2rem;
   line-height: 1.4;
+  margin-bottom: 1.5rem; /* distanza tra paragrafi */
 }
 
 /* Link */
@@ -4062,9 +4066,9 @@ html, body {
 /* Immagine decorativa */
 .s-about img.decorative {
   position: absolute;
-  bottom: 90px;
+  bottom: 40px;
   right: 10px;
-  width: 150px;
+  width: 60px; /* PNG più piccolo */
   height: auto;
 }
 
@@ -4117,10 +4121,10 @@ html, body {
     font-size: 1.8rem;
   }
 
-  /* Immagine più piccola su mobile */
+  /* PNG decorativo più piccolo su mobile */
   .s-about img.decorative {
-    width: 80px;
-    bottom: 40px;
+    width: 40px;
+    bottom: 30px;
     right: 10px;
   }
 }
