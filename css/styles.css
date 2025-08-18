@@ -2710,34 +2710,34 @@ td:last-child {
 .text-display-title {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.6rem, 6vw, 3rem); /* si ridimensiona in base allo schermo */
+  font-size: clamp(1.6rem, 6vw, 3rem); /* scala in base alla larghezza dello schermo */
   color: #000;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
-  text-align: center; /* centrato su tutti i device */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  line-height: 1.1; /* compatta un po’ */
-  max-width: 100%;  /* non sfora il contenitore */
+  text-align: center; /* centrato su tutti i dispositivi */
+  word-break: break-word; /* compatibile con tutti i browser */
+  line-height: 1.1; /* compatta un po' */
+  max-width: 100%; /* non sfora il contenitore */
 }
 
 /* Tablet */
 @media (max-width: 992px) {
-    .text-display-title {
-        margin-bottom: 1.2rem;
-        line-height: 1.1;
-    }
+  .text-display-title {
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+  }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-    .text-display-title {
-        margin-bottom: 1rem;
-        line-height: 1.05;
-        text-align: center; /* centra il titolo su mobile */
-    }
+  .text-display-title {
+    margin-bottom: 1rem;
+    line-height: 1.05;
+    text-align: center;
+  }
 }
+
 --------------------------------------------------------------- 
  * ## section header
  * ------------------------------------------------------------------- */
