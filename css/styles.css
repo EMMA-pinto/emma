@@ -4554,3 +4554,10 @@ html, body {
 body {
   overflow-x: hidden;
 }
+    * {
+  outline: 1px solid red; /* evidenzia tutti gli elementi */
+}
+
+body {
+  overflow-x: hidden; /* nasconde lo scroll orizzontale */
+}
