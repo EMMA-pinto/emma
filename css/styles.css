@@ -3987,10 +3987,10 @@ html, body {
 }
 
 /* ===================================================================
- * # WORKS
- *
- *
- * ------------------------------------------------------------------- */
+ * # WORKS - RESPONSIVE
+=================================================================== */
+
+/* Titolo */
 .logo-text {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -4000,23 +4000,59 @@ html, body {
   text-transform: uppercase;
   display: inline-block;
 }
-  .s-works {
-    padding-top: 20px;   /* esempio: prima era più grande */
-    padding-bottom: 10px;
-}
 
-.folio-entries {
-    --width-grid-max: 1800px;
-    margin-top      : var(--vspace-0_5);
-}
+/* Sezione principale */
 .s-works {
-  background-color: #fff !important; /* forza sfondo bianco */
-  color: #000 !important;            /* forza testo nero */
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #fff !important; 
+  color: #000 !important;
 }
 
 .s-works .logo-text {
-  color: #000 !important;            /* titolo nero */
+  color: #000 !important;
 }
+
+/* Contenitore delle entries */
+.folio-entries {
+  --width-grid-max: 1800px;
+  margin-top: var(--vspace-0_5);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* -----------------------
+   MEDIA QUERIES
+----------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .folio-entries {
+    grid-template-columns: repeat(2, 1fr); /* due colonne */
+    gap: 15px;
+  }
+  .logo-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+  .folio-entries {
+    grid-template-columns: 1fr; /* una colonna */
+    gap: 10px;
+  }
+  .logo-text {
+    font-size: 2rem;
+    text-align: center; /* centra il titolo su mobile */
+  }
+  .s-works {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+}
+
 /* ------------------------------------------------------------------- 
  * ## folio entries 
  * ------------------------------------------------------------------- */
