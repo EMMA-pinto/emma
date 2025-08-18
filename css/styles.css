@@ -3428,7 +3428,7 @@ html, body {
  * -------------------------------------------------------------------- */
 
 /* ===================================================================
-   # SEZIONE INTRO
+   # SEZIONE INTRO - RESPONSIVE
 =================================================================== */
 
 /* Sezione principale */
@@ -3479,10 +3479,13 @@ html, body {
     --color-btn-hover: var(--color-1);
     --color-btn-hover-text: var(--color-white);
     margin-top: var(--vspace-2);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .s-intro__content-btns .btn {
     margin-right: var(--vspace-0_375);
+    margin-bottom: 0;
 }
 
 .s-intro__content-btns .btn:last-child {
@@ -3508,17 +3511,7 @@ html, body {
 }
 
 /* Overlay opzionale sopra la GIF */
-.s-intro__content-media::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0);
-    pointer-events: none;
-}
-
+.s-intro__content-media::before,
 .s-intro__content-media::after {
     content: "";
     position: absolute;
@@ -3526,18 +3519,67 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
     pointer-events: none;
+}
+
+.s-intro__content-media::before {
+    background: rgba(0,0,0,0);
+}
+
+.s-intro__content-media::after {
+    background: transparent;
 }
 
 .s-intro__content-media img {
     width: 100%;          /* si adatta alla larghezza del contenitore */
     height: auto;         /* mantiene le proporzioni originali */
     display: block;
-    object-fit: contain;  /* opzionale, ma sicuro */
+    object-fit: contain;  
     object-position: center;
     border-radius: 5px;
-    max-height: 70vh;     /* evita che sia troppo alta */
+    max-height: 70vh;
+}
+
+/* -----------------------
+   MEDIA QUERIES
+----------------------- */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .s-intro__content-media {
+        width: 70vw;
+        max-width: 600px;
+        max-height: 60vh;
+    }
+}
+
+/* Smartphone */
+@media (max-width: 768px) {
+    .s-intro__content-media {
+        position: relative;       /* diventa relativo */
+        top: auto;
+        left: auto;
+        transform: none;          /* rimuove translate */
+        width: 90%;
+        max-width: 400px;
+        height: auto;             
+        margin: 20px auto;        /* centra con margini */
+    }
+
+    /* Ridimensiona titolo e bottoni */
+    .s-intro__content-title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.2;
+    }
+
+    .s-intro__content-btns {
+        flex-direction: column;
+    }
+
+    .s-intro__content-btns .btn {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
 }
 
 
