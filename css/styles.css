@@ -4001,7 +4001,9 @@ html, body {
     line-height: 1.4;        /* aumenta l'interlinea */
     color: var(--color-text-light) !important;
 }
-
+    /* nuova linea */
+    border-bottom: 1px solid #000;  /* linea nera di 1px */
+}
 
 /* ------------------------------------------------------------------- 
  * responsive:
