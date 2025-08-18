@@ -3945,6 +3945,10 @@ html, body {
     gap: 40px;               /* spazio tra blocchi */
     justify-content: flex-start; /* allinea i blocchi a sinistra */
     align-items: flex-start; /* allinea i blocchi in alto */
+    
+    box-sizing: border-box;  /* importante per il border */
+    width: 100vw;            /* garantisce tutta la larghezza della viewport */
+    border-bottom: 1px solid #000;  /* linea nera di 1px */
 }
 
 /* --------------------------------------------------------------------
