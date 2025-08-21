@@ -3542,26 +3542,24 @@ html, body {
 
 /* Contenitore GIF centrato e ridimensionato */
 .s-intro__content-media {
-    margin: 2rem auto 0 auto;   /* spazio sopra */
-    aspect-ratio: 4 / 5;        /* mantiene formato verticale */
+    margin: 2rem auto 0 auto;       /* spazio sopra */
+    aspect-ratio: 4 / 5;            /* mantiene formato verticale */
     width: 60%;
     max-width: 500px;
-    background: transparent;    /* niente sfondo bianco */
-    border-radius: 0;           /* niente angoli arrotondati */
+    background-color: var(--color-3); /* mantiene lo sfondo scuro */
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;                 /* niente padding interno */
+    justify-content: center;        /* centra orizzontalmente */
+    align-items: center;            /* centra verticalmente */
+    padding: 0;                     /* niente padding interno */
 }
 
 .s-intro__content-media img {
     width: 100%;
     height: 100%;
-    object-fit: cover;          /* la GIF riempie tutto il contenitore */
-    border-radius: 0;           /* niente angoli arrotondati sull'immagine */
+    object-fit: contain;            /* mantiene proporzioni della GIF */
+    display: block;                 /* evita spazi sotto l'immagine */
 }
-
 /* -----------------------
    MEDIA QUERIES
 ----------------------- */
