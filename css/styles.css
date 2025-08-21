@@ -4150,17 +4150,17 @@ html, body {
 .s-footer {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* altezza minima uguale alla viewport */
-    background-color: #111; /* sfondo scuro */
+    min-height: 100vh;
+    background-color: #111;
     margin: 0;
-    padding: 60px 20px; /* spazio interno */
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centra verticalmente i contenuti */
-    color: #fff; /* testi bianchi */
+    justify-content: flex-start; /* ⬅️ spinge tutto in alto */
+    align-items: center;          /* centra orizzontalmente */
+    color: #fff;
 }
 
-/* Contenuto interno centrato */
 .s-footer__inner {
     width: 100%;
     max-width: 1200px;
@@ -4169,14 +4169,16 @@ html, body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: space-between; /* puoi mantenere separazione dei blocchi */
 }
 
 /* Titolo “Get In Touch” */
 .s-footer h2.get-in-touch,
 .s-footer .section-header.light-on-dark h2 {
     color: #fff;
-    margin: 0 0 var(--vspace-1_25) 0;
+    text-align: center;  /* sempre centrato orizzontalmente */
+    margin-top: 0;       /* nessun offset extra */
+    margin-bottom: var(--vspace-1_25);
 }
 
 /* Blocchi interni */
