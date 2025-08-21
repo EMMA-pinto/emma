@@ -4028,7 +4028,7 @@ html, body {
   gap: 30px;
   max-width: 1200px;
   width: 100%;
-  margin: 60px auto 0 auto; /* distanza extra solo su desktop */
+  margin: 80px auto 0 auto; /* distanza extra solo su desktop */
 }
 
 .s-about__content .text-column,
