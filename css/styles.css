@@ -3484,9 +3484,9 @@ html, body {
 /* Sezione principale */
 .s-intro {
     position: relative;
-    min-height: 100vh;       /* occupa tutta la viewport */
+    min-height: 100vh;
     overflow: hidden;
-    background-color: var(--color-gray-10);
+    background-color: #111; /* colore scuro pieno */
     display: flex;
     flex-direction: column;
     justify-content: center;
