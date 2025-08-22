@@ -3533,11 +3533,10 @@ html, body {
     padding: 10px;        /* ridotto per dare più spazio alla GIF */
 }
 
-/* Immagine / GIF interna */
 .s-intro__content-media img {
-    width: 100%;          /* riempie il contenitore */
-    height: 100%;         /* riempie il contenitore */
-    object-fit: contain;  /* mantiene proporzioni */
+    width: 100%;         /* occupa tutta la larghezza */
+    height: auto;        /* mantiene proporzioni reali */
+    object-fit: contain; /* evita tagli */
     border-radius: 5px;
     display: block;
 }
