@@ -3609,7 +3609,23 @@ html, body {
         margin-right: 0;
     }
 }
+s-intro__content-note {
+    color: #fff;              /* testo bianco */
+    text-align: left;         /* allineato a sinistra */
+    max-width: 600px;         /* larghezza massima */
+    margin: 20px auto 0 0;    /* margine sopra, allineato alla GIF */
+    font-size: 1.2rem;        /* dimensione leggibile */
+    line-height: 1.5;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+    .s-intro__content-note {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 15px 0 0 0;
+    }
+}
 
 
 /* --------------------------------------------------------------------
