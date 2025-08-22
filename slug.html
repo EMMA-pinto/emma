@@ -32,11 +32,13 @@
   </div>
 </section>
 
-<!-- GRIGLIA DUE FOTO -->
-<section class="s-grid-two">
-  <div class="grid-two-container">
+<!-- GRIGLIA QUATTRO FOTO -->
+<section class="s-grid">
+  <div class="grid-container">
     <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
-    <div class="grid-item"><img src="poster2.jpg" alt="Poster 2"></div>
+    <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 2"></div>
+    <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 3"></div>
+    <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 4"></div>
   </div>
 </section>
 
@@ -56,9 +58,9 @@
 body {
     margin: 0;
     font-family: 'Helvetica', Arial, sans-serif;
-    background-color: #1A1A1A; /* sfondo scuro uniforme */
+    background-color: #1A1A1A;
     color: white;
-    padding-top: 80px; /* spazio per header fisso */
+    padding-top: 80px;
 }
 
 /* -------------------------
@@ -70,7 +72,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 999;
-    background-color: #1A1A1A; /* stesso colore di sfondo pagina */
+    background-color: #1A1A1A;
 }
 
 .s-header__inner {
@@ -141,26 +143,26 @@ body {
 }
 
 /* -------------------------
-   GRIGLIA DUE FOTO
+   GRIGLIA QUATTRO FOTO
 ------------------------- */
-.s-grid-two {
-    background-color: #1A1A1A; /* sfondo uniforme sotto le foto */
+.s-grid {
+    background-color: #1A1A1A;
     padding: 2rem 0;
 }
-.s-grid-two .grid-two-container {
+.s-grid .grid-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
     padding: 0 2rem;
 }
-.s-grid-two .grid-item {
-    flex: 1 1 400px;
+.s-grid .grid-item {
+    flex: 1 1 45%;
     max-width: 500px;
     border-radius: 10px;
     overflow: hidden;
 }
-.s-grid-two .grid-item img {
+.s-grid .grid-item img {
     width: 100%;
     height: auto;
     display: block;
@@ -173,7 +175,7 @@ body {
 .s-text-bottom {
     text-align: center;
     padding: 3rem 2rem;
-    background-color: #1A1A1A; /* stesso sfondo griglia e body */
+    background-color: #1A1A1A;
 }
 .s-text-bottom p {
     font-size: 1.2rem;
@@ -192,7 +194,7 @@ body {
     .s-text-black p, .s-text-bottom p {
         font-size: 1rem;
     }
-    .s-grid-two .grid-item {
+    .s-grid .grid-item {
         flex: 1 1 100%;
     }
 }
