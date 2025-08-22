@@ -4248,7 +4248,7 @@ html, body {
     position: absolute;
     bottom: 20px;
     left: 40px;
-    font-size: 1.1rem; /* leggermente più grande */
+    font-size: 1.5rem; /* leggermente più grande */
     text-decoration: underline;
     color: #fff;
     display: inline-flex;
@@ -4259,7 +4259,7 @@ html, body {
 }
 
 .instagram-link .arrow {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     transform: rotate(-45deg);
     display: inline-block;
 }
@@ -4274,7 +4274,7 @@ html, body {
     bottom: 20px;
     right: 40px;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Responsive */
@@ -4289,13 +4289,13 @@ html, body {
     }
 
     .instagram-link {
-        font-size: 1rem;
+        font-size: 1.2rem;
         left: 20px;
         bottom: 15px;
     }
 
     .instagram-link .arrow {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .s-footer__bottom-bar .copyright {
