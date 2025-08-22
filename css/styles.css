@@ -4178,16 +4178,17 @@ html, body {
 .s-footer {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh; /* ⬅️ metà altezza viewport */
     background-color: #111;
     margin: 0;
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* ⬅️ spinge tutto in alto */
+    justify-content: flex-start; /* spinge tutto in alto */
     align-items: center;          /* centra orizzontalmente */
     color: #fff;
 }
+
 
 .s-footer__inner {
     width: 100%;
