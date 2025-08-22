@@ -3456,156 +3456,94 @@ html, body {
     overflow-x: hidden;
 }
 
-/* =================================================================== */
-/* # INTRO */
-/* =================================================================== */
-
-/* ------------------------------------------------------------------- */
-/* Container principale */
+/* ===================================================================
+ * # INTRO
+ * ------------------------------------------------------------------- */
 .s-intro {
-    --content-padding-top   : max(20rem, 18vh);
+    --content-padding-top: max(20rem, 18vh);
     --content-padding-bottom: 4rem;
-    --content-min-height    : calc(var(--vspace-1) * 27);
-
-    z-index          : 2;
-    background-color : var(--color-gray-10);
-    width            : 100%;
-    height           : max(var(--content-min-height), 100vh);
-    overflow         : hidden;
-    position         : relative;
+    --content-min-height: calc(var(--vspace-1) * 27);
+    z-index: 2;
+    background-color: var(--color-gray-10);
+    width: 100%;
+    height: max(var(--content-min-height), 100vh);
+    overflow: hidden;
+    position: relative;
 }
 
-/* ------------------------------------------------------------------- */
-/* Contenuto intro */
+/* --------------------------------------------------------------------
+ * ## intro content
+ * -------------------------------------------------------------------- */
+
+/* Sezione principale */
 .s-intro {
-    position        : relative;
-    min-height      : 100vh;
-    overflow        : hidden;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
     background-color: var(--color-3); /* sfondo principale */
-
-    display         : flex;
-    flex-direction  : column;
-    justify-content : center;  /* centra verticalmente */
-    align-items     : center;  /* centra orizzontalmente */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* centra verticalmente */
+    align-items: center;      /* centra orizzontalmente */
 }
 
-/* ------------------------------------------------------------------- */
 /* Contenuto testo e bottoni */
 .s-intro__content {
-    position       : relative;
-    z-index        : 2;
-    display        : flex;
-    flex-direction : column;
-    align-items    : center;
-    text-align     : center;
-
-    padding: var(--content-padding-top)
-             var(--content-padding-side)
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;
+    padding: var(--content-padding-top) 
+             var(--content-padding-side) 
              var(--content-padding-bottom);
 }
 
-/* ------------------------------------------------------------------- */
-/* Testo principale */
-.s-intro__content-text {
-    z-index     : 2;
-    margin-top  : var(--vspace-1);
-}
-
-.s-intro__content-pretitle {
-    font-weight    : 600;
-    margin-bottom  : var(--vspace-0_125);
-    color          : var(--color-1);
-}
-
-.s-intro__content-title {
-    font-size      : clamp(3.8rem, 4.8vw, 8.8rem);
-    line-height    : 1.1;
-    letter-spacing : -0.025em;
-    margin         : 0 0 var(--vspace-1_25) 0;
-}
-
-/* ------------------------------------------------------------------- */
-/* Bottoni */
-.s-intro__content-btns {
-    --color-btn           : var(--color-text-dark);
-    --color-btn-text      : var(--color-white);
-    --color-btn-hover     : var(--color-1);
-    --color-btn-hover-text: var(--color-white);
-
-    margin-top     : var(--vspace-2);
-    display        : flex;
-    flex-wrap      : wrap;
-    justify-content: center;
-    gap            : var(--vspace-0_375);
-}
-
-.s-intro__content-btns .btn {
-    margin: 0;
-}
-
-/* ------------------------------------------------------------------- */
 /* Contenitore GIF centrato e ridimensionato */
 .s-intro__content-media {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-
-    margin         : 2rem auto;
-    aspect-ratio   : 4 / 5;
-    width          : 60%;
-    max-width      : 500px;
-
-    background     : var(--color-3);
-    border-radius  : 10px;
-    overflow       : hidden;
-    padding        : 20px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    margin: 2rem auto;
+    aspect-ratio: 4 / 5;      
+    width: 60%;
+    max-width: 500px;
+    background: var(--color-3);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
 }
 
 /* Immagine / GIF interna */
 .s-intro__content-media img {
-    width       : 100%;
-    height      : auto;
-    object-fit  : contain;
+    width: 100%;
+    height: auto;               
+    object-fit: contain;
     border-radius: 5px;
-    margin      : 10px;
-    display     : block;
+    margin: 10px;
+    display: block;
 }
 
-/* ------------------------------------------------------------------- */
-/* MEDIA QUERIES */
+/* -----------------------
+   MEDIA QUERIES
+----------------------- */
 
 /* Tablet */
 @media (max-width: 1024px) {
     .s-intro__content-media {
-        width      : 70%;
-        max-width  : 400px;
-    }
-
-    .s-intro__content-title {
-        font-size  : clamp(2.8rem, 4vw, 5.5rem);
+        width: 70%;
+        max-width: 400px;
     }
 }
 
 /* Smartphone */
 @media (max-width: 768px) {
     .s-intro__content-media {
-        width      : 90%;
-        max-width  : 300px;
-        margin     : 20px auto; /* mantiene centratura */
-    }
-
-    .s-intro__content-title {
-        font-size  : 2.4rem;
-        line-height: 1.2;
-    }
-
-    .s-intro__content-btns {
-        flex-direction: column;
-    }
-
-    .s-intro__content-btns .btn {
-        margin-bottom: 10px;
-        margin-right : 0;
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto; /* mantiene centratura */
     }
 }
 
