@@ -3210,7 +3210,22 @@ td:last-child {
 .s-header__menu-links li {
     padding-left: 0;
 }
+.s-header__menu-links li a {
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: var(--vspace-1);
+  color: white;
+  padding: 0 1.2rem;
+  display: inline-block; /* aggiunto per far apparire il border */
+  transition: color 0.3s, border-bottom 0.3s;
+  text-decoration: none; /* rimuove eventuale sottolineatura default */
+}
 
+.s-header__menu-links li a.active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
 .s-header__menu-links a {
     font-family: 'Helvetica', Arial, sans-serif; /* sostituisci var(--font-1) */
     font-weight: 400;
@@ -3224,10 +3239,7 @@ td:last-child {
 .s-header__menu-links .current a {
     color: #D3D3D3; /* esempio colore per il menu attivo */
 }
-    .s-header__menu-links li a.active {
-  border-bottom: 2px solid #fff; /* linea bianca */
-  padding-bottom: 2px;           /* evita che il testo si sposti */
-}
+  
 @media screen and (max-width: 992px) {
     .s-header__menu-links {
         flex-flow: row wrap;
