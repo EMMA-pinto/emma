@@ -4001,12 +4001,13 @@ html, body {
 }
 
 /* =================================================================== */
-/* # ABOUT SECTION */
+/* # ABOUT SECTION - VERSIONE DARK */
 /* ------------------------------------------------------------------- */
 .s-about {
   min-height: 100vh;
-  padding: 80px 20px; /* normale su desktop */
-  color: var(--color-3);
+  padding: 80px 20px;
+  background-color: #111;      /* sfondo scuro */
+  color: #fff;                 /* testo bianco */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4023,6 +4024,7 @@ html, body {
 
 .s-about h2.text-display-title {
   font-size: 2.5rem;
+  color: #fff; /* assicura titolo bianco */
 }
 
 /* Contenuto a 3 colonne */
@@ -4032,7 +4034,7 @@ html, body {
   gap: 30px;
   max-width: 1200px;
   width: 100%;
-  margin: 80px auto 0 auto; /* distanza extra solo su desktop */
+  margin: 80px auto 0 auto;
 }
 
 .s-about__content .text-column,
@@ -4040,6 +4042,7 @@ html, body {
   flex: 0 0 33.33%;
   max-width: 33.33%;
   box-sizing: border-box;
+  color: #fff; /* testo bianco anche nelle colonne */
 }
 
 /* Paragrafi */
@@ -4050,7 +4053,7 @@ html, body {
 
 /* Link */
 .s-about__content .text-column a {
-  color: inherit;
+  color: #fff; /* link bianco */
   text-decoration: underline;
 }
 
@@ -4067,7 +4070,7 @@ html, body {
   position: absolute;
   bottom: 90px;
   right: 10px;
-  width: 200px; /* PNG grande su desktop */
+  width: 200px;
   height: auto;
 }
 
@@ -4075,14 +4078,13 @@ html, body {
 /* Responsive */
 /* ------------------------------------------------------------------- */
 
-/* Tablet */
 @media screen and (max-width: 1024px) {
   .s-about {
     padding: 60px 20px;
   }
 
   .s-about__content {
-    margin-top: 30px; /* meno spazio sopra al contenuto */
+    margin-top: 30px;
   }
 
   .s-about__content .text-column,
@@ -4100,7 +4102,6 @@ html, body {
   }
 }
 
-/* Mobile */
 @media screen and (max-width: 767px) {
   .s-about {
     padding: 40px 15px;
@@ -4110,7 +4111,7 @@ html, body {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    margin-top: 20px; /* ancora meno spazio */
+    margin-top: 20px;
   }
 
   .s-about__content .text-column,
@@ -4135,7 +4136,6 @@ html, body {
     right: 10px;
   }
 }
-
 
 
 /* ----------------------- WORKS SECTION ----------------------- */
