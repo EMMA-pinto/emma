@@ -15,24 +15,24 @@
   </div>
 </header>
 
-<!-- SEZIONE INTRO / FOTO VIEWPORT -->
+<!-- FOTO INIZIALE FULLSCREEN -->
 <section id="intro" class="s-intro">
-  <div class="s-intro__content-media">
-    <img src="images/gif2.gif" alt="GIF animata">
+  <div class="s-intro__image">
+    <img src="images/foto-grande.jpg" alt="Foto a tutta pagina">
   </div>
 </section>
 
-<!-- TESTO CENTRATO -->
-<section class="s-text-center">
-  <div class="text-center-container">
-    <h1>“COMA COSE / La Gelosia”</h1>
+<!-- TESTO INTERMEDIO -->
+<section class="s-text-black">
+  <div class="text-black-container">
+    <h2>“COMA COSE / La Gelosia”</h2>
     <p>
-      Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano...
+      Il festival è caratterizzato da un'identità radicata che nasce dalla volontà di portare all’estero l’anima della città di Milano, un luogo ricco di opportunità, cultura e avanguardia.
     </p>
   </div>
 </section>
 
-<!-- GRIGLIA DI DUE FOTO -->
+<!-- GRIGLIA DUE FOTO -->
 <section class="s-grid-two">
   <div class="grid-two-container">
     <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
@@ -40,18 +40,18 @@
   </div>
 </section>
 
-<!-- TESTO SOTTO GRIGLIA -->
+<!-- TESTO FINALE -->
 <section class="s-text-bottom">
   <div class="text-bottom-container">
     <p>
-      Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati...
+      Durante i tre giorni di festival si esibiscono artisti emergenti e affermati, con workshop e interventi artistico-culturali.
     </p>
   </div>
 </section>
 
 <style>
 /* -------------------------
-   BODY E SFONDO SCURO
+   BODY E SFONDO GENERALE
 ------------------------- */
 body {
     margin: 0;
@@ -103,33 +103,36 @@ body {
 }
 
 /* -------------------------
-   INTRO FOTO VIEWPORT
+   INTRO FOTO FULLSCREEN
 ------------------------- */
 .s-intro {
     width: 100%;
-    height: 100vh; /* occupa tutta la viewport */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
-.s-intro__content-media img {
+.s-intro__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* -------------------------
-   TESTO CENTRATO
+   TESTO INTERMEDIO SFONDO NERO
 ------------------------- */
-.s-text-center {
+.s-text-black {
+    background-color: #000;
+    color: white;
     text-align: center;
     padding: 4rem 2rem;
 }
-.s-text-center h1 {
-    font-size: 2.5rem;
+.s-text-black h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
-.s-text-center p {
+.s-text-black p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -160,11 +163,12 @@ body {
 }
 
 /* -------------------------
-   TESTO SOTTO GRIGLIA
+   TESTO FINALE
 ------------------------- */
 .s-text-bottom {
     text-align: center;
     padding: 3rem 2rem;
+    background-color: #111;
 }
 .s-text-bottom p {
     font-size: 1.2rem;
@@ -177,15 +181,14 @@ body {
    RESPONSIVE
 ------------------------- */
 @media (max-width: 992px) {
-    .s-text-center h1 {
-        font-size: 2rem;
+    .s-text-black h2 {
+        font-size: 1.8rem;
     }
-    .s-text-center p, .s-text-bottom p {
+    .s-text-black p, .s-text-bottom p {
         font-size: 1rem;
     }
     .s-grid-two .grid-item {
         flex: 1 1 100%;
     }
 }
-
 </style>
