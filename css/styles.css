@@ -3224,6 +3224,10 @@ td:last-child {
 .s-header__menu-links .current a {
     color: #D3D3D3; /* esempio colore per il menu attivo */
 }
+    .s-header__menu-links li a.active {
+  border-bottom: 2px solid #fff; /* linea bianca */
+  padding-bottom: 2px;           /* evita che il testo si sposti */
+}
 @media screen and (max-width: 992px) {
     .s-header__menu-links {
         flex-flow: row wrap;
