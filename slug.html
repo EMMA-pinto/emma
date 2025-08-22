@@ -1,12 +1,9 @@
-<!-- CONTENUTO SLUG -->
+<!-- HEADER / MENU FISSO -->
 <header class="s-header">
   <div class="s-header__inner">
-    <!-- Logo -->
     <div class="s-header__logo">
       <a href="index.html">EMMA PINTO</a>
     </div>
-
-    <!-- Menu -->
     <nav class="s-header__nav">
       <ul class="s-header__menu-links">
         <li><a href="index.html#intro">Intro</a></li>
@@ -17,208 +14,178 @@
     </nav>
   </div>
 </header>
-<div class="container">
-  <div class="text-column">
-    <h1>“COMA COSE/"La Gelosia"</h1>
+
+<!-- SEZIONE INTRO / FOTO VIEWPORT -->
+<section id="intro" class="s-intro">
+  <div class="s-intro__content-media">
+    <img src="images/gif2.gif" alt="GIF animata">
+  </div>
+</section>
+
+<!-- TESTO CENTRATO -->
+<section class="s-text-center">
+  <div class="text-center-container">
+    <h1>“COMA COSE / La Gelosia”</h1>
     <p>
-      Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano e il suo modo di inserirsi all’interno del panorama internazionale: un luogo ricco di opportunità, cultura, dinamicità, avanguardia ma pur sempre a misura d’uomo. Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati, intervallati dalla presenza di interventi e workshop di natura artistico-culturale.
+      Il festival è caratterizzato da un'identità radicata che nasce a partire dalla volontà di portare all’estero l’anima della città di Milano...
     </p>
   </div>
+</section>
 
-  <div class="images-column">
-    <div class="grid">
-      <div class="grid-item large"><img src="images/folio/coma.jpg" alt="Poster Festival"></div>
-      <div class="grid-item small"><img src="poster2.jpg" alt="Poster Festival"></div>
-      <div class="grid-item medium"><img src="poster3.jpg" alt="Poster Festival"></div>
-      <div class="grid-item small"><img src="poster4.jpg" alt="Poster Festival"></div>
-      <div class="grid-item medium"><img src="poster5.jpg" alt="Poster Festival"></div>
-    </div>
+<!-- GRIGLIA DI DUE FOTO -->
+<section class="s-grid-two">
+  <div class="grid-two-container">
+    <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
+    <div class="grid-item"><img src="poster2.jpg" alt="Poster 2"></div>
   </div>
-</div>
+</section>
+
+<!-- TESTO SOTTO GRIGLIA -->
+<section class="s-text-bottom">
+  <div class="text-bottom-container">
+    <p>
+      Durante i tre giorni di festival si esibiscono molteplici artisti, dai giovani emergenti a quelli più affermati...
+    </p>
+  </div>
+</section>
 
 <style>
+/* -------------------------
+   BODY E SFONDO SCURO
+------------------------- */
+body {
+    margin: 0;
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: var(--color-3);
+    color: white;
+    padding-top: 80px; /* spazio per header fisso */
+}
+
 /* -------------------------
    HEADER / MENU FISSO
 ------------------------- */
 .s-header {
-    position: fixed;       /* menu sempre fisso */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;          /* sopra tutti i contenuti */
-    background-color: rgba(0, 0, 0, 0.85); /* sfondo semi-trasparente */
-    transition: top 0.3s ease;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.85);
 }
-
-/* spazio sotto header per non coprire contenuti */
-body {
-    padding-top: 80px; /* regola secondo altezza header */
-}
-
-/* Container interno header */
 .s-header__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
 }
-
-/* Logo */
 .s-header__logo a {
     color: white;
     font-size: 1.8rem;
     text-decoration: none;
 }
-
-/* Menu principale */
-.s-header__nav {
-    margin-left: var(--vspace-1);
-}
-
 .s-header__menu-links {
     list-style: none;
-    display: inline-flex;
-    flex-flow: row nowrap;
+    display: flex;
     margin: 0;
     padding: 0;
 }
-
 .s-header__menu-links li {
-    padding-left: 0;
+    margin-left: 1rem;
 }
-
 .s-header__menu-links a {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: var(--vspace-1);
     color: white;
-    padding: 0 1.2rem;
-    display: inline-block;
     text-decoration: none;
-    transition: color 0.3s, border-bottom 0.3s;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
 }
-
-/* Link attivo con linea bianca */
 .s-header__menu-links li a.active {
     border-bottom: 2px solid #fff;
-    padding-bottom: 2px;
-    color: white !important;
-}
-
-/* Responsive menu */
-@media screen and (max-width: 992px) {
-    .s-header__menu-links {
-        flex-flow: row wrap;
-    }
-    .s-header__menu-links a {
-        font-size: 1.2rem;
-        padding: 0 0.8rem;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .s-header__menu-links {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-    .s-header__menu-links a {
-        font-size: 1rem;
-        padding: 0.5rem 0;
-    }
 }
 
 /* -------------------------
-   CONTENUTO SLUG
+   INTRO FOTO VIEWPORT
 ------------------------- */
-.container {
-    display: flex;
-    gap: 30px;
-    padding: 50px;
-    flex-wrap: wrap;
-}
-
-.text-column {
-    flex: 1 1 300px;
-    max-width: 400px;
-    line-height: 1.4; /* meno distanza tra le righe */
-}
-
-.text-column h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.text-column p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.images-column {
-    flex: 2 1 400px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-auto-rows: 150px;
-    gap: 15px;
-}
-
-.grid-item {
-    overflow: hidden;
-    border-radius: 8px;
+.s-intro {
+    width: 100%;
+    height: 100vh; /* occupa tutta la viewport */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.grid-item img {
+.s-intro__content-media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* -------------------------
+   TESTO CENTRATO
+------------------------- */
+.s-text-center {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+.s-text-center h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.s-text-center p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* -------------------------
+   GRIGLIA DUE FOTO
+------------------------- */
+.s-grid-two .grid-two-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+.s-grid-two .grid-item {
+    flex: 1 1 400px;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.s-grid-two .grid-item img {
+    width: 100%;
+    height: auto;
     display: block;
+    object-fit: cover;
 }
 
-.grid-item.large {
-    grid-row: span 2;
-    grid-column: span 2;
+/* -------------------------
+   TESTO SOTTO GRIGLIA
+------------------------- */
+.s-text-bottom {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.s-text-bottom p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-.grid-item.medium {
-    grid-row: span 1;
-    grid-column: span 2;
-}
-
-.grid-item.small {
-    grid-row: span 1;
-    grid-column: span 1;
-}
-
-/* Responsive griglia */
+/* -------------------------
+   RESPONSIVE
+------------------------- */
 @media (max-width: 992px) {
-    .container {
-        gap: 20px;
-        padding: 30px;
+    .s-text-center h1 {
+        font-size: 2rem;
     }
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-        grid-auto-rows: 120px;
+    .s-text-center p, .s-text-bottom p {
+        font-size: 1rem;
+    }
+    .s-grid-two .grid-item {
+        flex: 1 1 100%;
     }
 }
 
-@media (max-width: 600px) {
-    .container {
-        flex-direction: column;
-        padding: 20px;
-    }
-    .text-column {
-        max-width: 100%;
-    }
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        grid-auto-rows: 100px;
-    }
-}
 </style>
