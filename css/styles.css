@@ -3237,7 +3237,7 @@ td:last-child {
 }
 
 .s-header__menu-links .current a {
-    color: #D3D3D3; /* esempio colore per il menu attivo */
+    color: white;
 }
   
 @media screen and (max-width: 992px) {
