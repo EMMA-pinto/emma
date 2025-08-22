@@ -56,7 +56,7 @@
 body {
     margin: 0;
     font-family: 'Helvetica', Arial, sans-serif;
-    background-color: var(--color-3);
+    background-color: #1A1A1A; /* sfondo scuro uniforme */
     color: white;
     padding-top: 80px; /* spazio per header fisso */
 }
@@ -142,12 +142,16 @@ body {
 /* -------------------------
    GRIGLIA DUE FOTO
 ------------------------- */
+.s-grid-two {
+    background-color: #1A1A1A; /* sfondo uniforme sotto le foto */
+    padding: 2rem 0;
+}
 .s-grid-two .grid-two-container {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 2rem;
     flex-wrap: wrap;
+    padding: 0 2rem;
 }
 .s-grid-two .grid-item {
     flex: 1 1 400px;
@@ -168,7 +172,7 @@ body {
 .s-text-bottom {
     text-align: center;
     padding: 3rem 2rem;
-    background-color: #111;
+    background-color: #1A1A1A; /* stesso sfondo griglia e body */
 }
 .s-text-bottom p {
     font-size: 1.2rem;
