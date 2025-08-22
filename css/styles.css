@@ -3486,11 +3486,12 @@ html, body {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-    background-color: var(--color-3)
+    background-color: var(--color-3); /* <-- corretto ; */
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;  /* centra verticalmente */
+    align-items: center;      /* centra orizzontalmente */
 }
 
 /* Contenuto testo e bottoni */
@@ -3499,9 +3500,11 @@ html, body {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    align-items: center;   /* centra testo e bottoni */
+    align-items: center;   
     text-align: center;
-    padding: var(--content-padding-top) var(--content-padding-side) var(--content-padding-bottom);
+    padding: var(--content-padding-top) 
+             var(--content-padding-side) 
+             var(--content-padding-bottom);
 }
 
 /* Testo principale */
@@ -3529,6 +3532,7 @@ html, body {
     --color-btn-text: var(--color-white);
     --color-btn-hover: var(--color-1);
     --color-btn-hover-text: var(--color-white);
+
     margin-top: var(--vspace-2);
     display: flex;
     flex-wrap: wrap;
@@ -3542,31 +3546,32 @@ html, body {
 
 /* Contenitore GIF centrato e ridimensionato */
 .s-intro__content-media {
-  margin: 2rem auto;          /* margini sopra e sotto centrato */
-  aspect-ratio: 4 / 5;        /* mantiene formato verticale */
-  width: 60%;
-  max-width: 500px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
 
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
+    margin: 2rem auto;
+    aspect-ratio: 4 / 5;      
+    width: 60%;
+    max-width: 500px;
 
-  display: flex;
-  justify-content: center;    /* centra orizzontalmente */
-  align-items: center;        /* centra verticalmente */
-  padding: 20px;              /* spazio interno più comodo */
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
 }
 
-/* --- IMMAGINE / GIF ALL'INTERNO --- */
+/* Immagine / GIF interna */
 .s-intro__content-media img {
-  width: 100%;
-  height: auto;               /* mantiene proporzioni originali */
-  object-fit: contain;
-  border-radius: 5px;
+    width: 100%;
+    height: auto;               
+    object-fit: contain;
+    border-radius: 5px;
+    margin: 10px;
+    display: block;
+}
 
-  margin: 10px;               /* margine attorno alla GIF */
-  display: block;
-}/* -----------------------
+/* -----------------------
    MEDIA QUERIES
 ----------------------- */
 
@@ -3576,6 +3581,7 @@ html, body {
         width: 70%;
         max-width: 400px;
     }
+
     .s-intro__content-title {
         font-size: clamp(2.8rem, 4vw, 5.5rem);
     }
@@ -3586,41 +3592,11 @@ html, body {
     .s-intro__content-media {
         width: 90%;
         max-width: 300px;
+        margin: 20px auto; /* mantiene centratura */
     }
+
     .s-intro__content-title {
         font-size: 2.4rem;
-    }
-}
-
-/* -----------------------
-   MEDIA QUERIES
------------------------ */
-
-/* Tablet */
-@media (max-width: 1024px) {
-    .s-intro__content-media {
-        width: 70vw;
-        max-width: 600px;
-        max-height: 60vh;
-    }
-}
-
-/* Smartphone */
-@media (max-width: 768px) {
-    .s-intro__content-media {
-        position: relative;       /* diventa relativo */
-        top: auto;
-        left: auto;
-        transform: none;          /* rimuove translate */
-        width: 90%;
-        max-width: 400px;
-        height: auto;             
-        margin: 20px auto;        /* centra con margini */
-    }
-
-    /* Ridimensiona titolo e bottoni */
-    .s-intro__content-title {
-        font-size: clamp(2rem, 5vw, 3rem);
         line-height: 1.2;
     }
 
@@ -3633,6 +3609,7 @@ html, body {
         margin-right: 0;
     }
 }
+
 
 
 /* --------------------------------------------------------------------
