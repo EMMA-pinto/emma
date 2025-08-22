@@ -3555,7 +3555,7 @@ html, body {
     width: 60%;
     max-width: 500px;
 
-    background: #fff;
+    background: var(--color-3);
     border-radius: 10px;
     overflow: hidden;
     padding: 20px;
