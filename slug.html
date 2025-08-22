@@ -17,9 +17,7 @@
 
 <!-- FOTO INIZIALE FULLSCREEN -->
 <section id="intro" class="s-intro">
-  <div class="s-intro__image">
-    <img src="images/foto-grande.jpg" alt="Foto a tutta pagina">
-  </div>
+  <img src="images/foto-grande.jpg" alt="Foto a tutta pagina" class="s-intro__image">
 </section>
 
 <!-- TESTO INTERMEDIO -->
@@ -32,7 +30,7 @@
   </div>
 </section>
 
-<!-- GRIGLIA QUATTRO FOTO -->
+<!-- GRIGLIA 2X2 -->
 <section class="s-grid">
   <div class="grid-container">
     <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
@@ -52,20 +50,16 @@
 </section>
 
 <style>
-/* -------------------------
-   BODY E SFONDO GENERALE
-------------------------- */
+/* BODY E SFONDO GENERALE */
 body {
     margin: 0;
     font-family: 'Helvetica', Arial, sans-serif;
     background-color: #1A1A1A;
     color: white;
-    padding-top: 80px;
+    padding-top: 80px; /* spazio per header fisso */
 }
 
-/* -------------------------
-   HEADER / MENU FISSO
-------------------------- */
+/* HEADER / MENU FISSO */
 .s-header {
     position: fixed;
     top: 0;
@@ -81,50 +75,52 @@ body {
     align-items: center;
     padding: 1rem 2rem;
 }
+
 .s-header__logo a {
     color: white;
     font-size: 1.8rem;
     text-decoration: none;
 }
+
 .s-header__menu-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
+
 .s-header__menu-links li {
     margin-left: 1rem;
 }
+
 .s-header__menu-links a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 0.3rem 0.5rem;
 }
+
 .s-header__menu-links li a.active {
     border-bottom: 2px solid #fff;
 }
 
-/* -------------------------
-   INTRO FOTO FULLSCREEN
-------------------------- */
+/* INTRO FOTO FULLSCREEN */
 .s-intro {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    overflow: hidden;
 }
-.s-intro__image img {
+.s-intro__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* -------------------------
-   TESTO INTERMEDIO SFONDO NERO
-------------------------- */
+/* TESTO INTERMEDIO SFONDO NERO */
 .s-text-black {
     background-color: #000;
     color: white;
@@ -142,36 +138,30 @@ body {
     line-height: 1.6;
 }
 
-/* -------------------------
-   GRIGLIA QUATTRO FOTO
-------------------------- */
+/* GRIGLIA 2X2 */
 .s-grid {
     background-color: #1A1A1A;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 }
-.s-grid .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.s-grid .grid-item {
-    flex: 1 1 45%;
-    max-width: 500px;
+.grid-item {
     border-radius: 10px;
     overflow: hidden;
 }
-.s-grid .grid-item img {
+.grid-item img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
 
-/* -------------------------
-   TESTO FINALE
-------------------------- */
+/* TESTO FINALE */
 .s-text-bottom {
     text-align: center;
     padding: 3rem 2rem;
@@ -184,18 +174,17 @@ body {
     line-height: 1.6;
 }
 
-/* -------------------------
-   RESPONSIVE
-------------------------- */
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .s-text-black h2 {
         font-size: 1.8rem;
     }
-    .s-text-black p, .s-text-bottom p {
+    .s-text-black p,
+    .s-text-bottom p {
         font-size: 1rem;
     }
-    .s-grid .grid-item {
-        flex: 1 1 100%;
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 colonna su tablet/smartphone */
     }
 }
 </style>
