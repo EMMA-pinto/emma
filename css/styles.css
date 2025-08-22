@@ -3504,12 +3504,13 @@ html, body {
 /* Contenitore GIF centrato e ridimensionato */
 .s-intro__content-media {
     display: flex;
-    justify-content: center;  
-    align-items: center;      
+    justify-content: center;
+    align-items: center;
+
     margin: 2rem auto;
-    aspect-ratio: 4 / 5;      
-    width: 60%;
-    max-width: 500px;
+    width: 80%;          /* più larga */
+    max-width: 800px;    /* massimo più grande */
+    aspect-ratio: 4 / 5; /* mantiene proporzioni verticale */
     background: var(--color-3);
     border-radius: 10px;
     overflow: hidden;
@@ -3518,11 +3519,10 @@ html, body {
 
 /* Immagine / GIF interna */
 .s-intro__content-media img {
-    width: 100%;
-    height: auto;               
+    width: 100%;   /* riempie il contenitore */
+    height: auto;  /* mantiene proporzioni */
     object-fit: contain;
     border-radius: 5px;
-    margin: 10px;
     display: block;
 }
 
