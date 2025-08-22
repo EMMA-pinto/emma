@@ -3544,13 +3544,19 @@ html, body {
     margin: 0;
 }
 
-/* Contenitore GIF centrato e ridimensionato */
-.s-intro__content-media {
+/* Wrapper GIF + nota */
+.s-intro__media-wrapper {
     display: flex;
-    justify-content: center;  
-    align-items: center;      
+    flex-direction: column;
+    align-items: flex-start;  /* nota allineata a sinistra */
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+}
 
-    margin: 2rem auto;
+/* Contenitore GIF centrato */
+.s-intro__content-media {
+    margin: 0 auto;            /* centra orizzontalmente */
     aspect-ratio: 4 / 5;      
     width: 60%;
     max-width: 500px;
@@ -3559,6 +3565,10 @@ html, body {
     border-radius: 10px;
     overflow: hidden;
     padding: 20px;
+
+    display: flex;
+    justify-content: center;   /* centra GIF dentro il box */
+    align-items: center;
 }
 
 /* Immagine / GIF interna */
@@ -3571,15 +3581,15 @@ html, body {
     display: block;
 }
 
-/* Frase sotto la GIF, allineata a sinistra */
+/* Nota sotto la GIF */
 .s-intro__content-note {
-    color: #fff;              /* testo bianco */
-    text-align: left;         /* allineato a sinistra */
-    max-width: 600px;         /* larghezza massima */
-    margin: 20px auto 0 0;    /* margine sopra, allineato alla GIF */
-    font-size: 1.8rem;        /* dimensione più grande */
-    line-height: 1.6;         /* distanza tra le righe */
-    white-space: normal;      /* consente il wrapping su più righe */
+    color: #fff;              
+    text-align: left;         
+    max-width: 600px;         
+    margin: 15px 0 0 20px;    /* margine sopra + spostata leggermente a sinistra */
+    font-size: 1.8rem;        
+    line-height: 1.6;         
+    white-space: normal;      
 }
 
 /* -----------------------
@@ -3600,6 +3610,7 @@ html, body {
     .s-intro__content-note {
         font-size: 1.5rem;
         max-width: 90%;
+        margin-left: 15px;
     }
 }
 
@@ -3608,7 +3619,7 @@ html, body {
     .s-intro__content-media {
         width: 90%;
         max-width: 300px;
-        margin: 20px auto; /* mantiene centratura */
+        margin: 20px auto; 
     }
 
     .s-intro__content-title {
@@ -3628,9 +3639,10 @@ html, body {
     .s-intro__content-note {
         font-size: 1.4rem;
         max-width: 90%;
-        margin: 15px 0 0 0;
+        margin: 10px 0 0 10px;
     }
 }
+
 
 
 /* --------------------------------------------------------------------
