@@ -4137,22 +4137,18 @@ html, body {
 
 /* Email centrale */
 .s-footer__content {
-    text-align: center;
-    margin-top: 20px;
     width: 100%;
+    text-align: center;
+    overflow-x: auto;  /* permette scroll orizzontale se lo spazio è troppo stretto */
 }
 
 .s-footer__content a {
-    font-size: clamp(1.2rem, 4vw, 2rem); /* leggermente più piccola */
+    font-size: clamp(1rem, 4vw, 1.6rem); /* riduce il font per mobile */
+    white-space: nowrap;                  /* forza su una sola riga */
+    display: inline-block;
     color: inherit;
     text-decoration: underline;
-    transition: color 0.3s ease;
-    display: inline-block;
-    max-width: 100%;
-    white-space: nowrap;   /* forza su una sola riga */
-    overflow: hidden;      /* evita overflow */
-    text-overflow: ellipsis; /* opzionale se lo spazio diventa troppo piccolo */
-    text-align: center;
+    word-wrap: normal;                    /* non permettere break automatici */
 }
 
 .s-footer__content a:hover {
