@@ -3512,31 +3512,32 @@ html, body {
     flex-direction: column;
     align-items: center;   
     text-align: center;
-    padding: var(--content-padding-top) 
-             var(--content-padding-side) 
-             var(--content-padding-bottom);
+    padding: var(--content-padding-top, 2rem) 
+             var(--content-padding-side, 1rem) 
+             var(--content-padding-bottom, 2rem);
 }
 
-/* Contenitore GIF centrato e ridimensionato */
+/* Contenitore GIF centrato e più grande */
 .s-intro__content-media {
     display: flex;
     justify-content: center;
     align-items: center;
     
     margin: 3rem auto;
-    width: 90%;
-    max-width: 1400px;
-    height: 70vh;         /* <--- forza altezza maggiore */
+    width: 95%;          /* più largo per occupare quasi tutta la larghezza */
+    max-width: 1600px;   /* aumenta massimo consentito */
+    height: 80vh;        /* aumenta altezza */
     background: var(--color-3);
     border-radius: 10px;
     overflow: hidden;
     padding: 20px;
 }
 
+/* GIF interna */
 .s-intro__content-media img {
     width: 100%;
-    height: 100%;         /* ora riempie il contenitore */
-    object-fit: contain;  /* mantiene proporzioni */
+    height: 100%;
+    object-fit: contain;  /* mantiene proporzioni senza tagli */
     border-radius: 5px;
     display: block;
 }
@@ -3545,10 +3546,12 @@ html, body {
    MEDIA QUERIES
 ----------------------- */
 
+/* Tablet */
 @media (max-width: 1024px) {
     .s-intro__content-media {
-        width: 85%;
-        max-width: 900px;
+        width: 90%;
+        max-width: 1000px;
+        height: 60vh;
     }
 }
 
@@ -3556,7 +3559,8 @@ html, body {
 @media (max-width: 600px) {
     .s-intro__content-media {
         width: 95%;
-        max-width: 600px;
+        max-width: 700px;
+        height: 50vh;
     }
 }
 
@@ -3564,8 +3568,10 @@ html, body {
     .s-intro__content-media {
         width: 95%;
         max-width: 400px;
+        height: 45vh;
     }
 }
+
 
 /* --------------------------------------------------------------------
  * ## intro btn cv download
