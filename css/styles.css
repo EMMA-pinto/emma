@@ -3017,16 +3017,17 @@ td:last-child {
 /* HEADER BASE */
 .s-header {
   --header-height: 72px;
-  z-index: 1000;
-  background-color: #1A1A1A;   /* fascia scura fissa */
-  height: var(--header-height);
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-
+  width: 100%;
+  height: var(--header-height);
+  background-color: #1A1A1A;   /* fascia scura fissa */
+  z-index: 9999;                /* sempre in primo piano */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.3s ease;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* CONTENITORE INTERNO */
@@ -3043,7 +3044,7 @@ td:last-child {
   box-sizing: border-box;
 
   position: relative;
-  z-index: 1001; /* sopra al video */
+  z-index: 10000; /* sopra il video e altri elementi */
 }
 
 /* LOGO */
@@ -3054,7 +3055,7 @@ td:last-child {
   color: #fff;
   text-decoration: none;
   position: relative;
-  z-index: 1002;
+  z-index: 10001; /* garantisce visibilità sopra tutto */
 }
 
 /* MENU */
@@ -3064,7 +3065,7 @@ td:last-child {
   margin: 0;
   padding: 0;
   position: relative;
-  z-index: 1002; /* sopra al video */
+  z-index: 10001; /* sempre sopra il contenuto */
 }
 
 .s-header__menu-links li {
@@ -3083,7 +3084,6 @@ td:last-child {
 .s-header__menu-links a.active {
   border-bottom: 2px solid #fff;
 }
-
 
 /* MOBILE */
 @media screen and (max-width: 992px) {
