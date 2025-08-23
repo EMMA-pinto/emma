@@ -4389,19 +4389,7 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* Nasconde l'overflow orizzontale */
 }
-    /* Forza header visibile */
-.s-header.sticky,
-.s-header.offset {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
-}
-
-/* Intro sopra altri elementi */
-.s-intro__content-media {
-    position: relative;
-    z-index: 10;
-}
+  
 body {
   overflow-x: hidden;
 #preloader {
