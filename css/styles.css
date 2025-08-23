@@ -2707,18 +2707,18 @@ td:last-child {
  * # TEXT DISPLAY TITLE - RESPONSIVE
 =================================================================== */
 
-/* Base per tutti i titoli */
+/* Base per tutti i titoli - Desktop */
 .section-header .text-display-title,
 .section-header .text-display-title.h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: clamp(1.5rem, 3vw, 3rem); /* scala fluido desktop */
+    font-size: clamp(1.5rem, 3vw, 3rem); /* desktop fluido */
     line-height: 1.1;
     letter-spacing: 1px;
     text-transform: uppercase;
     white-space: nowrap;       /* forza il testo su una sola riga */
-    overflow: hidden;          /* evita overflow */
-    text-overflow: ellipsis;   /* opzionale, aggiunge "..." se troppo lungo */
+    overflow: hidden;          
+    text-overflow: ellipsis;   /* aggiunge "..." se troppo lungo */
     max-width: 100%;
     text-align: center;
     margin: 0;
@@ -2728,21 +2728,24 @@ td:last-child {
 @media (max-width: 992px) {
     .section-header .text-display-title,
     .section-header .text-display-title.h2 {
-        font-size: clamp(1.2rem, 4vw, 2rem); /* riduzione per tablet */
+        font-size: 1.4rem !important; /* forza riduzione per tablet */
     }
 }
 
 /* -------------------- Mobile -------------------- */
 @media (max-width: 600px) {
     .section-header {
-        flex-direction: row;         /* mantiene anno e titolo sulla stessa riga se presente */
-        justify-content: center;     /* centra il contenuto */
+        flex-direction: row;
+        justify-content: center;
         gap: 0.2em;
     }
 
     .section-header .text-display-title,
     .section-header .text-display-title.h2 {
-        font-size: clamp(1rem, 5vw, 1.6rem); /* riduzione aggressiva su smartphone */
+        font-size: 1.2rem !important;    /* forza font piccolo */
+        white-space: nowrap !important;  /* sempre su una riga */
+        overflow: hidden !important;     
+        text-overflow: ellipsis !important;
     }
 }
 
@@ -2750,11 +2753,11 @@ td:last-child {
 @media (max-width: 480px) {
     .section-header .text-display-title,
     .section-header .text-display-title.h2 {
-        font-size: clamp(0.9rem, 6vw, 1.2rem); /* leggibile anche su schermi stretti */
+        font-size: 1rem !important;      /* font ancora più piccolo su schermi stretti */
     }
 }
 
-/* Variante selected works (anno + titolo) */
+/* -------------------- Variante selected works (anno + titolo) -------------------- */
 .section-header.selected.works {
     margin-bottom: var(--vspace-1);
     display: flex;             
@@ -2771,16 +2774,15 @@ td:last-child {
 .section-header.selected.works .text-display-title.h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: 1.2rem !important;   /* forza riduzione su mobile */
     line-height: 1.2;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 0;
-    white-space: nowrap;   /* forza su una riga */
+    white-space: nowrap !important;  /* sempre su una riga */
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## swiper overrides
