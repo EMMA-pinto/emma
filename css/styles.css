@@ -3494,27 +3494,14 @@ html, body {
 /* Sezione principale */
 .s-intro {
     position: relative;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
     background-color: var(--color-3); /* sfondo principale */
 
     display: flex;
-    flex-direction: column;
     justify-content: center;  /* centra verticalmente */
     align-items: center;      /* centra orizzontalmente */
-}
-
-/* Contenuto testo e bottoni */
-.s-intro__content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-    text-align: center;
-    padding: var(--content-padding-top, 2rem) 
-             var(--content-padding-side, 1rem) 
-             var(--content-padding-bottom, 2rem);
 }
 
 /* Contenitore GIF centrato e più grande */
@@ -3523,21 +3510,21 @@ html, body {
     justify-content: center;
     align-items: center;
     
-    margin: 3rem auto;
-    width: 95%;          /* più largo per occupare quasi tutta la larghezza */
-    max-width: 1600px;   /* aumenta massimo consentito */
-    height: 80vh;        /* aumenta altezza */
+    width: 95%;          /* quasi tutta la larghezza */
+    max-width: 1600px;   /* massimo consentito */
+    height: 80vh;        /* occupa la maggior parte della viewport */
     background: var(--color-3);
     border-radius: 10px;
     overflow: hidden;
     padding: 20px;
+    margin: 0 auto;
 }
 
 /* GIF interna */
 .s-intro__content-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;  /* mantiene proporzioni senza tagli */
+    width: auto;         /* mantiene proporzioni reali */
+    height: 100%;        /* riempie il contenitore in altezza */
+    object-fit: contain; /* evita tagli o distorsioni */
     border-radius: 5px;
     display: block;
 }
@@ -3549,9 +3536,9 @@ html, body {
 /* Tablet */
 @media (max-width: 1024px) {
     .s-intro__content-media {
-        width: 90%;
-        max-width: 1000px;
-        height: 60vh;
+        width: 85%;
+        max-width: 900px;
+        height: 70vh;
     }
 }
 
@@ -3559,8 +3546,8 @@ html, body {
 @media (max-width: 600px) {
     .s-intro__content-media {
         width: 95%;
-        max-width: 700px;
-        height: 50vh;
+        max-width: 600px;
+        height: 60vh;
     }
 }
 
@@ -3568,10 +3555,9 @@ html, body {
     .s-intro__content-media {
         width: 95%;
         max-width: 400px;
-        height: 45vh;
+        height: 50vh;
     }
 }
-
 
 /* --------------------------------------------------------------------
  * ## intro btn cv download
