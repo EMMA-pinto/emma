@@ -2751,19 +2751,21 @@ td:last-child {
   margin-bottom: 0;
 }
 
-/* -------------------- RESPONSIVE -------------------- */ 
+/* -------------------- RESPONSIVE -------------------- */
 
 /* Tablet */
 @media (max-width: 992px) {
     .section-header {
         gap: 4px;
     }
+
     .section-header .text-display-title {
-        font-size: clamp(1.3rem, 2vw + 0.8rem, 1.8rem);
+        font-size: clamp(1.3rem, 2vw + 0.8rem, 1.8rem); /* riduce il font su tablet */
         white-space: nowrap;       /* forza il titolo su una sola riga */
-        overflow: hidden;          /* evita overflow */
-        text-overflow: ellipsis;   /* aggiunge "..." se troppo lungo */
+        overflow: hidden;          /* evita che il testo esca dal contenitore */
+        text-overflow: ellipsis;   /* aggiunge "..." se il testo è troppo lungo */
     }
+
     .section-header::before {
         font-size: 5em;
     }
@@ -2772,17 +2774,19 @@ td:last-child {
 /* Mobile */
 @media (max-width: 600px) {
     .section-header {
-        flex-direction: column;
+        flex-direction: column;    /* anno sopra titolo */
         text-align: center;
-        gap: 0.2em; /* piccolo spazio tra numero e titolo */
+        gap: 0.2em;                /* piccolo spazio tra numero e titolo */
     }
+
     .section-header .text-display-title {
-        font-size: clamp(1.2rem, 2vw + 0.6rem, 1.5rem);
+        font-size: clamp(1rem, 4vw, 1.5rem); /* riduzione minima più aggressiva */
         margin-bottom: 0.4em;
-        white-space: nowrap;       /* forza il titolo su una sola riga */
-        overflow: hidden;          
-        text-overflow: ellipsis;   
+        white-space: normal;        /* permette il wrap su più righe */
+        overflow: visible;          /* il testo non viene tagliato */
+        text-overflow: clip;        /* disabilita ellipsis */
     }
+
     .section-header::before {
         font-size: 3.5em;
         top: -0.2em;
