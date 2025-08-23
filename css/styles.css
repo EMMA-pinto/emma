@@ -2719,19 +2719,45 @@ td:last-child {
     margin-top    : 0;
 }
 
-/* Base per tutti i titoli - Desktop */
-.section-header .text-display-title,
-.section-header .text-display-title.h2 {
+.text-display-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: clamp(1.2rem, 5vw, 2rem); /* dimensione originale fluida */
-    line-height: 1.2;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    color: #000;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0;
     text-align: center;
+    line-height: 1.2;
     max-width: 100%;
     white-space: normal; /* permette al testo di andare a capo se necessario */
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Variante selected works (anno + titolo) */
+.section-header.selected.works {
+    margin-bottom: var(--vspace-1);
+    display: flex;             
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header.selected.works .section-year {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #555;
+}
+
+.section-header.selected.works .text-display-title.h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    white-space: normal;
     overflow: visible;
     text-overflow: clip;
 }
