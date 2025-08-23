@@ -4391,3 +4391,6 @@ html, body {
 }
 body {
   overflow-x: hidden;
+#preloader {
+    display: none !important;
+}
