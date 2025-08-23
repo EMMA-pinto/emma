@@ -4405,19 +4405,18 @@ html, body {
 body {
   overflow-x: hidden;
 /* ============================================================
-   FORZA TITOLI RESPONSIVE SU UNA RIGA
+   TITOLI FORZATI SU UNA RIGA (definitivo)
 ============================================================ */
 
-/* Tutti i titoli dentro section-header */
-.section-header h2.text-display-title,
-.section-header h2.text-display-title.h2 {
+/* Tutti i titoli con classe text-display-title */
+h2.text-display-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     font-weight: 700 !important;
-    font-size: 1.2rem !important;       /* forza piccolissimo su mobile */
+    font-size: 1.2rem !important;        /* forza piccolo su mobile/tablet */
     line-height: 1.2 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
-    white-space: nowrap !important;     /* forza su una sola riga */
+    white-space: nowrap !important;      /* forza una riga */
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     max-width: 100% !important;
@@ -4427,25 +4426,21 @@ body {
 
 /* Tablet */
 @media (max-width: 992px) {
-    .section-header h2.text-display-title,
-    .section-header h2.text-display-title.h2 {
+    h2.text-display-title {
         font-size: 1rem !important;
     }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-    .section-header h2.text-display-title,
-    .section-header h2.text-display-title.h2 {
+    h2.text-display-title {
         font-size: 0.9rem !important;
     }
 }
 
 /* Extra small mobile */
 @media (max-width: 480px) {
-    .section-header h2.text-display-title,
-    .section-header h2.text-display-title.h2 {
+    h2.text-display-title {
         font-size: 0.8rem !important;
     }
 }
-
