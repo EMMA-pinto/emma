@@ -2755,17 +2755,17 @@ td:last-child {
     color: #555;
 }
 
-.section-header.selected.works .text-display-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: clamp(1rem, 5vw, 3rem); /* scala fluidamente tra 1rem e 3rem */
-    line-height: 1.2;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    white-space: normal;      /* permette il wrap su mobile se necessario */
-    overflow: visible;
-    text-overflow: clip;
+.section-header.selected.works .text-display-title.h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(1rem, 5vw, 3rem) !important; /* scala fluidamente tra 1rem e 3rem */
+    line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0 !important;
+    white-space: normal !important;      /* permette il wrap su mobile se necessario */
+    overflow: visible !important;
+    text-overflow: clip !important;
 }
 
 /* -------------------- RESPONSIVE -------------------- */
