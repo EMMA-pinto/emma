@@ -3523,20 +3523,20 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    margin: 2rem auto;
-    width: 90%;          /* più largo */
-    max-width: 1200px;   /* massimo maggiore */
-    aspect-ratio: auto;   /* mantiene proporzioni GIF originali */
+    margin: 3rem auto;        /* spazio sopra e sotto */
+    width: 95%;               /* più largo rispetto a prima */
+    max-width: 1400px;        /* massimo più grande */
+    height: auto;             /* altezza automatica */
     background: var(--color-3);
     border-radius: 10px;
     overflow: hidden;
-    padding: 10px;        /* ridotto per dare più spazio alla GIF */
+    padding: 20px;            /* spazio interno per “respirare” */
 }
 
 .s-intro__content-media img {
-    width: 100%;         /* occupa tutta la larghezza */
-    height: auto;        /* mantiene proporzioni reali */
-    object-fit: contain; /* evita tagli */
+    width: 100%;              /* occupa tutta la larghezza disponibile */
+    height: auto;             /* mantiene proporzioni reali */
+    object-fit: contain;      /* non taglia l’immagine */
     border-radius: 5px;
     display: block;
 }
@@ -3545,20 +3545,18 @@ html, body {
    MEDIA QUERIES
 ----------------------- */
 
-/* Tablet */
 @media (max-width: 1024px) {
     .s-intro__content-media {
-        width: 80%;
-        max-width: 600px;
+        width: 85%;
+        max-width: 900px;
     }
 }
 
 /* Smartphone */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .s-intro__content-media {
-        width: 90%;
-        max-width: 500px;
-        margin: 20px auto;
+        width: 95%;
+        max-width: 600px;
     }
 }
 
