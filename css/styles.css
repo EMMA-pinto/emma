@@ -2704,49 +2704,62 @@ td:last-child {
 }
 
 /* ===================================================================
- * # TEXT DISPLAY TITLE
- =================================================================== */
-.text-display-title {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.2rem, 5vw, 2rem); /* scala con la larghezza */
-  color: #000;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 0;
-  text-align: center;
-  line-height: 1.2;
-  max-width: 100%;
-  white-space: normal; /* permette al testo di andare a capo solo se necessario */
+ * # TEXT DISPLAY TITLE - RESPONSIVE
+=================================================================== */
+
+/* Base per tutti i titoli */
+.section-header .text-display-title,
+.section-header .text-display-title.h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 3rem); /* scala fluido desktop */
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;       /* forza il testo su una sola riga */
+    overflow: hidden;          /* evita overflow */
+    text-overflow: ellipsis;   /* opzionale, aggiunge "..." se troppo lungo */
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
 }
 
-/* Tablet */
+/* -------------------- Tablet -------------------- */
 @media (max-width: 992px) {
-  .text-display-title {
-    font-size: 1.4rem;
-  }
+    .section-header .text-display-title,
+    .section-header .text-display-title.h2 {
+        font-size: clamp(1.2rem, 4vw, 2rem); /* riduzione per tablet */
+    }
 }
 
-/* Mobile */
+/* -------------------- Mobile -------------------- */
 @media (max-width: 600px) {
-  .text-display-title {
-    font-size: 1.2rem;
-  }
+    .section-header {
+        flex-direction: row;         /* mantiene anno e titolo sulla stessa riga se presente */
+        justify-content: center;     /* centra il contenuto */
+        gap: 0.2em;
+    }
+
+    .section-header .text-display-title,
+    .section-header .text-display-title.h2 {
+        font-size: clamp(1rem, 5vw, 1.6rem); /* riduzione aggressiva su smartphone */
+    }
 }
 
-/* Extra small mobile */
+/* -------------------- Extra small mobile -------------------- */
 @media (max-width: 480px) {
-  .text-display-title {
-    font-size: 1rem;
-  }
+    .section-header .text-display-title,
+    .section-header .text-display-title.h2 {
+        font-size: clamp(0.9rem, 6vw, 1.2rem); /* leggibile anche su schermi stretti */
+    }
 }
 
-
+/* Variante selected works (anno + titolo) */
 .section-header.selected.works {
     margin-bottom: var(--vspace-1);
-    display: flex;             /* allinea anno e titolo sulla stessa riga */
+    display: flex;             
     align-items: center;
-    gap: 10px;                 /* distanza tra anno e titolo */
+    gap: 10px;
 }
 
 .section-header.selected.works .section-year {
@@ -2756,55 +2769,17 @@ td:last-child {
 }
 
 .section-header.selected.works .text-display-title.h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-    font-weight: 700 !important;
-    font-size: clamp(1rem, 5vw, 3rem) !important; /* scala fluidamente tra 1rem e 3rem */
-    line-height: 1.2 !important;
-    letter-spacing: 1px !important;
-    text-transform: uppercase !important;
-    margin-bottom: 0 !important;
-    white-space: normal !important;      /* permette il wrap su mobile se necessario */
-    overflow: visible !important;
-    text-overflow: clip !important;
-}
-
-/* -------------------- RESPONSIVE: sempre su una riga -------------------- */
-
-/* Base per tutti i titoli */
-.section-header .text-display-title,
-.section-header .text-display-title.h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: calc(1rem + 2vw); /* scala automaticamente con la viewport */
-    line-height: 1.1;
+    font-size: clamp(1rem, 5vw, 3rem);
+    line-height: 1.2;
     letter-spacing: 1px;
     text-transform: uppercase;
-    white-space: nowrap;       /* forza il testo su una sola riga */
-    overflow: hidden;          /* evita che esca dal contenitore */
+    margin-bottom: 0;
+    white-space: nowrap;   /* forza su una riga */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
-/* Tablet */
-@media (max-width: 992px) {
-    .section-header .text-display-title,
-    .section-header .text-display-title.h2 {
-        font-size: calc(0.9rem + 3vw); /* riduce il font per viewport più piccole */
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .section-header {
-        flex-direction: row;    /* mantiene anno e titolo sulla stessa riga */
-        justify-content: center; /* centra il contenuto */
-        gap: 0.2em;
-    }
-
-    .section-header .text-display-title,
-    .section-header .text-display-title.h2 {
-        font-size: calc(0.8rem + 4vw); /* riduzione più aggressiva su smartphone */
-    }
-}
-
 
 
 /* ------------------------------------------------------------------- 
