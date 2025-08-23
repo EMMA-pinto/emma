@@ -294,7 +294,17 @@
         });
 
     }; // end ssMoveTo
-
+window.addEventListener('DOMContentLoaded', () => {
+    const titles = document.querySelectorAll('h2.text-display-title');
+    if (window.innerWidth <= 600) {
+        titles.forEach(t => {
+            t.style.fontSize = '1rem';
+            t.style.whiteSpace = 'nowrap';
+            t.style.overflow = 'hidden';
+            t.style.textOverflow = 'ellipsis';
+        });
+    }
+});
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -310,5 +320,6 @@
         ssMoveTo();
 
     })();
+
 
 })(document.documentElement);
