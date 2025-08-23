@@ -3512,26 +3512,22 @@ html, body {
 }
 
 /* Contenitore GIF */
-.s-intro__content-media {
+s-intro__content-media {
     width: 90%;
     max-width: 1400px;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 10px;
+    /* togliamo altezza fissa */
+    padding-top: 50%; /* questo crea un contenitore proporzionale */
+    position: relative;
 }
 
-/* GIF */
 .s-intro__gif {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    display: block;
-    border-radius: 5px;
 }
-
 
 /* -------------------------
    MEDIA QUERIES
