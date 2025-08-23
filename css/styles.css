@@ -3491,6 +3491,7 @@ html, body {
  * ## intro content
  * -------------------------------------------------------------------- */
 
+/* Sezione principale pieno schermo */
 .s-intro {
     position: relative;
     width: 100%;
@@ -3504,26 +3505,29 @@ html, body {
 /* Contenitore centrale */
 .s-intro__content {
     width: 100%;
-    height: 100%;           /* <--- prende tutta l’altezza */
+    height: 100%;           /* prende tutta l’altezza */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Contenitore GIF */
+/* Contenitore GIF con margini */
 .s-intro__content-media {
-    width: 90%;
-    height: 90%;            /* quasi tutta la sezione */
+    width: 80%;             /* leggermente più piccolo */
+    height: 80%;            /* lascia spazio sopra e sotto */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;           /* margini automatici per centraggio */
+    padding: 20px;          /* margine interno */
 }
 
 /* GIF interna */
 .s-intro__content-media img {
     width: 100%;
     height: 100%;
-    object-fit: contain;     /* mantiene proporzioni */
+    object-fit: contain;    /* mantiene proporzioni */
+    border-radius: 10px;    /* opzionale, bordo morbido */
 }
 /* -------------------------
    MEDIA QUERIES
