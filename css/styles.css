@@ -4143,13 +4143,15 @@ html, body {
 }
 
 .s-footer__content a {
-    font-size: clamp(1.5rem, 5vw, 3rem); /* font fluido */
+    font-size: clamp(1.2rem, 4vw, 2rem); /* leggermente più piccola */
     color: inherit;
     text-decoration: underline;
     transition: color 0.3s ease;
     display: inline-block;
     max-width: 100%;
-    word-wrap: break-word;
+    white-space: nowrap;   /* forza su una sola riga */
+    overflow: hidden;      /* evita overflow */
+    text-overflow: ellipsis; /* opzionale se lo spazio diventa troppo piccolo */
     text-align: center;
 }
 
@@ -4198,10 +4200,10 @@ html, body {
 
 /* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
-    .s-footer {
-        padding: 40px 15px;
-        box-sizing: border-box;
+    .s-footer__content a {
+        font-size: clamp(1rem, 4vw, 1.8rem); /* riduzione più aggressiva su smartphone */
     }
+}
 
     /* Titolo "Get In Touch" */
     .s-footer h2.get-in-touch,
