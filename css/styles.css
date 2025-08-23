@@ -4197,30 +4197,53 @@ html, body {
 @media (max-width: 768px) {
     .s-footer {
         padding: 40px 15px;
+        box-sizing: border-box;
     }
 
+    /* Titolo "Get In Touch" */
     .s-footer h2.get-in-touch,
     .s-footer .section-header.light-on-dark h2 {
-        font-size: clamp(1.5rem, 6vw, 2rem);
+        font-size: clamp(1.2rem, 6vw, 2rem); /* ridotto per mobile */
         margin-bottom: 30px;
+        text-align: center;
+        max-width: 100%;
+        word-wrap: break-word; /* evita che il testo esca dallo schermo */
     }
 
+    /* Email centrale */
     .s-footer__content a {
-        font-size: clamp(1.5rem, 6vw, 2rem);
+        font-size: clamp(1.2rem, 6vw, 2rem);
+        display: inline-block;
+        max-width: 100%;
+        text-align: center;
+        word-wrap: break-word;
     }
 
+    /* Bottom bar verticale */
     .s-footer__bottom-bar {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
         padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
+    /* Instagram link e copyright */
     .instagram-link,
     .s-footer__bottom-bar .copyright {
-        font-size: clamp(0.8rem, 4vw, 1rem);
+        font-size: clamp(0.7rem, 4vw, 1rem);
+        text-align: center;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    .instagram-link .arrow {
+        font-size: 1rem;
     }
 }
+
 
 /* ------------------------------------------------------------------- 
  * ## copyright
