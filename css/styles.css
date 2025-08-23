@@ -3491,21 +3491,20 @@ html, body {
  * ## intro content
  * -------------------------------------------------------------------- */
 
-/* Sezione principale */
 .s-intro {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh;          /* occupa tutto il viewport */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-3);
+    background-color: #1A1A1A;
 }
 
-/* Contenitore contenuto */
+/* Contenitore centrale */
 .s-intro__content {
     width: 100%;
-    height: 100%; /* importante per far crescere la GIF */
+    height: 100%;           /* <--- prende tutta l’altezza */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3513,19 +3512,18 @@ html, body {
 
 /* Contenitore GIF */
 .s-intro__content-media {
-    width: 100%;        /* occupa tutta la larghezza possibile */
-    max-width: 1600px;  /* limite massimo */
-    height: 90vh;       /* quasi tutta l’altezza del viewport */
+    width: 90%;
+    height: 90%;            /* quasi tutta la sezione */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
+/* GIF interna */
 .s-intro__content-media img {
-    width: 100%;        /* forza larghezza massima */
-    height: 100%;       /* forza altezza massima */
-    object-fit: cover;  /* riempie il contenitore, ritaglia se serve */
+    width: 100%;
+    height: 100%;
+    object-fit: contain;     /* mantiene proporzioni */
 }
 /* -------------------------
    MEDIA QUERIES
