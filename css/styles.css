@@ -3002,11 +3002,13 @@ td:last-child {
 /* ===================================================================
  * # SITE HEADER
  * ------------------------------------------------------------------- */
+
+/* Testo logo */
 .logo-text {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  color: white;
+  color: #fff;
   letter-spacing: 1px;
   text-transform: uppercase;
   display: inline-block;
@@ -3015,8 +3017,8 @@ td:last-child {
 /* HEADER BASE */
 .s-header {
   --header-height: 72px;
-  z-index: 999;
-  background-color: #1A1A1A;   /* sfondo scuro fisso */
+  z-index: 1000;
+  background-color: #1A1A1A;   /* fascia scura fissa */
   height: var(--header-height);
   width: 100%;
   position: fixed;
@@ -3039,13 +3041,20 @@ td:last-child {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+
+  position: relative;
+  z-index: 1001; /* sopra al video */
 }
 
 /* LOGO */
-.s-header__logo a,
-.logo-text {
-  color: white;
+.s-header__logo a {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
   text-decoration: none;
+  position: relative;
+  z-index: 1002;
 }
 
 /* MENU */
@@ -3054,6 +3063,8 @@ td:last-child {
   display: flex;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 1002; /* sopra al video */
 }
 
 .s-header__menu-links li {
@@ -3061,16 +3072,18 @@ td:last-child {
 }
 
 .s-header__menu-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0.3rem 0.5rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, color 0.3s ease;
 }
 
+.s-header__menu-links a:hover,
 .s-header__menu-links a.active {
   border-bottom: 2px solid #fff;
 }
+
 
 /* MOBILE */
 @media screen and (max-width: 992px) {
