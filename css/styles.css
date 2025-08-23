@@ -4444,3 +4444,28 @@ h2.text-display-title {
         font-size: 0.8rem !important;
     }
 }
+    /* Titoli ridotti su tablet e mobile */
+@media (max-width: 992px) {
+    h2.text-display-title.mobile-small {
+        font-size: 1.2rem !important;    /* tablet */
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+}
+
+@media (max-width: 600px) {
+    h2.text-display-title.mobile-small {
+        font-size: 1rem !important;      /* smartphone */
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h2.text-display-title.mobile-small {
+        font-size: 0.9rem !important;    /* extra small mobile */
+    }
+}
+
