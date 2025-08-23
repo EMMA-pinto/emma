@@ -2995,7 +2995,7 @@ td:last-child {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    overflow: hidden;
+    overflow: visible;   /* cambia hidden in visible */
     position: relative;
 }
 
