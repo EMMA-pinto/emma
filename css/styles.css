@@ -4105,7 +4105,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* previene scroll orizzontale */
 }
 
 .s-footer {
@@ -4143,11 +4143,14 @@ html, body {
 }
 
 .s-footer__content a {
-    font-size: clamp(2rem, 5vw, 3rem); /* font fluido */
+    font-size: clamp(1.5rem, 5vw, 3rem); /* font fluido */
     color: inherit;
     text-decoration: underline;
     transition: color 0.3s ease;
+    display: inline-block;
+    max-width: 100%;
     word-wrap: break-word;
+    text-align: center;
 }
 
 .s-footer__content a:hover {
@@ -4203,23 +4206,23 @@ html, body {
     /* Titolo "Get In Touch" */
     .s-footer h2.get-in-touch,
     .s-footer .section-header.light-on-dark h2 {
-        font-size: clamp(1.2rem, 6vw, 2rem); /* ridotto per mobile */
+        font-size: clamp(1.2rem, 6vw, 2rem);
         margin-bottom: 30px;
         text-align: center;
         max-width: 100%;
-        word-wrap: break-word; /* evita che il testo esca dallo schermo */
+        word-wrap: break-word;
     }
 
     /* Email centrale */
     .s-footer__content a {
-        font-size: clamp(1.2rem, 6vw, 2rem);
+        font-size: clamp(1.2rem, 5vw, 2rem);
         display: inline-block;
         max-width: 100%;
         text-align: center;
         word-wrap: break-word;
     }
 
-    /* Bottom bar verticale */
+    /* Bottom bar verticale e centrata */
     .s-footer__bottom-bar {
         display: flex;
         flex-direction: column;
@@ -4243,7 +4246,6 @@ html, body {
         font-size: 1rem;
     }
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## copyright
