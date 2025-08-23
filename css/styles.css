@@ -2742,13 +2742,30 @@ td:last-child {
 }
 
 
-/* Variante specifica selected.works */
 .section-header.selected.works {
-  margin-bottom: var(--vspace-1);
+    margin-bottom: var(--vspace-1);
+    display: flex;             /* allinea anno e titolo sulla stessa riga */
+    align-items: center;
+    gap: 10px;                 /* distanza tra anno e titolo */
+}
+
+.section-header.selected.works .section-year {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #555;
 }
 
 .section-header.selected.works .text-display-title {
-  margin-bottom: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 5vw, 3rem); /* scala fluidamente tra 1rem e 3rem */
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    white-space: normal;      /* permette il wrap su mobile se necessario */
+    overflow: visible;
+    text-overflow: clip;
 }
 
 /* -------------------- RESPONSIVE -------------------- */
