@@ -3495,32 +3495,43 @@ html, body {
 .s-intro {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;  /* centra orizzontalmente */
-    align-items: center;      /* centra verticalmente */
-    background-color: var(--color-3); /* sfondo principale */
-    padding: 2rem;            /* spazio intorno */
-    box-sizing: border-box;
-}
-
-/* Contenitore GIF centrato */
-.s-intro__content-media {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1600px;  /* larghezza massima */
-    width: 100%;        /* occupa tutta la larghezza disponibile */
-    overflow: hidden;
+    background-color: var(--color-3);
 }
 
-/* GIF interna */
-.s-intro__content-media img {
-    max-height: 90vh;  /* altezza massima quasi tutta la viewport */
-    width: auto;       /* mantiene proporzioni */
-    display: block;
-    border-radius: 10px; /* angoli arrotondati */
+/* Contenitore contenuto */
+.s-intro__content {
+    width: 100%;
+    height: 100%; /* importante per far crescere la GIF */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Contenitore GIF */
+.s-intro__content-media {
+    width: 90%;
+    max-width: 1400px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* GIF */
+.s-intro__gif {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+}
+
 
 /* -------------------------
    MEDIA QUERIES
