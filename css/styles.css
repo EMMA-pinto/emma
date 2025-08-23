@@ -4100,26 +4100,27 @@ html, body {
    # FOOTER – VERSIONE SCURA
 =================================================================== */
 
-/* Reset base per evitare margini/padding indesiderati */
+/* Reset base */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* previene scroll orizzontale */
+    overflow-x: hidden;
 }
 
 .s-footer {
     position: relative;
     width: 100%;
-    min-height: 50vh; /* metà altezza viewport */
+    min-height: 50vh;
     background-color: #111;
     margin: 0;
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* verticalmente in alto, cambiare in center se vuoi centrato */
+    justify-content: flex-start;
     align-items: center;
     color: #fff;
+    box-sizing: border-box;
 }
 
 /* Titolo “Get In Touch” */
@@ -4129,20 +4130,24 @@ html, body {
     text-align: center;
     margin-top: 0;
     margin-bottom: 40px;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* font fluido e responsivo */
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 /* Email centrale */
 .s-footer__content {
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 .s-footer__content a {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem); /* font fluido */
     color: inherit;
     text-decoration: underline;
     transition: color 0.3s ease;
+    word-wrap: break-word;
 }
 
 .s-footer__content a:hover {
@@ -4152,20 +4157,17 @@ html, body {
 /* Footer bottom bar: Instagram a sinistra + copyright a destra */
 .s-footer__bottom-bar {
     width: 100%;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
     box-sizing: border-box;
     font-size: 0.9rem;
+    margin-top: auto; /* spinge la bottom bar in basso */
 }
 
-/* Instagram link in basso a sinistra, leggermente più grande */
+/* Instagram link */
 .instagram-link {
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    font-size: 1.5rem; /* leggermente più grande */
+    font-size: clamp(1rem, 3vw, 1.5rem);
     text-decoration: underline;
     color: #fff;
     display: inline-flex;
@@ -4176,7 +4178,7 @@ html, body {
 }
 
 .instagram-link .arrow {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     transform: rotate(-45deg);
     display: inline-block;
 }
@@ -4185,43 +4187,40 @@ html, body {
     color: #ccc;
 }
 
-/* Copyright in basso a destra */
+/* Copyright */
 .s-footer__bottom-bar .copyright {
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
 }
 
-/* Responsive */
+/* -------------------- Responsive -------------------- */
 @media (max-width: 768px) {
+    .s-footer {
+        padding: 40px 15px;
+    }
+
     .s-footer h2.get-in-touch,
     .s-footer .section-header.light-on-dark h2 {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        margin-bottom: 30px;
     }
 
     .s-footer__content a {
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 6vw, 2rem);
     }
 
-    .instagram-link {
-        font-size: 1.2rem;
-        left: 20px;
-        bottom: 15px;
+    .s-footer__bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0 10px;
     }
 
-    .instagram-link .arrow {
-        font-size: 1.3rem;
-    }
-
+    .instagram-link,
     .s-footer__bottom-bar .copyright {
-        font-size: 0.8rem;
-        right: 20px;
-        bottom: 15px;
+        font-size: clamp(0.8rem, 4vw, 1rem);
     }
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## copyright
