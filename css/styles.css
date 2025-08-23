@@ -1279,9 +1279,25 @@ h1,
 
 h2,
 .h2 {
-  font-size     : var(--text-xxl);
-  line-height   : calc(1.375 * var(--space));
+  font-size: var(--text-xxl);
+  line-height: calc(1.375 * var(--space));
   letter-spacing: -0.02em;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  h2,
+  .h2 {
+    font-size: 1.5rem; /* riduzione per tablet */
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  h2,
+  .h2 {
+    font-size: 1.2rem; /* riduzione per smartphone */
+  }
 }
 
 h3,
