@@ -2719,86 +2719,23 @@ td:last-child {
     margin-top    : 0;
 }
 
-/* ===================================================================
- * # TEXT DISPLAY TITLE - RESPONSIVE
-=================================================================== */
-
 /* Base per tutti i titoli - Desktop */
 .section-header .text-display-title,
 .section-header .text-display-title.h2 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: clamp(1.5rem, 3vw, 3rem); /* desktop fluido */
-    line-height: 1.1;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    white-space: nowrap;       /* forza il testo su una sola riga */
-    overflow: hidden;          
-    text-overflow: ellipsis;   /* aggiunge "..." se troppo lungo */
-    max-width: 100%;
-    text-align: center;
-    margin: 0;
-}
-
-/* -------------------- Tablet -------------------- */
-@media (max-width: 992px) {
-    .section-header .text-display-title,
-    .section-header .text-display-title.h2 {
-        font-size: 1.4rem !important; /* forza riduzione per tablet */
-    }
-}
-
-/* -------------------- Mobile -------------------- */
-@media (max-width: 600px) {
-    .section-header {
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.2em;
-    }
-
-    .section-header .text-display-title,
-    .section-header .text-display-title.h2 {
-        font-size: 1.2rem !important;    /* forza font piccolo */
-        white-space: nowrap !important;  /* sempre su una riga */
-        overflow: hidden !important;     
-        text-overflow: ellipsis !important;
-    }
-}
-
-/* -------------------- Extra small mobile -------------------- */
-@media (max-width: 480px) {
-    .section-header .text-display-title,
-    .section-header .text-display-title.h2 {
-        font-size: 1rem !important;      /* font ancora più piccolo su schermi stretti */
-    }
-}
-
-/* -------------------- Variante selected works (anno + titolo) -------------------- */
-.section-header.selected.works {
-    margin-bottom: var(--vspace-1);
-    display: flex;             
-    align-items: center;
-    gap: 10px;
-}
-
-.section-header.selected.works .section-year {
-    font-weight: 700;
-    font-size: 1rem;
-    color: #555;
-}
-
-.section-header.selected.works .text-display-title.h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem !important;   /* forza riduzione su mobile */
+    font-size: clamp(1.2rem, 5vw, 2rem); /* dimensione originale fluida */
     line-height: 1.2;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 0;
-    white-space: nowrap !important;  /* sempre su una riga */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin: 0;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal; /* permette al testo di andare a capo se necessario */
+    overflow: visible;
+    text-overflow: clip;
 }
+
 
 /* ------------------------------------------------------------------- 
  * ## swiper overrides
@@ -4420,68 +4357,3 @@ html, body {
 }
 body {
   overflow-x: hidden;
-/* ============================================================
-   TITOLI FORZATI SU UNA RIGA (definitivo)
-============================================================ */
-
-/* Tutti i titoli con classe text-display-title */
-h2.text-display-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-    font-weight: 700 !important;
-    font-size: 1.2rem !important;        /* forza piccolo su mobile/tablet */
-    line-height: 1.2 !important;
-    letter-spacing: 1px !important;
-    text-transform: uppercase !important;
-    white-space: nowrap !important;      /* forza una riga */
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 100% !important;
-    text-align: center !important;
-    margin: 0 !important;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-    h2.text-display-title {
-        font-size: 1rem !important;
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    h2.text-display-title {
-        font-size: 0.9rem !important;
-    }
-}
-
-/* Extra small mobile */
-@media (max-width: 480px) {
-    h2.text-display-title {
-        font-size: 0.8rem !important;
-    }
-}
-    /* Titoli ridotti su tablet e mobile */
-@media (max-width: 992px) {
-    h2.text-display-title.mobile-small {
-        font-size: 1.2rem !important;    /* tablet */
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-}
-
-@media (max-width: 600px) {
-    h2.text-display-title.mobile-small {
-        font-size: 1rem !important;      /* smartphone */
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-}
-
-@media (max-width: 480px) {
-    h2.text-display-title.mobile-small {
-        font-size: 0.9rem !important;    /* extra small mobile */
-    }
-}
-
