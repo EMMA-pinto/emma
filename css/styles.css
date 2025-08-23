@@ -2768,44 +2768,40 @@ td:last-child {
     text-overflow: clip !important;
 }
 
-/* -------------------- RESPONSIVE -------------------- */
+/* -------------------- RESPONSIVE: sempre su una riga -------------------- */
+
+/* Base per tutti i titoli */
+.section-header .text-display-title,
+.section-header .text-display-title.h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: calc(1rem + 2vw); /* scala automaticamente con la viewport */
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;       /* forza il testo su una sola riga */
+    overflow: hidden;          /* evita che esca dal contenitore */
+}
 
 /* Tablet */
 @media (max-width: 992px) {
-    .section-header {
-        gap: 4px;
-    }
-
-.section-header .text-display-title {
-    font-size: calc(12px + 3vw); /* cresce e decresce in base alla viewport */
-    white-space: nowrap;
-}
-
-    .section-header::before {
-        font-size: 5em;
+    .section-header .text-display-title,
+    .section-header .text-display-title.h2 {
+        font-size: calc(0.9rem + 3vw); /* riduce il font per viewport più piccole */
     }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
     .section-header {
-        flex-direction: column;    /* anno sopra titolo */
-        text-align: center;
-        gap: 0.2em;                /* piccolo spazio tra numero e titolo */
+        flex-direction: row;    /* mantiene anno e titolo sulla stessa riga */
+        justify-content: center; /* centra il contenuto */
+        gap: 0.2em;
     }
 
-    .section-header .text-display-title {
-        font-size: clamp(1rem, 4vw, 1.5rem); /* riduzione minima più aggressiva */
-        margin-bottom: 0.4em;
-        white-space: normal;        /* permette il wrap su più righe */
-        overflow: visible;          /* il testo non viene tagliato */
-        text-overflow: clip;        /* disabilita ellipsis */
-    }
-
-    .section-header::before {
-        font-size: 3.5em;
-        top: -0.2em;
-        left: 0;
+    .section-header .text-display-title,
+    .section-header .text-display-title.h2 {
+        font-size: calc(0.8rem + 4vw); /* riduzione più aggressiva su smartphone */
     }
 }
 
