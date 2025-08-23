@@ -3522,21 +3522,21 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin: 3rem auto;        /* spazio sopra e sotto */
-    width: 95%;               /* più largo rispetto a prima */
-    max-width: 1400px;        /* massimo più grande */
-    height: auto;             /* altezza automatica */
+    
+    margin: 3rem auto;
+    width: 90%;
+    max-width: 1400px;
+    height: 70vh;         /* <--- forza altezza maggiore */
     background: var(--color-3);
     border-radius: 10px;
     overflow: hidden;
-    padding: 20px;            /* spazio interno per “respirare” */
+    padding: 20px;
 }
 
 .s-intro__content-media img {
-    width: 100%;              /* occupa tutta la larghezza disponibile */
-    height: auto;             /* mantiene proporzioni reali */
-    object-fit: contain;      /* non taglia l’immagine */
+    width: 100%;
+    height: 100%;         /* ora riempie il contenitore */
+    object-fit: contain;  /* mantiene proporzioni */
     border-radius: 5px;
     display: block;
 }
