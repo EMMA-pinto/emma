@@ -3964,13 +3964,31 @@ html, body {
 .text-display-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 3rem; /* dimensione desktop */
     color: #000;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0;
     text-align: left;
+    white-space: nowrap; /* forza il titolo su una sola riga */
+    overflow: hidden;
+    text-overflow: ellipsis; /* opzionale: aggiunge "..." se il titolo è troppo lungo */
 }
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .text-display-title {
+        font-size: 2rem;
+    }
+}
+
+/* Smartphone (fino a 767px) */
+@media (max-width: 767px) {
+    .text-display-title {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* ---------------- GRID ENTRIES ---------------- */
 .folio-entries {
