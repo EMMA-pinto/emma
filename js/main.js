@@ -296,27 +296,7 @@
     }; // end ssMoveTo
 
 });
-function resizeTitles() {
-    const titles = document.querySelectorAll('h2.text-display-title');
-    if (window.innerWidth <= 600) {
-        titles.forEach(t => {
-            t.style.fontSize = '1rem';
-            t.style.whiteSpace = 'nowrap';
-            t.style.overflow = 'hidden';
-            t.style.textOverflow = 'ellipsis';
-        });
-    } else {
-        titles.forEach(t => {
-            t.style.fontSize = '';
-            t.style.whiteSpace = '';
-            t.style.overflow = '';
-            t.style.textOverflow = '';
-        });
-    }
-}
 
-window.addEventListener('DOMContentLoaded', resizeTitles);
-window.addEventListener('resize', resizeTitles);
 
    /* Initialize
     * ------------------------------------------------------ */
@@ -335,4 +315,5 @@ window.addEventListener('resize', resizeTitles);
 
 
 })(document.documentElement);
+
 
