@@ -2759,12 +2759,10 @@ td:last-child {
         gap: 4px;
     }
 
-    .section-header .text-display-title {
-        font-size: clamp(1.3rem, 2vw + 0.8rem, 1.8rem); /* riduce il font su tablet */
-        white-space: nowrap;       /* forza il titolo su una sola riga */
-        overflow: hidden;          /* evita che il testo esca dal contenitore */
-        text-overflow: ellipsis;   /* aggiunge "..." se il testo è troppo lungo */
-    }
+.section-header .text-display-title {
+    font-size: calc(12px + 3vw); /* cresce e decresce in base alla viewport */
+    white-space: nowrap;
+}
 
     .section-header::before {
         font-size: 5em;
