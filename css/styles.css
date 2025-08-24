@@ -3429,7 +3429,7 @@ td:last-child {
 }
 
 
-/* ----------------------- WORKS SECTION - SENZA TITOLO ----------------------- */
+/* ----------------------- WORKS SECTION - CON TITOLO ----------------------- */
 .s-works {
     padding: 40px 20px;
     background-color: #fff;
@@ -3437,20 +3437,58 @@ td:last-child {
     scroll-margin-top: var(--header-height); /* evita che l'header copra la sezione */
 }
 
-.s-works .section-header {
-    margin-bottom: 0; /* rimosso spazio riservato al titolo */
+/* Header titolo Works */
+.works-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra il titolo */
+    position: relative;
+    margin-bottom: 2rem;
 }
 
-/* Se c'erano altre regole legate a .text-display-title le togliamo completamente */
+.works-year {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.2rem); /* piccola e leggibile */
+    font-weight: 500;
+    color: #000;
+}
 
-/* Responsive della sezione Works */
+.works-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 6rem); /* grandezza desktop */
+    text-align: center;
+    color: #000;
+}
+
+/* -------------------------------------------------------------------
+   Responsive per tablet e mobile
+------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-    /* eventuali adattamenti della sezione senza titolo */
+    .works-title {
+        font-size: clamp(2.5rem, 6vw, 4.5rem); /* scala ridotta per tablet */
+    }
+
+    .works-year {
+        font-size: clamp(0.8rem, 1.5vw, 1rem);
+    }
 }
 
 @media (max-width: 767px) {
-    /* eventuali adattamenti della sezione senza titolo */
+    .works-title {
+        font-size: clamp(2rem, 10vw, 3.5rem); /* scala mobile */
+    }
+
+    .works-year {
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
+    }
 }
+
 
 /* ---------------- GRID ENTRIES ---------------- */
 .folio-entries {
