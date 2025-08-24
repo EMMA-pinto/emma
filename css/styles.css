@@ -3029,18 +3029,11 @@ td:last-child {
 }
 
 /* CONTENITORE INTERNO */
-.s-header__inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0; /* rimosso padding laterale */
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 10000; /* sopra il video e altri elementi */
+s-header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem; /* padding laterale ridotto ma non nullo */
 }
 
 /* LOGO */
