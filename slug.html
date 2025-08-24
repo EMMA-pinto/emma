@@ -214,14 +214,31 @@ body {
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .s-text-black h2 {
-        font-size: 1.8rem;
+        font-size: 2.8rem; /* più grande su tablet */
+    }
+    .s-text-black .category {
+        font-size: 1.4rem;
     }
     .s-text-black p,
     .s-text-bottom p {
-        font-size: 1rem;
+        font-size: 1.4rem; /* paragrafi più grandi su tablet */
     }
     .grid-container {
-        grid-template-columns: 1fr; /* 1 colonna su tablet/smartphone */
+        grid-template-columns: 1fr; /* 1 colonna su tablet */
     }
 }
+
+@media (max-width: 600px) {
+    .s-text-black h2 {
+        font-size: 3rem; /* titolo più grande su smartphone */
+    }
+    .s-text-black .category {
+        font-size: 1.6rem; /* categoria più leggibile */
+    }
+    .s-text-black p,
+    .s-text-bottom p {
+        font-size: 1.6rem; /* paragrafi più grandi su telefono */
+    }
+}
+</style>
 </style>
