@@ -3587,6 +3587,15 @@ td:last-child {
     box-sizing: border-box;
 }
 
+/* Titolo footer */
+.footer-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700; /* grassetto */
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 /* Email centrale */
 .s-footer__content {
     width: 100%;
@@ -3652,6 +3661,11 @@ td:last-child {
 
 /* Responsive per mobile */
 @media (max-width: 768px) {
+    .footer-title {
+        font-size: clamp(1.2rem, 6vw, 1.8rem);
+        margin-bottom: 1.5rem;
+    }
+
     .s-footer__bottom-bar {
         flex-direction: column;
         align-items: center;
@@ -3659,6 +3673,7 @@ td:last-child {
         padding: 0 10px;
     }
 }
+
 
 
 /* ------------------------------------------------------------------- 
