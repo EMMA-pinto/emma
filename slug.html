@@ -68,7 +68,7 @@ body {
   position: absolute;
   top: 50%;
   right: 2rem;
-  transform: translateY(-50%);
+  transform: translateY(-52%); /* leggero aggiustamento verticale */
   cursor: pointer;
   z-index: 1001;
 }
@@ -135,7 +135,7 @@ body {
     gap: 2rem;
   }
   .s-header__menu-links li a {
-    font-size: 2rem;
+    font-size: 1.8rem; /* leggermente più piccolo */
     color: white;
     text-decoration: none;
   }
@@ -166,24 +166,24 @@ body {
   background-color: #1A1A1A;
   color: white;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3.5rem 2rem; /* leggermente meno spazio verticale */
 }
 .s-text-black h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem; /* prima 2.5rem */
   margin-bottom: 0.5rem;
 }
 .s-text-black .category {
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* prima 1.2rem */
   font-weight: 500;
   text-transform: uppercase;
   color: #ccc;
   margin-bottom: 1.5rem;
 }
 .s-text-black p {
-  font-size: 1.2rem;
+  font-size: 1.1rem; /* prima 1.2rem */
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ============================================================
@@ -216,24 +216,24 @@ body {
 ============================================================ */
 .s-text-bottom {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 3.5rem 2rem; /* leggermente meno spazio verticale */
   background-color: #1A1A1A;
   color: white;
 }
 .s-text-bottom h2 {
-  font-size: 2rem;
+  font-size: 1.8rem; /* prima 2rem */
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .s-text-bottom p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.1rem; /* prima 1.2rem */
+  line-height: 1.6;
   margin: 0.5rem 0;
 }
 .s-text-bottom .partners {
   margin-top: 2rem;
-  font-size: 1rem;
+  font-size: 0.95rem; /* prima 1rem */
   font-weight: 500;
   color: #ccc;
   letter-spacing: 1px;
@@ -252,19 +252,20 @@ body {
    RESPONSIVE
 ============================================================ */
 @media (max-width: 992px) {
-  .s-text-black h2 { font-size: 2.8rem; }
-  .s-text-black .category { font-size: 1.4rem; }
+  .s-text-black h2 { font-size: 2rem; }
+  .s-text-black .category { font-size: 1rem; }
   .s-text-black p,
-  .s-text-bottom p { font-size: 1.4rem; }
+  .s-text-bottom p { font-size: 1.2rem; }
   .grid-container { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .s-text-black h2 { font-size: 3rem; }
-  .s-text-black .category { font-size: 1.6rem; }
+  .s-text-black h2 { font-size: 1.8rem; }
+  .s-text-black .category { font-size: 0.95rem; }
   .s-text-black p,
-  .s-text-bottom p { font-size: 1.6rem; }
+  .s-text-bottom p { font-size: 1rem; }
 }
 </style>
+</head>
 <body>
 
   <!-- HEADER / MENU FISSO -->
