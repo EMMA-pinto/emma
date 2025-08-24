@@ -4141,7 +4141,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  h2.text-display-title {
-    font-size: 1.8rem !important;; 
-  }
+    .s-about h2.text-display-title {
+        font-size: 1.8rem !important;
+    }
 }
