@@ -4,6 +4,12 @@
     <div class="s-header__logo">
       <a href="index.html">EMMA PINTO</a>
     </div>
+
+    <!-- Menu toggle -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+    <label for="menu-toggle" class="s-header__menu-toggle"><span></span></label>
+
+    <!-- Nav -->
     <nav class="s-header__nav">
       <ul class="s-header__menu-links">
         <li><a href="index.html#intro">Intro</a></li>
@@ -66,179 +72,268 @@
 </section>
 
 <style>
-/* BODY E SFONDO GENERALE */
+/* ============================================================
+   BODY E SFONDO GENERALE
+============================================================ */
 body {
-    margin: 0;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #1A1A1A;
-    color: white;
-    padding-top: 80px; /* spazio per header fisso */
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #1A1A1A;
+  color: white;
+  padding-top: 80px; /* spazio per header fisso */
 }
 
-/* HEADER / MENU FISSO */
+/* ============================================================
+   HEADER / MENU FISSO
+============================================================ */
 .s-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #1A1A1A;
+}
+.s-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.s-header__logo a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+.s-header__menu-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.s-header__menu-links li {
+  margin-left: 1rem;
+}
+.s-header__menu-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.5rem;
+}
+.s-header__menu-links li a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* ============================================================
+   MENU MOBILE TOGGLE
+============================================================ */
+.menu-toggle-checkbox {
+  display: none;
+}
+.s-header__menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1001;
+}
+.s-header__menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.s-header__menu-toggle span::before,
+.s-header__menu-toggle span::after {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.s-header__menu-toggle span::before { top: -8px; }
+.s-header__menu-toggle span::after { bottom: -8px; }
+.menu-toggle-checkbox:checked + .s-header__menu-toggle span {
+  background-color: transparent;
+}
+.menu-toggle-checkbox:checked + .s-header__menu-toggle span::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle-checkbox:checked + .s-header__menu-toggle span::after {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================================
+   NAV MOBILE
+============================================================ */
+@media screen and (max-width: 900px) {
+  .s-header__menu-toggle { display: block; }
+
+  .s-header__nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
-    background-color: #1A1A1A;
-}
-.s-header__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-}
-.s-header__logo a {
-    color: white;
-    font-size: 1.8rem;
-    text-decoration: none;
-}
-.s-header__menu-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-.s-header__menu-links li {
-    margin-left: 1rem;
-}
-.s-header__menu-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    padding: 0.3rem 0.5rem;
-}
-.s-header__menu-links li a.active {
-    border-bottom: 2px solid #fff;
-}
-
-/* INTRO VIDEO FULLSCREEN */
-.s-intro {
-    width: 100%;
     height: 100vh;
+    background-color: #1A1A1A;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    background-color: #000;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    z-index: 1000;
+  }
+
+  .menu-toggle-checkbox:checked ~ .s-header__nav {
+    transform: scaleY(1);
+  }
+
+  .s-header__menu-links {
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+  }
+  .s-header__menu-links li a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* ============================================================
+   INTRO VIDEO FULLSCREEN
+============================================================ */
+.s-intro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000;
 }
 .s-intro__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* TESTO INTERMEDIO */
+/* ============================================================
+   TESTO INTERMEDIO
+============================================================ */
 .s-text-black {
-    background-color: #1A1A1A;
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
+  background-color: #1A1A1A;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
 }
 .s-text-black h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 .s-text-black .category {
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #ccc;
-    margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 1.5rem;
 }
 .s-text-black p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* GRIGLIA 2X2 */
+/* ============================================================
+   GRIGLIA 2X2
+============================================================ */
 .s-grid {
-    background-color: #1A1A1A;
-    padding: 2rem 2rem;
+  background-color: #1A1A1A;
+  padding: 2rem;
 }
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .grid-item {
-    border-radius: 10px;
-    overflow: hidden;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .grid-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-/* TEAM CREDITS */
+/* ============================================================
+   TEAM CREDITS
+============================================================ */
 .s-text-bottom {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: #1A1A1A;
-    color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #1A1A1A;
+  color: white;
 }
 .s-text-bottom h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .s-text-bottom p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin: 0.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0.5rem 0;
 }
 .s-text-bottom .partners {
-    margin-top: 2rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ccc;
-    letter-spacing: 1px;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ccc;
+  letter-spacing: 1px;
 }
 
-/* IMMAGINE FINALE FULL-WIDTH */
+/* ============================================================
+   IMMAGINE FINALE FULL-WIDTH
+============================================================ */
 .s-final-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* RESPONSIVE */
+/* ============================================================
+   RESPONSIVE
+============================================================ */
 @media (max-width: 992px) {
-    .s-text-black h2 {
-        font-size: 2.8rem; /* più grande su tablet */
-    }
-    .s-text-black .category {
-        font-size: 1.4rem;
-    }
-    .s-text-black p,
-    .s-text-bottom p {
-        font-size: 1.4rem; /* paragrafi più grandi su tablet */
-    }
-    .grid-container {
-        grid-template-columns: 1fr; /* 1 colonna su tablet */
-    }
+  .s-text-black h2 { font-size: 2.8rem; }
+  .s-text-black .category { font-size: 1.4rem; }
+  .s-text-black p,
+  .s-text-bottom p { font-size: 1.4rem; }
+  .grid-container { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-    .s-text-black h2 {
-        font-size: 3rem; /* titolo più grande su smartphone */
-    }
-    .s-text-black .category {
-        font-size: 1.6rem; /* categoria più leggibile */
-    }
-    .s-text-black p,
-    .s-text-bottom p {
-        font-size: 1.6rem; /* paragrafi più grandi su telefono */
-    }
+  .s-text-black h2 { font-size: 3rem; }
+  .s-text-black .category { font-size: 1.6rem; }
+  .s-text-black p,
+  .s-text-bottom p { font-size: 1.6rem; }
 }
-</style>
 </style>
