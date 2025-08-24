@@ -3434,60 +3434,59 @@ td:last-child {
     padding: 40px 20px;
     background-color: #fff;
     color: #000;
-    scroll-margin-top: var(--header-height); /* evita che l'header copra la sezione */
+    scroll-margin-top: var(--header-height);
 }
 
 /* Header titolo Works */
 .works-header {
-    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* centra il titolo */
-    position: relative;
+    align-items: baseline; /* allinea sulla stessa linea di base */
+    justify-content: center; /* centro orizzontale */
+    gap: 10px; /* piccolo spazio tra titolo e anno */
     margin-bottom: 2rem;
 }
 
-.works-year {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: clamp(0.9rem, 2vw, 1.2rem); /* piccola e leggibile */
-    font-weight: 500;
-    color: #000;
-}
-
+/* Titolo principale */
 .works-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 900;
-    font-size: clamp(3rem, 8vw, 6rem); /* grandezza desktop */
-    text-align: center;
+    font-size: clamp(3rem, 8vw, 6rem);
     color: #000;
+    text-align: center;
 }
 
-/* -------------------------------------------------------------------
-   Responsive per tablet e mobile
-------------------------------------------------------------------- */
+/* Anno accanto al titolo */
+.works-year {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.5rem); /* molto più piccolo del titolo */
+    color: #000;
+    margin-left: 0.5rem; /* separazione minima dal titolo */
+}
+
+/* Responsive Tablet */
 @media (max-width: 1024px) {
     .works-title {
-        font-size: clamp(2.5rem, 6vw, 4.5rem); /* scala ridotta per tablet */
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
     }
-
     .works-year {
-        font-size: clamp(0.8rem, 1.5vw, 1rem);
+        font-size: clamp(0.9rem, 1.8vw, 1.2rem);
     }
 }
 
+/* Responsive Mobile */
 @media (max-width: 767px) {
-    .works-title {
-        font-size: clamp(2rem, 10vw, 3.5rem); /* scala mobile */
+    .works-header {
+        gap: 6px;
     }
-
+    .works-title {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
     .works-year {
-        font-size: clamp(0.7rem, 3vw, 0.9rem);
+        font-size: clamp(0.8rem, 3vw, 1rem);
     }
 }
+
 
 
 /* ---------------- GRID ENTRIES ---------------- */
