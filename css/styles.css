@@ -3313,7 +3313,11 @@ td:last-child {
 
 .s-about h2.text-display-title {
     font-size: 2.5rem;
+    text-align: center; /* forza il centro */
+    width: 100%;
+    margin: 0 auto; /* assicura che sia centrato se ha larghezza */
 }
+
 
 /* Contenuto a 3 colonne */
 .s-about__content {
@@ -3363,7 +3367,7 @@ td:last-child {
 }
 
 /* -------------------------------------------------------------------
-   Responsive
+   Responsive ABOUT SECTION
 ------------------------------------------------------------------- */
 
 /* Tablet */
@@ -3384,6 +3388,7 @@ td:last-child {
 
     .s-about h2.text-display-title {
         font-size: 2.2rem;
+        text-align: center; /* forza centraggio se necessario */
     }
 
     .s-about img.decorative {
@@ -3418,6 +3423,7 @@ td:last-child {
 
     .s-about h2.text-display-title {
         font-size: 1.8rem;
+        text-align: center; /* forza centraggio su mobile */
     }
 
     .s-about img.decorative {
@@ -3426,70 +3432,6 @@ td:last-child {
         right: 10px;
     }
 }
-
-/* ------------------------------------------------------------------- */
-/* Responsive */
-/* ------------------------------------------------------------------- */
-
-@media screen and (max-width: 1024px) {
-  .s-about {
-    padding: 60px 20px;
-  }
-
-  .s-about__content {
-    margin-top: 30px;
-  }
-
-  .s-about__content .text-column,
-  .s-about__content .images-column {
-    flex: 0 0 48%;
-    max-width: 48%;
-  }
-
-  .s-about h2.text-display-title {
-    font-size: 2.2rem;
-  }
-
-  .s-about img.decorative {
-    width: 150px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .s-about {
-    padding: 40px 15px;
-  }
-
-  .s-about__content {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .s-about__content .text-column,
-  .s-about__content .images-column {
-    flex: 0 0 100%;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .s-about__content .text-column p.attention-getter {
-    font-size: 1.1rem;
-    line-height: 1.5;
-  }
-
-  .s-about h2.text-display-title {
-    font-size: 1.8rem;
-  }
-
-  .s-about img.decorative {
-    width: 80px;
-    bottom: 40px;
-    right: 10px;
-  }
-}
-
 
 /* ----------------------- WORKS SECTION ----------------------- */
 .s-works {
