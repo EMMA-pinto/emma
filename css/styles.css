@@ -3896,10 +3896,11 @@ html, body {
     }
 }
 
-/* Responsive Mobile */
 @media (max-width: 767px) {
     .works-header {
-        gap: 6px;
+        gap: 2px; /* prima 6px, diminuito */
+        justify-content: center; /* centra meglio il contenuto */
+        text-align: center; /* assicura che il testo su due righe sia centrato */
     }
     .works-title {
         font-size: clamp(2rem, 10vw, 3.5rem);
@@ -3908,7 +3909,6 @@ html, body {
         font-size: clamp(0.8rem, 3vw, 1rem);
     }
 }
-
 
 
 /* ---------------- GRID ENTRIES ---------------- */
