@@ -3287,7 +3287,45 @@ td:last-child {
     bottom: 0;
     transform: rotate(225deg);
 }
+@media screen and (max-width: 600px) {
+  .s-header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* sfondo scuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    z-index: 99;
+  }
 
+  /* lista voci centrata */
+  .s-header__menu-links {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .s-header__menu-links a {
+    font-size: 2rem;
+    color: white;
+  }
+
+  /* quando il menu è aperto */
+  .menu-is-open .s-header__nav {
+    transform: translateY(0);
+  }
+
+  /* mostra l’hamburger */
+  .s-header__menu-toggle {
+    display: block;
+    z-index: 100;
+  }
+}
 
 /* ============================================================
    RESPONSIVE HEADER BEHAVIOUR
