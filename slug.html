@@ -1,76 +1,9 @@
-<!-- HEADER / MENU FISSO -->
-<header class="s-header">
-  <div class="s-header__inner">
-    <div class="s-header__logo">
-      <a href="index.html">EMMA PINTO</a>
-    </div>
-
-    <!-- Menu toggle (checkbox) -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-    <label for="menu-toggle" class="s-header__menu-toggle"><span></span></label>
-
-    <!-- Nav -->
-    <nav class="s-header__nav">
-      <ul class="s-header__menu-links">
-        <li><a href="index.html#intro">Intro</a></li>
-        <li><a href="index.html#works">Works</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#footer">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- VIDEO INIZIALE FULLSCREEN -->
-<section id="intro" class="s-intro">
-  <video class="s-intro__video" autoplay loop muted playsinline>
-    <source src="video/videocoma.mp4" type="video/mp4">
-    Il tuo browser non supporta i video.
-  </video>
-</section>
-
-<!-- TESTO INTERMEDIO -->
-<section class="s-text-black">
-  <div class="text-black-container">
-    <h2>“COMA COSE / LA GELOSIA”</h2>
-    <h3 class="category">Shooting</h3>
-    <p>
-      Shooting for the release <em>"La Gelosia"</em> by Coma Cose.
-    </p>
-  </div>
-</section>
-
-<!-- GRIGLIA 2X2 -->
-<section class="s-grid">
-  <div class="grid-container">
-    <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
-    <div class="grid-item"><img src="images/folio/coma2.jpg" alt="Poster 2"></div>
-    <div class="grid-item"><img src="images/folio/coma6.jpg" alt="Poster 3"></div>
-    <div class="grid-item"><img src="images/folio/coma3.jpg" alt="Poster 4"></div>
-  </div>
-</section>
-
-<!-- TEAM CREDITS -->
-<section class="s-text-bottom">
-  <div class="text-bottom-container">
-    <h2>TEAM CREDITS</h2>
-    <p>
-      <strong>Make up:</strong> Fausto Cavalieri<br>
-      <strong>Hairstyling:</strong> Filippo Calì<br>
-      <strong>Styling:</strong> Tiny Idols<br>
-      <strong>Production:</strong> Homies Work
-    </p>
-    <p class="partners">
-      Asian Fake &nbsp;|&nbsp; Warner Music Italy
-    </p>
-  </div>
-</section>
-
-<!-- IMMAGINE FINALE FULL-WIDTH -->
-<section class="s-final-image">
-  <img src="images/folio/coma7.png" alt="Final Image">
-</section>
-
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emma Pinto Portfolio</title>
 <style>
 /* ============================================================
    BODY E SFONDO GENERALE
@@ -105,6 +38,8 @@ body {
   font-size: 1.8rem;
   text-decoration: none;
 }
+
+/* MENU LINKS DESKTOP */
 .s-header__menu-links {
   list-style: none;
   display: flex;
@@ -124,9 +59,7 @@ body {
   border-bottom: 2px solid #fff;
 }
 
-/* ============================================================
-   MENU MOBILE TOGGLE
-============================================================ */
+/* MENU MOBILE TOGGLE (HAMBURGER) */
 .menu-toggle-checkbox { display: none; }
 .s-header__menu-toggle {
   display: none;
@@ -169,9 +102,7 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* ============================================================
-   NAV MOBILE
-============================================================ */
+/* NAV MOBILE */
 @media screen and (max-width: 900px) {
   .s-header__menu-toggle { display: block; }
 
@@ -199,7 +130,6 @@ body {
   .s-header__menu-links {
     flex-direction: column;
     text-align: center;
-    list-style: none;
     padding: 0;
     margin: 0;
     gap: 2rem;
@@ -328,7 +258,6 @@ body {
   .s-text-bottom p { font-size: 1.4rem; }
   .grid-container { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 600px) {
   .s-text-black h2 { font-size: 3rem; }
   .s-text-black .category { font-size: 1.6rem; }
@@ -336,3 +265,78 @@ body {
   .s-text-bottom p { font-size: 1.6rem; }
 }
 </style>
+<body>
+
+  <!-- HEADER / MENU FISSO -->
+  <header class="s-header">
+    <div class="s-header__inner">
+      <div class="s-header__logo">
+        <a href="index.html">EMMA PINTO</a>
+      </div>
+
+      <!-- Menu toggle (hamburger) -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+      <label for="menu-toggle" class="s-header__menu-toggle"><span></span></label>
+
+      <!-- Nav -->
+      <nav class="s-header__nav">
+        <ul class="s-header__menu-links">
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- VIDEO INIZIALE FULLSCREEN -->
+  <section id="intro" class="s-intro">
+    <video class="s-intro__video" autoplay loop muted playsinline>
+      <source src="video/videocoma.mp4" type="video/mp4">
+      Il tuo browser non supporta i video.
+    </video>
+  </section>
+
+  <!-- TESTO INTERMEDIO -->
+  <section class="s-text-black">
+    <div class="text-black-container">
+      <h2>“COMA COSE / LA GELOSIA”</h2>
+      <h3 class="category">Shooting</h3>
+      <p>Shooting for the release <em>"La Gelosia"</em> by Coma Cose.</p>
+    </div>
+  </section>
+
+  <!-- GRIGLIA 2X2 -->
+  <section class="s-grid">
+    <div class="grid-container">
+      <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
+      <div class="grid-item"><img src="images/folio/coma2.jpg" alt="Poster 2"></div>
+      <div class="grid-item"><img src="images/folio/coma6.jpg" alt="Poster 3"></div>
+      <div class="grid-item"><img src="images/folio/coma3.jpg" alt="Poster 4"></div>
+    </div>
+  </section>
+
+  <!-- TEAM CREDITS -->
+  <section class="s-text-bottom">
+    <div class="text-bottom-container">
+      <h2>TEAM CREDITS</h2>
+      <p>
+        <strong>Make up:</strong> Fausto Cavalieri<br>
+        <strong>Hairstyling:</strong> Filippo Calì<br>
+        <strong>Styling:</strong> Tiny Idols<br>
+        <strong>Production:</strong> Homies Work
+      </p>
+      <p class="partners">
+        Asian Fake &nbsp;|&nbsp; Warner Music Italy
+      </p>
+    </div>
+  </section>
+
+  <!-- IMMAGINE FINALE FULL-WIDTH -->
+  <section class="s-final-image">
+    <img src="images/folio/coma7.png" alt="Final Image">
+  </section>
+
+</body>
+</html>
