@@ -3163,45 +3163,50 @@ td:last-child {
     margin-left: var(--vspace-1);
 }
 
-.s-header__menu-links {
-    list-style: none;
-    display: inline-flex;
-    flex-flow: row nowrap;
-    margin: 0;
+/* NAV MOBILE */
+@media screen and (max-width: 900px) {
+  .s-header__menu-toggle { 
+    display: block; 
+    position: relative; /* rimuove absolute */
+    top: auto;          /* annulla top */
+    transform: none;    /* annulla translateY */
+    margin-left: auto;  /* spinge a destra, allineato verticalmente */
+  }
+
+  .s-header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+    z-index: 1000;
+  }
+
+  .menu-toggle-checkbox:checked ~ .s-header__nav {
+    transform: scaleY(1);
+  }
+
+  .s-header__menu-links {
+    flex-direction: column;
+    text-align: center;
     padding: 0;
-}
-
-.s-header__menu-links li { padding-left: 0; }
-
-.s-header__menu-links li a {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: var(--vspace-1);
+    margin: 0;
+    gap: 2rem;
+  }
+  .s-header__menu-links li a {
+    font-size: 1.8rem; /* leggermente più piccolo */
     color: white;
-    padding: 0 1.2rem;
-    display: inline-block;
-    transition: color 0.3s, border-bottom 0.3s;
     text-decoration: none;
+  }
 }
-
-.s-header__menu-links li a.active {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 2px;
-}
-
-.s-header__menu-links a {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: var(--vspace-1);
-    color: white;
-    padding: 0 1.2rem;
-    transition-property: color, background-color;
-}
-
-.s-header__menu-links .current a { color: white; }
-
 
 /* ============================================================
    RESPONSIVE NAVIGATION
