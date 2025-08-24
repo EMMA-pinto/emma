@@ -4004,10 +4004,10 @@ html, body {
     min-height: 50vh;
     background-color: #111;
     margin: 0;
-    padding: 40px 20px; /* ridotto il padding per accorciare spazio verticale */
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; /* titolo e mail restano in alto */
     align-items: center;
     color: #fff;
     box-sizing: border-box;
@@ -4055,7 +4055,8 @@ html, body {
     padding: 0 20px;
     box-sizing: border-box;
     font-size: 0.9rem;
-    margin-top: 0; /* tolto margin auto per avvicinare email */
+    margin-top: auto;   /* spinge in basso */
+    margin-bottom: 10px; /* piccolo distacco dal bordo */
 }
 
 /* Instagram link */
