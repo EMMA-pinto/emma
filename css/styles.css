@@ -3907,8 +3907,11 @@ body {
 }
 
 @media (max-width: 600px) {
+    .s-text-black h2,
     .s-about h2.text-display-title,
-    .s-text-black h2.text-display-title {
+    .s-text-bottom h2,
+    h2, .h2 {
         font-size: 1.8rem;
+        text-align: center; /* se vuoi centrarli su mobile */
     }
 }
