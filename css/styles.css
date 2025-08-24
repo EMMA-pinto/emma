@@ -3289,7 +3289,7 @@ td:last-child {
 }
 
 /* ===================================================================
-   # ABOUT SECTION - ORIGINALE
+   # ABOUT SECTION - SENZA TITOLO
 =================================================================== */
 
 /* Sezione principale */
@@ -3303,21 +3303,6 @@ td:last-child {
     box-sizing: border-box;
     position: relative;
 }
-
-/* Titolo */
-.s-about .section-header {
-    text-align: center;
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-.s-about h2.text-display-title {
-    font-size: 2.5rem;
-    text-align: center; /* forza il centro */
-    width: 100%;
-    margin: 0 auto; /* assicura che sia centrato se ha larghezza */
-}
-
 
 /* Contenuto a 3 colonne */
 .s-about__content {
@@ -3386,11 +3371,6 @@ td:last-child {
         max-width: 48%;
     }
 
-    .s-about h2.text-display-title {
-        font-size: 2.2rem;
-        text-align: center; /* forza centraggio se necessario */
-    }
-
     .s-about img.decorative {
         width: 150px;
     }
@@ -3421,17 +3401,13 @@ td:last-child {
         line-height: 1.5;
     }
 
-    .s-about h2.text-display-title {
-        font-size: 1.8rem;
-        text-align: center; /* forza centraggio su mobile */
-    }
-
     .s-about img.decorative {
         width: 80px;
         bottom: 40px;
         right: 10px;
     }
 }
+
 
 /* ----------------------- WORKS SECTION ----------------------- */
 .s-works {
