@@ -4145,9 +4145,10 @@ html, body {
   
 body {
   overflow-x: hidden;
+}
 
 @media (max-width: 600px) {
   h2.text-display-title {
-    font-size: 1.8rem; /* riduce tutti i titoli h2.text-display-title su mobile */
+    font-size: 1.8rem !important;; 
   }
 }
