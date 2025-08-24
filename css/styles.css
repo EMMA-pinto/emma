@@ -3816,15 +3816,13 @@ html, body {
 }
 
 /* Mobile */
-@media screen and (max-width: 767px) {
-    .s-about {
-        padding: 40px 15px;
-    }
-
+@media (max-width: 768px) {
     .about-title {
-        font-size: clamp(7.5rem, 30vw, 12rem); /* grande ma proporzionato al mobile */
+        font-size: clamp(2rem, 8vw, 2.8rem); /* più grande ma proporzionato al mobile */
         margin-bottom: 1rem;
     }
+
+
 
     .s-about__content {
         flex-direction: column;
