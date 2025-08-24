@@ -5,7 +5,7 @@
       <a href="index.html">EMMA PINTO</a>
     </div>
 
-    <!-- Menu toggle -->
+    <!-- Menu toggle (checkbox) -->
     <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
     <label for="menu-toggle" class="s-header__menu-toggle"><span></span></label>
 
@@ -127,9 +127,7 @@ body {
 /* ============================================================
    MENU MOBILE TOGGLE
 ============================================================ */
-.menu-toggle-checkbox {
-  display: none;
-}
+.menu-toggle-checkbox { display: none; }
 .s-header__menu-toggle {
   display: none;
   width: 44px;
@@ -183,10 +181,11 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #1A1A1A;
+    background-color: rgba(0,0,0,0.95);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.4s ease;
