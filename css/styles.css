@@ -3429,7 +3429,7 @@ td:last-child {
 }
 
 
-/* ----------------------- WORKS SECTION ----------------------- */
+/* ----------------------- WORKS SECTION - SENZA TITOLO ----------------------- */
 .s-works {
     padding: 40px 20px;
     background-color: #fff;
@@ -3438,37 +3438,19 @@ td:last-child {
 }
 
 .s-works .section-header {
-    margin-bottom: 30px;
+    margin-bottom: 0; /* rimosso spazio riservato al titolo */
 }
 
-.text-display-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 3rem; /* dimensione desktop */
-    color: #000;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0;
-    text-align: left;
-    white-space: nowrap; /* forza il titolo su una sola riga */
-    overflow: hidden;
-    text-overflow: ellipsis; /* opzionale: aggiunge "..." se il titolo è troppo lungo */
-}
+/* Se c'erano altre regole legate a .text-display-title le togliamo completamente */
 
-/* Tablet (768px - 1024px) */
+/* Responsive della sezione Works */
 @media (max-width: 1024px) {
-    .text-display-title {
-        font-size: 2rem;
-    }
+    /* eventuali adattamenti della sezione senza titolo */
 }
 
-/* Smartphone (fino a 767px) */
 @media (max-width: 767px) {
-    .text-display-title {
-        font-size: 1.5rem;
-    }
+    /* eventuali adattamenti della sezione senza titolo */
 }
-
 
 /* ---------------- GRID ENTRIES ---------------- */
 .folio-entries {
