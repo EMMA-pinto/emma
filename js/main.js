@@ -293,15 +293,11 @@
             moveTo.registerTrigger(trigger);
         });
 
-    }; // end ssMoveTo
-
-});
-
+  }; // end ssMoveTo
 
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
-
         ssPreloader();
         ssMoveHeader();
         ssMobileMenu();
@@ -310,9 +306,7 @@
         ssSwiper();
         ssAlertBoxes();
         ssMoveTo();
-
     })();
-
 
 })(document.documentElement);
 
