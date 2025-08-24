@@ -3289,7 +3289,7 @@ td:last-child {
 }
 
 /* ===================================================================
-   # ABOUT SECTION - SENZA TITOLO
+   # ABOUT SECTION - CON TITOLO
 =================================================================== */
 
 /* Sezione principale */
@@ -3304,6 +3304,16 @@ td:last-child {
     position: relative;
 }
 
+/* Titolo About */
+.about-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900; /* super grassetto */
+    font-size: clamp(9rem, 24vw, 18rem); /* molto grande su desktop */
+    text-align: center;
+    margin-bottom: 2rem; /* spazio sotto titolo */
+    color: #fff;
+}
+
 /* Contenuto a 3 colonne */
 .s-about__content {
     display: flex;
@@ -3311,7 +3321,7 @@ td:last-child {
     gap: 30px;
     max-width: 1200px;
     width: 100%;
-    margin: 80px auto 0 auto; /* distanza extra solo su desktop */
+    margin-top: 1rem; /* ridotto per avvicinare il contenuto al titolo */
 }
 
 /* Colonne testo e immagini */
@@ -3347,7 +3357,7 @@ td:last-child {
     position: absolute;
     bottom: 90px;
     right: 10px;
-    width: 200px; /* PNG grande su desktop */
+    width: 200px;
     height: auto;
 }
 
@@ -3361,8 +3371,13 @@ td:last-child {
         padding: 60px 20px;
     }
 
+    .about-title {
+        font-size: clamp(3rem, 8vw, 6rem); /* scala ridotta per tablet */
+        margin-bottom: 1.5rem;
+    }
+
     .s-about__content {
-        margin-top: 30px; /* meno spazio sopra al contenuto */
+        margin-top: 0.5rem;
     }
 
     .s-about__content .text-column,
@@ -3382,11 +3397,16 @@ td:last-child {
         padding: 40px 15px;
     }
 
+    .about-title {
+        font-size: clamp(7.5rem, 30vw, 12rem); /* grande ma proporzionato al mobile */
+        margin-bottom: 1rem;
+    }
+
     .s-about__content {
         flex-direction: column;
         gap: 20px;
         align-items: center;
-        margin-top: 20px; /* ancora meno spazio */
+        margin-top: 0.5rem; /* spazio ridotto sotto titolo */
     }
 
     .s-about__content .text-column,
