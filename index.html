@@ -47,41 +47,46 @@
     <div id="page" class="s-pagewrap">
 
 
-        <!-- # site header 
-        ================================================== -->
+     <!-- # site header ================================================== -->
 <header class="s-header">
-    <div class="s-header__inner">
-        <!-- Logo -->
-        <div class="s-header__logo">
-            <a class="logo" href="index.html">EMMA PINTO</a>
-        </div>
+  <div class="s-header__inner">
+    
+    <!-- Logo -->
+    <div class="s-header__logo">
+      <a class="logo" href="index.html">EMMA PINTO</a>
+    </div>
 
-        <!-- Menu toggle -->
-        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+    <!-- Menu toggle (hamburger per mobile) -->
+    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
 
-        <!-- Nav -->
-        <nav class="s-header__nav">    
-            <ul class="s-header__menu-links">
-                <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
-                <li><a class="smoothscroll" href="#works">Works</a></li>
-                <li><a class="smoothscroll" href="#about">About</a></li>
-                <li><a class="smoothscroll" href="#footer">Contact</a></li>
-            </ul>    
-        </nav>
-    </div> <!-- end s-header__inner -->
+    <!-- Nav -->
+    <nav class="s-header__nav">    
+      <ul class="s-header__menu-links">
+        <li class="current"><a class="smoothscroll" href="#intro">Intro</a></li>
+        <li><a class="smoothscroll" href="#works">Works</a></li>
+        <li><a class="smoothscroll" href="#about">About</a></li>
+        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+      </ul>    
+    </nav>
+
+  </div> <!-- end s-header__inner -->
 </header>
+
+<!-- Smooth scroll + link attivo -->
 <script>
 document.querySelectorAll('.smoothscroll').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
+
+    // Trova il target della sezione
     const target = document.querySelector(this.getAttribute('href'));
-    if(target) {
-      target.scrollIntoView({ behavior: 'smooth' }); // scroll normale
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Sottolineatura bianca sul link attivo
-    const menuLinks = document.querySelectorAll('.s-header__menu-links a');
-    menuLinks.forEach(l => l.classList.remove('active'));
+    // Aggiorna la classe "active" per evidenziare il link corrente
+    document.querySelectorAll('.s-header__menu-links a')
+      .forEach(l => l.classList.remove('active'));
     this.classList.add('active');
   });
 });
@@ -367,6 +372,7 @@ document.querySelectorAll('.smoothscroll').forEach(link => {
 
 </body>
 </html>
+
 
 
 
