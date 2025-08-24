@@ -3886,8 +3886,8 @@ html, body {
     margin-bottom: 2px;
 }
 .section-header .text-display-title {
-  font-size: 6.5rem !important;
-  line-height: 1.2 !important;
+  font-size: 6.5rem ;
+  line-height: 1.2 ;
 }
 * {
   margin: 0;
