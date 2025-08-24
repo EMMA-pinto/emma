@@ -42,23 +42,44 @@ body {
 
 /* MENU LINKS DESKTOP */
 .s-header__menu-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    margin: 0;
+    padding: 0;
 }
-.s-header__menu-links li {
-  margin-left: 1rem;
+
+.s-header__menu-links li { padding-left: 0; }
+
+.s-header__menu-links li a {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: var(--vspace-1);
+    color: white;
+    padding: 0 1.2rem;
+    display: inline-block;
+    transition: color 0.3s, border-bottom 0.3s;
+    text-decoration: none;
 }
-.s-header__menu-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0.3rem 0.5rem;
-}
+
 .s-header__menu-links li a.active {
-  border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 2px;
 }
+
+.s-header__menu-links a {
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: var(--vspace-1);
+    color: white;
+    padding: 0 1.2rem;
+    transition-property: color, background-color;
+}
+
+.s-header__menu-links .current a { color: white; }
+
 
 /* MENU MOBILE TOGGLE (HAMBURGER) */
 .menu-toggle-checkbox { display: none; }
