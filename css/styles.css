@@ -3895,7 +3895,6 @@ html, body {
     }
 }
 
-
 /* ----------------------- WORKS SECTION - CON TITOLO ----------------------- */
 .s-works {
     padding: 40px 20px;
@@ -3931,6 +3930,44 @@ html, body {
     margin-left: 0.5rem; /* separazione minima dal titolo */
 }
 
+/* Banda nera sotto il titolo */
+.works-banner {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    height: 40px; /* altezza banda */
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem; /* spazio prima della griglia */
+    position: relative;
+}
+
+/* Traccia che scorre */
+.banner-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 15s linear infinite;
+    white-space: nowrap;
+}
+
+.banner-track span {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0 2rem; /* spazio tra ripetizioni */
+}
+
+/* Animazione di scorrimento */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* Responsive Tablet */
 @media (max-width: 1024px) {
     .works-title {
@@ -3941,6 +3978,7 @@ html, body {
     }
 }
 
+/* Responsive Mobile */
 @media (max-width: 767px) {
     .works-header {
         gap: 2px; /* prima 6px, diminuito */
@@ -3952,6 +3990,13 @@ html, body {
     }
     .works-year {
         font-size: clamp(0.8rem, 3vw, 1rem);
+    }
+    .works-banner {
+        height: 30px; /* più sottile su mobile */
+    }
+    .banner-track span {
+        font-size: 0.9rem;
+        padding: 0 1.5rem;
     }
 }
 
