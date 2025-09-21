@@ -3930,35 +3930,37 @@ html, body {
     margin-left: 0.5rem;
 }
 
-/* Banda nera sotto il titolo */
+/* --- BANDA NERA SPESSA --- */
 .works-banner {
     width: 100%;
-    background: #000;
-    color: #fff;
+    background: #000;              /* fascia nera */
+    color: #fff;                   /* testo bianco */
     overflow: hidden;
-    height: 40px;
+    height: 80px;                  /* spessore della banda (puoi aumentare/diminuire) */
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;           /* spazio prima della griglia */
     position: relative;
 }
 
-/* Testo scorrevole */
+/* Testo che scorre dentro la banda */
 .banner-track {
     display: flex;
     width: max-content;
-    animation: scroll-left 15s linear infinite;
+    animation: scroll-left 20s linear infinite;
     white-space: nowrap;
 }
 
 .banner-track span {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 0 2rem;
+    font-weight: 700;
+    font-size: 2rem;              /* testo grande per dare impatto */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0 4rem;              /* spazio tra le ripetizioni */
 }
 
-/* Animazione */
+/* Animazione scorrimento */
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
@@ -3976,6 +3978,13 @@ html, body {
     .works-year {
         font-size: clamp(0.9rem, 1.8vw, 1.2rem);
     }
+    .works-banner {
+        height: 60px;
+    }
+    .banner-track span {
+        font-size: 1.5rem;
+        padding: 0 3rem;
+    }
 }
 
 /* Responsive Mobile */
@@ -3992,13 +4001,14 @@ html, body {
         font-size: clamp(0.8rem, 3vw, 1rem);
     }
     .works-banner {
-        height: 30px;
+        height: 50px;
     }
     .banner-track span {
-        font-size: 0.9rem;
-        padding: 0 1.5rem;
+        font-size: 1.2rem;
+        padding: 0 2rem;
     }
 }
+
 /* ---------------- GRID ENTRIES ---------------- */
 .folio-entries {
     display: grid;
