@@ -34,52 +34,32 @@ body {
   padding: 1rem 2rem;
 }
 .s-header__logo a {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 700; /* aggiunto bold */
-    text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /* MENU LINKS DESKTOP */
 .s-header__menu-links {
-    list-style: none;
-    display: inline-flex;
-    flex-flow: row nowrap;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
 }
-
-.s-header__menu-links li { padding-left: 0; }
-
 .s-header__menu-links li a {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: var(--vspace-1);
-    color: white;
-    padding: 0 1.2rem;
-    display: inline-block;
-    transition: color 0.3s, border-bottom 0.3s;
-    text-decoration: none;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0 1.2rem;
+  text-decoration: none;
 }
-
 .s-header__menu-links li a.active {
-    border-bottom: 2px solid #fff;
-    padding-bottom: 2px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
 }
-
-.s-header__menu-links a {
-    font-family: 'Helvetica', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: var(--vspace-1);
-    color: white;
-    padding: 0 1.2rem;
-    transition-property: color, background-color;
-}
-
-.s-header__menu-links .current a { color: white; }
-
 
 /* MENU MOBILE TOGGLE (HAMBURGER) */
 .menu-toggle-checkbox { display: none; }
@@ -90,7 +70,7 @@ body {
   position: absolute;
   top: 50%;
   right: 2rem;
-  transform: translateY(-52%); /* leggero aggiustamento verticale */
+  transform: translateY(-52%);
   cursor: pointer;
   z-index: 1001;
 }
@@ -127,7 +107,6 @@ body {
 /* NAV MOBILE */
 @media screen and (max-width: 900px) {
   .s-header__menu-toggle { display: block; }
-
   .s-header__nav {
     position: fixed;
     top: 0;
@@ -144,23 +123,15 @@ body {
     transition: transform 0.4s ease;
     z-index: 1000;
   }
-
   .menu-toggle-checkbox:checked ~ .s-header__nav {
     transform: scaleY(1);
   }
-
   .s-header__menu-links {
     flex-direction: column;
     text-align: center;
-    padding: 0;
-    margin: 0;
     gap: 2rem;
   }
-  .s-header__menu-links li a {
-    font-size: 1.8rem; /* leggermente più piccolo */
-    color: white;
-    text-decoration: none;
-  }
+  .s-header__menu-links li a { font-size: 1.8rem; }
 }
 
 /* ============================================================
@@ -188,28 +159,18 @@ body {
   background-color: #1A1A1A;
   color: white;
   text-align: center;
-  padding: 3.5rem 2rem; /* leggermente meno spazio verticale */
+  padding: 3.5rem 2rem;
 }
-.s-text-black h2 {
-  font-size: 2.2rem; /* prima 2.5rem */
-  margin-bottom: 0.5rem;
-}
+.s-text-black h2 { font-size: 2.2rem; margin-bottom: 0.5rem; }
 .s-text-black .category {
-  font-size: 1.1rem; /* prima 1.2rem */
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #ccc;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem; font-weight: 500; text-transform: uppercase; color: #ccc; margin-bottom: 1.5rem;
 }
 .s-text-black p {
-  font-size: 1.1rem; /* prima 1.2rem */
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.5;
+  font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.5;
 }
 
 /* ============================================================
-   GRIGLIA 2X2
+   GRIGLIA MODIFICATA
 ============================================================ */
 .s-grid {
   background-color: #1A1A1A;
@@ -226,49 +187,25 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-.grid-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
+.grid-item img { width: 100%; height: auto; display: block; object-fit: cover; }
 
 /* ============================================================
    TEAM CREDITS
 ============================================================ */
 .s-text-bottom {
   text-align: center;
-  padding: 3.5rem 2rem; /* leggermente meno spazio verticale */
+  padding: 3.5rem 2rem;
   background-color: #1A1A1A;
   color: white;
 }
-.s-text-bottom h2 {
-  font-size: 1.8rem; /* prima 2rem */
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.s-text-bottom p {
-  font-size: 1.1rem; /* prima 1.2rem */
-  line-height: 1.6;
-  margin: 0.5rem 0;
-}
-.s-text-bottom .partners {
-  margin-top: 2rem;
-  font-size: 0.95rem; /* prima 1rem */
-  font-weight: 500;
-  color: #ccc;
-  letter-spacing: 1px;
-}
+.s-text-bottom h2 { font-size: 1.8rem; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 2px; }
+.s-text-bottom p { font-size: 1.1rem; line-height: 1.6; margin: 0.5rem 0; }
+.s-text-bottom .partners { margin-top: 2rem; font-size: 0.95rem; font-weight: 500; color: #ccc; letter-spacing: 1px; }
 
 /* ============================================================
    IMMAGINE FINALE FULL-WIDTH
 ============================================================ */
-.s-final-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+.s-final-image img { width: 100%; height: auto; display: block; }
 
 /* ============================================================
    RESPONSIVE
@@ -276,15 +213,13 @@ body {
 @media (max-width: 992px) {
   .s-text-black h2 { font-size: 2rem; }
   .s-text-black .category { font-size: 1rem; }
-  .s-text-black p,
-  .s-text-bottom p { font-size: 1.2rem; }
+  .s-text-black p, .s-text-bottom p { font-size: 1.2rem; }
   .grid-container { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .s-text-black h2 { font-size: 1.8rem; }
   .s-text-black .category { font-size: 0.95rem; }
-  .s-text-black p,
-  .s-text-bottom p { font-size: 1rem; }
+  .s-text-black p, .s-text-bottom p { font-size: 1rem; }
 }
 </style>
 </head>
@@ -296,12 +231,8 @@ body {
       <div class="s-header__logo">
         <a href="index.html">EMMA PINTO</a>
       </div>
-
-      <!-- Menu toggle (hamburger) -->
       <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
       <label for="menu-toggle" class="s-header__menu-toggle"><span></span></label>
-
-      <!-- Nav -->
       <nav class="s-header__nav">
         <ul class="s-header__menu-links">
           <li><a href="#intro">Intro</a></li>
@@ -330,11 +261,21 @@ body {
     </div>
   </section>
 
-  <!-- GRIGLIA 2X2 -->
+  <!-- GRIGLIA MODIFICATA 2+TESTO+2 -->
   <section class="s-grid">
     <div class="grid-container">
+      <!-- Prime due immagini -->
       <div class="grid-item"><img src="images/folio/1mag.webp" alt="Poster 1"></div>
       <div class="grid-item"><img src="images/folio/evento.webp" alt="Poster 2"></div>
+
+      <!-- Testo intermedio -->
+      <div class="grid-item" style="grid-column: span 2; background-color:#1A1A1A; display:flex; align-items:center; justify-content:center; padding:2rem;">
+        <p style="font-size:1.2rem; line-height:1.6; text-align:center; max-width:700px;">
+          Published annually in print during the winter, the magazine is launched with a major release event across multiple cities in Italy. It showcases articles, exclusive content, and artist interviews, complemented by strong visual and photographic elements. Each year, the production involves over 50 professionals.
+        </p>
+      </div>
+
+      <!-- Altre due immagini -->
       <div class="grid-item"><img src="images/folio/coma6.jpg" alt="Poster 3"></div>
       <div class="grid-item"><img src="images/folio/coma3.jpg" alt="Poster 4"></div>
     </div>
