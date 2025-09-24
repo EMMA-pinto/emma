@@ -324,9 +324,10 @@ body {
   <!-- TESTO INTERMEDIO -->
   <section class="s-text-black">
     <div class="text-black-container">
-      <h2>“COMA COSE / LA GELOSIA”</h2>
-      <h3 class="category">Shooting</h3>
-      <p>Shooting for the release <em>"La Gelosia"</em> by Coma Cose.</p>
+      <h2>“A CALL FOR INTIMACY”</h2>
+      <h3 class="category">Graphic Design</h3>
+      <p>A Call for Intimacy is a collective photography exhibition featuring five artists on a journey of self-discovery.
+In this visual experience, the photographers present their most personal projects, revealing a different side of themselves and opening their private rooms to the public. The exhibition unfolds as a path where visitors are invited to step into the spaces the photographers “inhabit,” allowing themselves to be carried into their inner worlds.</p>
     </div>
   </section>
 
@@ -345,10 +346,8 @@ body {
     <div class="text-bottom-container">
       <h2>TEAM CREDITS</h2>
       <p>
-        <strong>Make up:</strong> Fausto Cavalieri<br>
-        <strong>Hairstyling:</strong> Filippo Calì<br>
-        <strong>Styling:</strong> Tiny Idols<br>
-        <strong>Production:</strong> Homies Work
+        <strong>Graphic Designers</strong> Tommaso Franzoso, Camilla <br>
+       
       </p>
       <p class="partners">
         Asian Fake &nbsp;|&nbsp; Warner Music Italy
