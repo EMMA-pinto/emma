@@ -367,6 +367,129 @@ body {
   <section class="s-final-image">
     <img src="images/folio/rolling.webp" alt="Final Image">
   </section>
+<!-- FOOTER -->
+<footer id="footer" class="s-footer target-section">
+
+  <!-- Titolo -->
+  <div class="footer-title">GET IN TOUCH</div>
+
+  <!-- Email centrale -->
+  <div class="s-footer__content">
+    <a href="mailto:emmapjnto@gmail.com" class="footer-email">
+      emmapjnto@gmail.com
+    </a>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="s-footer__bottom-bar">
+    <a class="instagram-link" href="https://www.instagram.com/emmapjnto/" target="_blank" rel="noopener">
+      INSTAGRAM <span class="arrow">↗</span>
+    </a>
+    <span class="copyright">
+      © 2025 Emma Pinto. All Rights Reserved.
+    </span>
+  </div>
+
+</footer>
+
+<!-- CSS FOOTER -->
+<style>
+.s-footer {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    background-color: #111;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/* Titolo footer */
+.footer-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 8vw, 6rem);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+/* Email centrale */
+.s-footer__content {
+    width: 100%;
+    text-align: center;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+.s-footer__content a {
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    color: inherit;
+    text-decoration: underline;
+    text-align: center;
+    max-width: 100%;
+}
+.s-footer__content a:hover {
+    color: #ccc;
+}
+
+/* Bottom bar */
+.s-footer__bottom-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+.instagram-link {
+    font-size: clamp(0.8rem, 4vw, 1.6rem);
+    text-decoration: underline;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.instagram-link .arrow {
+    font-size: 1rem;
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+.instagram-link:hover {
+    color: #ccc;
+}
+.s-footer__bottom-bar .copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(0.8rem, 4vw, 1rem);
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-title {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        margin-bottom: 1rem;
+    }
+    .s-footer__bottom-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 0 10px;
+    }
+}
+</style>
 
 </body>
 </html>
