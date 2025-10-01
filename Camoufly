@@ -325,7 +325,7 @@ body {
   <section class="s-text-black">
     <div class="text-black-container">
       <h2>“Camoufly”</h2>
-      <h3 class="category">cCover</h3>
+      <h3 class="category">Cover</h3>
       <p>Cover for the release <em>"FORMULA"</em> by Camoufly.</p>
     </div>
   </section>
@@ -349,7 +349,7 @@ body {
 
   <!-- IMMAGINE FINALE FULL-WIDTH -->
   <section class="s-final-image">
-    <img src="images/folio/coma7.png" alt="Final Image">
+    <img src="images/folio/.png" alt="Final Image">
   </section>
 <!-- FOOTER -->
 <footer id="footer" class="s-footer target-section">
