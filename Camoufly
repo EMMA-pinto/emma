@@ -333,10 +333,10 @@ body {
   <!-- GRIGLIA 2X2 -->
   <section class="s-grid">
     <div class="grid-container">
-      <div class="grid-item"><img src="images/folio/coma.jpg" alt="Poster 1"></div>
-      <div class="grid-item"><img src="images/folio/coma2.jpg" alt="Poster 2"></div>
-      <div class="grid-item"><img src="images/folio/coma6.jpg" alt="Poster 3"></div>
-      <div class="grid-item"><img src="images/folio/coma3.jpg" alt="Poster 4"></div>
+      <div class="grid-item"><img src="images/folio/.jpg" alt="Poster 1"></div>
+      <div class="grid-item"><img src="images/folio/.jpg" alt="Poster 2"></div>
+      <div class="grid-item"><img src="images/folio/.jpg" alt="Poster 3"></div>
+      <div class="grid-item"><img src="images/folio/.jpg" alt="Poster 4"></div>
     </div>
   </section>
 
