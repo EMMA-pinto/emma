@@ -326,7 +326,7 @@ body {
     <div class="text-black-container">
       <h2>“Camoufly”</h2>
       <h3 class="category">cCover</h3>
-      <p>Shooting for the release <em>"La Gelosia"</em> by Coma Cose.</p>
+      <p>Cover for the release <em>"FORMULA"</em> by Camoufly.</p>
     </div>
   </section>
 
@@ -343,16 +343,7 @@ body {
   <!-- TEAM CREDITS -->
   <section class="s-text-bottom">
     <div class="text-bottom-container">
-      <h2>TEAM CREDITS</h2>
-      <p>
-        <strong>Make up:</strong> Fausto Cavalieri<br>
-        <strong>Hairstyling:</strong> Filippo Calì<br>
-        <strong>Styling:</strong> Tiny Idols<br>
-        <strong>Production:</strong> Homies Work
-      </p>
-      <p class="partners">
-        Asian Fake &nbsp;|&nbsp; Warner Music Italy
-      </p>
+
     </div>
   </section>
 
